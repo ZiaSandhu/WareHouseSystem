@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WareHouseSystem.Screens.UI.Manage;
 
 namespace WareHouseSystem.Screens.UI
 {
@@ -35,6 +36,11 @@ namespace WareHouseSystem.Screens.UI
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Users().ShowDialog();
         }
     }
 }

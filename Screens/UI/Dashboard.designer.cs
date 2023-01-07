@@ -314,25 +314,26 @@
             // manageUsersToolStripMenuItem
             // 
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
+            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
             // manageCustomersToolStripMenuItem
             // 
             this.manageCustomersToolStripMenuItem.Name = "manageCustomersToolStripMenuItem";
-            this.manageCustomersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.manageCustomersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageCustomersToolStripMenuItem.Text = "Manage Customers";
             // 
             // manageProductsToolStripMenuItem
             // 
             this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
-            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageProductsToolStripMenuItem.Text = "Manage Products";
             // 
             // manageSuppliersToolStripMenuItem
             // 
             this.manageSuppliersToolStripMenuItem.Name = "manageSuppliersToolStripMenuItem";
-            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageSuppliersToolStripMenuItem.Text = "Manage Suppliers";
             // 
             // toolStripMenuItem3
