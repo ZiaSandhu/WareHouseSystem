@@ -15,3 +15,4 @@ F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CoreCom
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CopyComplete
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.exe
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.pdb
+F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Suppliers.resources

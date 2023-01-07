@@ -34,10 +34,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkIsActive = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtBalance = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtMail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
@@ -85,17 +84,18 @@
             this.GDVSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GDVSupplier.Size = new System.Drawing.Size(598, 337);
             this.GDVSupplier.TabIndex = 15;
+            this.GDVSupplier.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GDVSupplier_CellDoubleClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(323, 20);
+            this.label6.Location = new System.Drawing.Point(255, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Search";
+            this.label6.Text = "Search By Name";
             // 
             // txtSearch
             // 
@@ -103,7 +103,8 @@
             this.txtSearch.Location = new System.Drawing.Point(389, 17);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(210, 26);
-            this.txtSearch.TabIndex = 13;
+            this.txtSearch.TabIndex = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox1
             // 
@@ -121,10 +122,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.checkIsActive);
             this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtBalance);
             this.panel1.Controls.Add(this.txtAddress);
-            this.panel1.Controls.Add(this.txtMail);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnExit);
@@ -142,58 +142,44 @@
             this.panel1.Size = new System.Drawing.Size(502, 371);
             this.panel1.TabIndex = 10;
             // 
-            // checkIsActive
-            // 
-            this.checkIsActive.AutoSize = true;
-            this.checkIsActive.Checked = true;
-            this.checkIsActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkIsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkIsActive.ForeColor = System.Drawing.Color.Crimson;
-            this.checkIsActive.Location = new System.Drawing.Point(127, 238);
-            this.checkIsActive.Name = "checkIsActive";
-            this.checkIsActive.Size = new System.Drawing.Size(97, 24);
-            this.checkIsActive.TabIndex = 5;
-            this.checkIsActive.Text = "Is Active?";
-            this.checkIsActive.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(66, 108);
+            this.label7.Location = new System.Drawing.Point(49, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 20);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Email";
+            this.label7.Size = new System.Drawing.Size(67, 20);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Balance";
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBalance.Location = new System.Drawing.Point(127, 102);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(273, 26);
+            this.txtBalance.TabIndex = 2;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(127, 138);
+            this.txtAddress.Location = new System.Drawing.Point(127, 134);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(273, 94);
-            this.txtAddress.TabIndex = 4;
-            // 
-            // txtMail
-            // 
-            this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.Location = new System.Drawing.Point(127, 102);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(273, 26);
-            this.txtMail.TabIndex = 2;
+            this.txtAddress.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(46, 138);
+            this.label8.Location = new System.Drawing.Point(46, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 20);
+            this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 24;
-            this.label8.Text = "Address";
+            this.label8.Text = "Location";
             // 
             // label2
             // 
@@ -214,7 +200,7 @@
             this.btnExit.Location = new System.Drawing.Point(374, 305);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(115, 50);
-            this.btnExit.TabIndex = 9;
+            this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -229,10 +215,11 @@
             this.btnDelete.Location = new System.Drawing.Point(132, 305);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 50);
-            this.btnDelete.TabIndex = 7;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnReset
             // 
@@ -242,10 +229,11 @@
             this.btnReset.Location = new System.Drawing.Point(253, 305);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(115, 50);
-            this.btnReset.TabIndex = 8;
+            this.btnReset.TabIndex = 6;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSave
             // 
@@ -255,10 +243,11 @@
             this.btnSave.Location = new System.Drawing.Point(11, 305);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 50);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label5
             // 
@@ -318,6 +307,7 @@
             this.Controls.Add(this.UserRecords);
             this.Name = "Suppliers";
             this.Text = "Manage Supplier";
+            this.Load += new System.EventHandler(this.Suppliers_Load);
             this.UserRecords.ResumeLayout(false);
             this.UserRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVSupplier)).EndInit();
@@ -332,10 +322,7 @@
         private System.Windows.Forms.GroupBox UserRecords;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkIsActive;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExit;
@@ -350,5 +337,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView GDVSupplier;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBalance;
     }
 }
