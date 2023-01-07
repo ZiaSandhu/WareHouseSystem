@@ -47,5 +47,10 @@ namespace WareHouseSystem.Screens.UI
         {
             new Suppliers().ShowDialog();
         }
+
+        private void manageCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Customers().ShowDialog();
+        }
     }
 }

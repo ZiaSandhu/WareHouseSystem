@@ -16,3 +16,4 @@ F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CopyCom
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.exe
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.pdb
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Suppliers.resources
+F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Customers.resources

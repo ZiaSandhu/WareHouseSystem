@@ -323,6 +323,7 @@
             this.manageCustomersToolStripMenuItem.Name = "manageCustomersToolStripMenuItem";
             this.manageCustomersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageCustomersToolStripMenuItem.Text = "Manage Customers";
+            this.manageCustomersToolStripMenuItem.Click += new System.EventHandler(this.manageCustomersToolStripMenuItem_Click);
             // 
             // manageProductsToolStripMenuItem
             // 
