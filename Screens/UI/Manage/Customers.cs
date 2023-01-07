@@ -51,6 +51,7 @@ namespace WareHouseSystem.Screens.UI.Manage
             txtName.Text = string.Empty; ;
             txtAddress.Text = string.Empty;
             PopulateSupplierGrid();
+            bal = 0;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -65,7 +66,8 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void UpdateValues()
         {
-            string query = "Update tblCustomers set Name='" + txtName.Text.Trim() + "',Phone='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance='" + txtBalance.Text.Trim() + "' where Id='" + this.CustomerID + "'";
+            GetBalance();
+            string query = "Update tblCustomers set Name='" + txtName.Text.Trim() + "',Phone='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance=" + bal + " where Id='" + this.CustomerID + "'";
             if (database.RunQuery(query))
             {
                 MessageBox.Show("Customers Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

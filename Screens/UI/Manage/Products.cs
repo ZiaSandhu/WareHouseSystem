@@ -11,17 +11,15 @@ using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.Manage
 {
-    public partial class Suppliers : MetroTemplate
+    public partial class Products : MetroTemplate
     {
-        private string SupplierName { get; set; }
-        private string SupplierID { get; set; }
-        
-        decimal bal = 0;
-
-        public Suppliers()
+        public Products()
         {
             InitializeComponent();
         }
+        private string ProductID { get; set; }
+
+        decimal stock = 0;
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -35,28 +33,25 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void PopulateSupplierGrid()
         {
-            string query = "Select * from tblSuppliers";
-            database.PopulatGrid(query,GDVSupplier);
+            string query = "Select * from tblProducts";
+            database.PopulatGrid(query, GDVSupplier);
         }
 
         private void ResetFormControls()
         {
             btnDelete.Enabled = false;
             btnSave.Text = "Save";
-            bal = 0;
-            this.SupplierID = null;
-            this.SupplierName = null;
-            txtBalance.Text = string.Empty;
-            txtPhone.Text = string.Empty;
+
+            this.ProductID = null;
+            txtStock.Text = string.Empty;
             txtName.Text = string.Empty; ;
-            txtAddress.Text = string.Empty;
             PopulateSupplierGrid();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (RequireFields())
             {
-                if (this.SupplierName == string.Empty || this.SupplierName == null)
+                if (this.ProductID == string.Empty || this.ProductID == null)
                     InsertValues();
                 else
                     UpdateValues();
@@ -65,11 +60,11 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void UpdateValues()
         {
-            GetBalance();
-            string query = "Update tblSuppliers set Name='" + txtName.Text.Trim() + "',Phone='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance=" + bal + " where Id='"+this.SupplierID+"'";
+            GetStock();
+            string query = "Update tblProducts set Name='" + txtName.Text.Trim() + "',Stock=" + stock +" where Id='" + this.ProductID + "'";
             if (database.RunQuery(query))
             {
-                MessageBox.Show("Supplier Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ResetFormControls();
                 PopulateSupplierGrid();
             }
@@ -81,8 +76,8 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void InsertValues()
         {
-            GetBalance();
-            string query = "Insert into tblSuppliers Values('"+txtName.Text.Trim()+"','"+txtPhone.Text.Trim()+"','"+txtAddress.Text.Trim()+"',"+bal+")";
+            GetStock();
+            string query = "Insert into tblProducts Values('" + txtName.Text.Trim() + "',"+stock+")";
             if (database.RunQuery(query))
             {
                 MessageBox.Show("Supplier Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -95,10 +90,10 @@ namespace WareHouseSystem.Screens.UI.Manage
             }
         }
 
-        private void GetBalance()
+        private void GetStock()
         {
-            if (txtBalance.Text.Trim().Length > 0)
-                bal = Convert.ToDecimal(txtBalance.Text.Trim());
+            if (txtStock.Text.Trim().Length > 0)
+                stock = Convert.ToDecimal(txtStock.Text.Trim());
         }
 
         private bool RequireFields()
@@ -109,12 +104,6 @@ namespace WareHouseSystem.Screens.UI.Manage
                 txtName.Focus();
                 return false;
             }
-            if (txtPhone.Text == string.Empty)
-            {
-                MessageBox.Show("Phone is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPhone.Focus();
-                return false;
-            }
             return true;
         }
 
@@ -123,12 +112,12 @@ namespace WareHouseSystem.Screens.UI.Manage
 
             if (RequireFields())
             {
-                if (MessageBox.Show("Are You Sure ? \n Delete Supplier " + txtName.Text + " from System.", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show("Are You Sure ? \n Delete Product " + txtName.Text + " from System.", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    string query = "delete from tblSuppliers where Id='" + this.SupplierID + "'";
+                    string query = "delete from tblProducts where Id='" + this.ProductID + "'";
                     if (database.RunQuery(query))
                     {
-                        MessageBox.Show("Supplier Record Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ResetFormControls();
                         PopulateSupplierGrid();
                     }
@@ -144,22 +133,12 @@ namespace WareHouseSystem.Screens.UI.Manage
         {
             if (GDVSupplier.Rows.Count > 0)
             {
-                this.SupplierID = GDVSupplier.CurrentRow.Cells[0].Value.ToString();
-                this.SupplierName = GDVSupplier.CurrentRow.Cells[1].Value.ToString();
-                txtName.Text = this.SupplierName;
-                txtPhone.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
-                txtAddress.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
-                txtBalance.Text = GDVSupplier.CurrentRow.Cells[4].Value.ToString();
-
+                this.ProductID = GDVSupplier.CurrentRow.Cells[0].Value.ToString();
+                txtName.Text = GDVSupplier.CurrentRow.Cells[1].Value.ToString();
+                txtStock.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
                 btnDelete.Enabled = true;
                 btnSave.Text = "Update";
             }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            string query = "Select * from tblSuppliers where Name like '%"+txtSearch.Text.Trim()+"%'";
-            database.PopulatGrid(query, GDVSupplier);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -168,11 +147,6 @@ namespace WareHouseSystem.Screens.UI.Manage
         }
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            database.DigitValidation(sender, e);
-        }
-
-        private void txtBalance_KeyPress(object sender, KeyPressEventArgs e)
         {
             database.DigitValidation(sender, e);
         }
