@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WareHouseSystem.Screens.UI.Invoices
 {
-    public partial class Sale : Form
+    public partial class Sale : MetroTemplate
     {
         public Sale()
         {
