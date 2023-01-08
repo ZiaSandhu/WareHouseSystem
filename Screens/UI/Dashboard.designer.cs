@@ -71,7 +71,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPurchaseInvoice = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -314,28 +314,28 @@
             // manageUsersToolStripMenuItem
             // 
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
             // manageCustomersToolStripMenuItem
             // 
             this.manageCustomersToolStripMenuItem.Name = "manageCustomersToolStripMenuItem";
-            this.manageCustomersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageCustomersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.manageCustomersToolStripMenuItem.Text = "Manage Customers";
             this.manageCustomersToolStripMenuItem.Click += new System.EventHandler(this.manageCustomersToolStripMenuItem_Click);
             // 
             // manageProductsToolStripMenuItem
             // 
             this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
-            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.manageProductsToolStripMenuItem.Text = "Manage Products";
             this.manageProductsToolStripMenuItem.Click += new System.EventHandler(this.manageProductsToolStripMenuItem_Click);
             // 
             // manageSuppliersToolStripMenuItem
             // 
             this.manageSuppliersToolStripMenuItem.Name = "manageSuppliersToolStripMenuItem";
-            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.manageSuppliersToolStripMenuItem.Text = "Manage Suppliers";
             this.manageSuppliersToolStripMenuItem.Click += new System.EventHandler(this.manageSuppliersToolStripMenuItem_Click);
             // 
@@ -486,18 +486,19 @@
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnPurchaseInvoice
             // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(225, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 98);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Purchase Invoice";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPurchaseInvoice.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchaseInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchaseInvoice.Location = new System.Drawing.Point(225, 204);
+            this.btnPurchaseInvoice.Name = "btnPurchaseInvoice";
+            this.btnPurchaseInvoice.Size = new System.Drawing.Size(187, 98);
+            this.btnPurchaseInvoice.TabIndex = 5;
+            this.btnPurchaseInvoice.Text = "Purchase Invoice";
+            this.btnPurchaseInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPurchaseInvoice.UseVisualStyleBackColor = false;
+            this.btnPurchaseInvoice.Click += new System.EventHandler(this.btnPurchaseInvoice_Click);
             // 
             // button1
             // 
@@ -520,7 +521,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnPurchaseInvoice);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -578,7 +579,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPurchaseInvoice;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem cashBookToolStripMenuItem;

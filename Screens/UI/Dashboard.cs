@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WareHouseSystem.Screens.UI.Invoices;
 using WareHouseSystem.Screens.UI.Manage;
 
 namespace WareHouseSystem.Screens.UI
@@ -56,6 +57,11 @@ namespace WareHouseSystem.Screens.UI
         private void manageProductsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Products().ShowDialog();
+        }
+
+        private void btnPurchaseInvoice_Click(object sender, EventArgs e)
+        {
+            new Purchase().ShowDialog();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace WareHouseSystem.General
 {
@@ -53,7 +54,7 @@ namespace WareHouseSystem.General
             }
         }
 
-        public static void DeleteQuery(string query)
+        public static string ScalarQuery(string query)
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -61,7 +62,7 @@ namespace WareHouseSystem.General
                 {
                     if (con.State != ConnectionState.Open)
                         con.Open();
-                    cmd.ExecuteNonQuery();
+                    return cmd.ExecuteScalar().ToString();
                 }
             }
         }
@@ -76,6 +77,28 @@ namespace WareHouseSystem.General
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+        public static void LoadComboBox(string query,ComboBox box)
+        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    DataTable dt = new DataTable();
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.HasRows) { 
+                        dt.Load(sdr);
+                        box.DataSource = dt;
+                        box.DisplayMember = "Name";
+                        box.ValueMember = "Id";
+                    }
+                    else
+                    {
+                        box.DataSource = null;
+                    }
+                }
             }
         }
     }
