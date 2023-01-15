@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace WareHouseSystem.General
 {
     public class database
     {
-        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ziar4\OneDrive\Documents\WareHouseSystem.mdf;Integrated Security=True;Connect Timeout=30";
+        //public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ziar4\OneDrive\Documents\WareHouseSystem.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Projects\Software C#\WareHouseSystem\WarHouseSystem.mdf;Integrated Security=True";
 
         public static void PopulatGrid(string query, DataGridView datagrid)
         {
@@ -35,6 +38,7 @@ namespace WareHouseSystem.General
                 }
             }
         }
+        
         public static bool RunQuery(string query)
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
@@ -66,6 +70,15 @@ namespace WareHouseSystem.General
                 }
             }
         }
+        
+        public static void DigitValidWithoutDecimal(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         public static void DigitValidation(Object sender,KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -79,6 +92,7 @@ namespace WareHouseSystem.General
                 e.Handled = true;
             }
         }
+        
         public static void LoadComboBox(string query,ComboBox box)
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
@@ -101,6 +115,76 @@ namespace WareHouseSystem.General
                 }
             }
         }
+        
+        public static void StockAdd(string Pid,string Newstock)
+        {
+            string query = "select stock from tblProducts where Id="+Pid;
+            string stock = ScalarQuery(query);
+            stock = (Convert.ToDecimal(stock) + Convert.ToDecimal(Newstock)).ToString();
+            query = "Update tblProducts Set Stock=" + stock + " where Id=" + Pid;
+            RunQuery(query);
+        }
+
+        public static void StockMinus(string Pid,string netweight)
+        {
+            string query = "select stock from tblProducts where Id=" + Pid;
+            string stock = ScalarQuery(query);
+            stock = (Convert.ToDecimal(stock) - Convert.ToDecimal(netweight)).ToString();
+            query = "Update tblProducts Set Stock=" + stock + " where Id=" + Pid;
+            RunQuery(query);
+        }
+
+        public static DataTable GetTable(string query)
+        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    if (con.State != ConnectionState.Open)
+                        con.Open();
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    DataTable dt = new DataTable();
+                    if (sdr.HasRows)
+                    {
+                        dt.Load(sdr);
+                        return dt;
+                    }
+                    else
+                        return dt ;
+                }
+            }
+        }
+        public static void BackupDatabase()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string filePath = Path.Combine(currentDirectory, "backup.txt");
+            if (File.Exists(filePath))
+            {
+                string[] path = File.ReadLines(filePath).ToArray();
+                string query = "BACKUP DATABASE WarHouseSystem TO DISK='" + path[0] + "\\Buisness_Solution " + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".bak'";
+                database.RunQuery(query);
+                MessageBox.Show("Backuped Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
+        //public static int RowsCount(string query)
+        //{
+        //    using (SqlConnection con = new SqlConnection(ConnectionString))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand(query, con))
+        //        {
+        //            if (con.State != ConnectionState.Open)
+        //                con.Open();
+        //            SqlDataReader sdr = cmd.ExecuteReader();
+        //            if (sdr.HasRows)
+        //            {
+        //                return sdr.Cast<int>().Count();
+        //            }
+        //            else
+        //                return dt;
+        //        }
+        //    }
+        //}
+
     }
 
 }

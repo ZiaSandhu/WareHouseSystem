@@ -169,7 +169,7 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            database.DigitValidation(sender, e);
+            database.DigitValidWithoutDecimal(e);
         }
 
         private void txtBalance_KeyPress(object sender, KeyPressEventArgs e)

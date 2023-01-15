@@ -19,8 +19,6 @@ namespace WareHouseSystem.Screens.UI.Manage
         }
         private string ProductID { get; set; }
 
-        decimal stock = 0;
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,7 +42,8 @@ namespace WareHouseSystem.Screens.UI.Manage
 
             this.ProductID = null;
             txtStock.Text = string.Empty;
-            txtName.Text = string.Empty; ;
+            txtName.Text = string.Empty;
+            txtCost.Text = string.Empty;
             PopulateSupplierGrid();
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -60,8 +59,7 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void UpdateValues()
         {
-            GetStock();
-            string query = "Update tblProducts set Name='" + txtName.Text.Trim() + "',Stock=" + stock +" where Id='" + this.ProductID + "'";
+            string query = "Update tblProducts set Name='" + txtName.Text.Trim() + "',Stock=" + txtStock.Text.Trim() +",Cost="+txtCost.Text.Trim()+" where Id='" + this.ProductID + "'";
             if (database.RunQuery(query))
             {
                 MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,11 +74,10 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void InsertValues()
         {
-            GetStock();
-            string query = "Insert into tblProducts Values('" + txtName.Text.Trim() + "',"+stock+")";
+            string query = "Insert into tblProducts Values('" + txtName.Text.Trim() + "',"+txtStock.Text.Trim()+","+txtCost.Text.Trim()+")";
             if (database.RunQuery(query))
             {
-                MessageBox.Show("Supplier Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Category Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ResetFormControls();
                 PopulateSupplierGrid();
             }
@@ -90,18 +87,24 @@ namespace WareHouseSystem.Screens.UI.Manage
             }
         }
 
-        private void GetStock()
-        {
-            if (txtStock.Text.Trim().Length > 0)
-                stock = Convert.ToDecimal(txtStock.Text.Trim());
-        }
-
         private bool RequireFields()
         {
             if (txtName.Text == string.Empty)
             {
                 MessageBox.Show("Name is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtName.Focus();
+                return false;
+            }
+            if (txtCost.Text == string.Empty)
+            {
+                MessageBox.Show("Cost is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCost.Focus();
+                return false;
+            }
+            if (txtStock.Text == string.Empty)
+            {
+                MessageBox.Show("Stock is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtStock.Focus();
                 return false;
             }
             return true;
@@ -136,6 +139,7 @@ namespace WareHouseSystem.Screens.UI.Manage
                 this.ProductID = GDVSupplier.CurrentRow.Cells[0].Value.ToString();
                 txtName.Text = GDVSupplier.CurrentRow.Cells[1].Value.ToString();
                 txtStock.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
+                txtCost.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
                 btnDelete.Enabled = true;
                 btnSave.Text = "Update";
             }
@@ -146,7 +150,12 @@ namespace WareHouseSystem.Screens.UI.Manage
             ResetFormControls();
         }
 
-        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            database.DigitValidation(sender, e);
+        }
+
+        private void txtCost_KeyPress(object sender, KeyPressEventArgs e)
         {
             database.DigitValidation(sender, e);
         }

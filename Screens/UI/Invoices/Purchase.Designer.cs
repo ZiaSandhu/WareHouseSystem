@@ -48,12 +48,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.GDVitemDetail = new System.Windows.Forms.DataGridView();
-            this.sr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bags = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -244,6 +238,7 @@
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(198, 28);
             this.ItemName.TabIndex = 0;
+            this.ItemName.SelectedIndexChanged += new System.EventHandler(this.ItemName_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -281,6 +276,7 @@
             this.SupName.Name = "SupName";
             this.SupName.Size = new System.Drawing.Size(208, 28);
             this.SupName.TabIndex = 149;
+            this.SupName.SelectedIndexChanged += new System.EventHandler(this.SupName_SelectedIndexChanged);
             // 
             // btnAddCus
             // 
@@ -334,13 +330,6 @@
             this.GDVitemDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GDVitemDetail.BackgroundColor = System.Drawing.SystemColors.MenuBar;
             this.GDVitemDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVitemDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sr,
-            this.desc,
-            this.Weight,
-            this.bags,
-            this.rate,
-            this.total});
             this.GDVitemDetail.Location = new System.Drawing.Point(12, 255);
             this.GDVitemDetail.MultiSelect = false;
             this.GDVitemDetail.Name = "GDVitemDetail";
@@ -354,41 +343,6 @@
             this.GDVitemDetail.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.GDVitemDetail_UserDeletedRow);
             this.GDVitemDetail.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.GDVitemDetail_UserDeletingRow);
             this.GDVitemDetail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GDVitemDetail_KeyPress);
-            // 
-            // sr
-            // 
-            this.sr.FillWeight = 50F;
-            this.sr.HeaderText = "Sr.";
-            this.sr.Name = "sr";
-            // 
-            // desc
-            // 
-            this.desc.FillWeight = 93.27411F;
-            this.desc.HeaderText = "Description";
-            this.desc.Name = "desc";
-            // 
-            // Weight
-            // 
-            this.Weight.FillWeight = 93.27411F;
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            // 
-            // bags
-            // 
-            this.bags.HeaderText = "Bags";
-            this.bags.Name = "bags";
-            // 
-            // rate
-            // 
-            this.rate.FillWeight = 93.27411F;
-            this.rate.HeaderText = "Rate";
-            this.rate.Name = "rate";
-            // 
-            // total
-            // 
-            this.total.FillWeight = 93.27411F;
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
             // 
             // groupBox3
             // 
@@ -646,7 +600,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.DataGridView GDVitemDetail;
         private System.Windows.Forms.TextBox txtItemTotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCash;
@@ -665,11 +618,6 @@
         private System.Windows.Forms.ComboBox SupName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox TotalBags;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn desc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bags;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        public System.Windows.Forms.DataGridView GDVitemDetail;
     }
 }

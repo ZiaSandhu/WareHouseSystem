@@ -68,7 +68,7 @@ namespace WareHouseSystem.Screens.UI
         {
             using (SqlConnection con = new SqlConnection(database.ConnectionString))
             {
-                string query = "INSERT INTO tblLoginHistory Values('"+txtName.Text.Trim()+"','"+System.DateTime.Now+"')";
+                string query = "INSERT INTO tblLoginHistory(Name,DataTime) Values('"+txtName.Text.Trim()+"',GetDate())";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();

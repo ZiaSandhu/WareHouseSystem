@@ -43,6 +43,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
             this.UserRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVSupplier)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -95,6 +97,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtCost);
+            this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnDelete);
@@ -127,7 +131,7 @@
             this.btnExit.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(237, 152);
+            this.btnExit.Location = new System.Drawing.Point(200, 205);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(115, 50);
             this.btnExit.TabIndex = 7;
@@ -142,7 +146,7 @@
             this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(237, 96);
+            this.btnDelete.Location = new System.Drawing.Point(200, 149);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 50);
             this.btnDelete.TabIndex = 5;
@@ -156,7 +160,7 @@
             this.btnReset.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(116, 152);
+            this.btnReset.Location = new System.Drawing.Point(79, 205);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(115, 50);
             this.btnReset.TabIndex = 6;
@@ -170,7 +174,7 @@
             this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(116, 96);
+            this.btnSave.Location = new System.Drawing.Point(79, 149);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 50);
             this.btnSave.TabIndex = 4;
@@ -198,7 +202,7 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(273, 26);
             this.txtStock.TabIndex = 1;
-            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // txtName
             // 
@@ -229,6 +233,27 @@
             this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "Stock";
+            // 
+            // txtCost
+            // 
+            this.txtCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(79, 96);
+            this.txtCost.MaxLength = 12;
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(273, 26);
+            this.txtCost.TabIndex = 21;
+            this.txtCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost_KeyPress);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.Black;
+            this.label.Location = new System.Drawing.Point(16, 102);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(42, 20);
+            this.label.TabIndex = 22;
+            this.label.Text = "Cost";
             // 
             // Products
             // 
@@ -264,5 +289,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView GDVSupplier;
+        private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.Label label;
     }
 }
