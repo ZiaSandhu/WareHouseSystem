@@ -96,6 +96,7 @@
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "Search By Name";
+            this.label6.Visible = false;
             // 
             // txtSearch
             // 
@@ -104,6 +105,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(210, 26);
             this.txtSearch.TabIndex = 8;
+            this.txtSearch.Visible = false;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox1

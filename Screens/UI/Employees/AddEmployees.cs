@@ -130,5 +130,6 @@ namespace WareHouseSystem.Screens.UI.Employees
                 btnSave.Text = "Update";
             }
         }
+
     }
 }

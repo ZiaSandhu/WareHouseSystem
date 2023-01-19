@@ -33,6 +33,8 @@
             this.GDVSupplier = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCost = new System.Windows.Forms.TextBox();
-            this.label = new System.Windows.Forms.Label();
             this.UserRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVSupplier)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -115,6 +115,27 @@
             this.panel1.Size = new System.Drawing.Size(388, 265);
             this.panel1.TabIndex = 10;
             // 
+            // txtCost
+            // 
+            this.txtCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(79, 96);
+            this.txtCost.MaxLength = 12;
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(273, 26);
+            this.txtCost.TabIndex = 2;
+            this.txtCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost_KeyPress);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.Black;
+            this.label.Location = new System.Drawing.Point(16, 102);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(42, 20);
+            this.label.TabIndex = 22;
+            this.label.Text = "Cost";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -134,7 +155,7 @@
             this.btnExit.Location = new System.Drawing.Point(200, 205);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(115, 50);
-            this.btnExit.TabIndex = 7;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -163,7 +184,7 @@
             this.btnReset.Location = new System.Drawing.Point(79, 205);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(115, 50);
-            this.btnReset.TabIndex = 6;
+            this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
@@ -177,7 +198,7 @@
             this.btnSave.Location = new System.Drawing.Point(79, 149);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 50);
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -233,27 +254,6 @@
             this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "Stock";
-            // 
-            // txtCost
-            // 
-            this.txtCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCost.Location = new System.Drawing.Point(79, 96);
-            this.txtCost.MaxLength = 12;
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(273, 26);
-            this.txtCost.TabIndex = 21;
-            this.txtCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost_KeyPress);
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(16, 102);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(42, 20);
-            this.label.TabIndex = 22;
-            this.label.Text = "Cost";
             // 
             // Products
             // 

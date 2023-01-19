@@ -53,6 +53,7 @@
             this.customerLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cashBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +67,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnPurchaseInvoice = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.salaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -314,23 +314,30 @@
             // customerLedgerToolStripMenuItem
             // 
             this.customerLedgerToolStripMenuItem.Name = "customerLedgerToolStripMenuItem";
-            this.customerLedgerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerLedgerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.customerLedgerToolStripMenuItem.Text = "Customer Ledger";
             this.customerLedgerToolStripMenuItem.Click += new System.EventHandler(this.customerLedgerToolStripMenuItem_Click);
             // 
             // supplierLedgerToolStripMenuItem
             // 
             this.supplierLedgerToolStripMenuItem.Name = "supplierLedgerToolStripMenuItem";
-            this.supplierLedgerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.supplierLedgerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.supplierLedgerToolStripMenuItem.Text = "Supplier Ledger";
             this.supplierLedgerToolStripMenuItem.Click += new System.EventHandler(this.supplierLedgerToolStripMenuItem_Click);
             // 
             // cashBookToolStripMenuItem
             // 
             this.cashBookToolStripMenuItem.Name = "cashBookToolStripMenuItem";
-            this.cashBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cashBookToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.cashBookToolStripMenuItem.Text = "CashBook";
             this.cashBookToolStripMenuItem.Click += new System.EventHandler(this.cashBookToolStripMenuItem_Click);
+            // 
+            // salaryToolStripMenuItem
+            // 
+            this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.salaryToolStripMenuItem.Text = "Salary";
+            this.salaryToolStripMenuItem.Click += new System.EventHandler(this.salaryToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -350,15 +357,16 @@
             // backupDataToolStripMenuItem
             // 
             this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.backupDataToolStripMenuItem.Text = "Backup Data";
             this.backupDataToolStripMenuItem.Click += new System.EventHandler(this.backupDataToolStripMenuItem_Click);
             // 
             // restoreToolStripMenuItem
             // 
             this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
-            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.restoreToolStripMenuItem.Text = "Restore Data";
+            this.restoreToolStripMenuItem.Click += new System.EventHandler(this.restoreToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
@@ -443,13 +451,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // salaryToolStripMenuItem
-            // 
-            this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salaryToolStripMenuItem.Text = "Salary";
-            this.salaryToolStripMenuItem.Click += new System.EventHandler(this.salaryToolStripMenuItem_Click);
             // 
             // Dashboard
             // 

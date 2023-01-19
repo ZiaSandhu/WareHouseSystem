@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PurchaseDataSet" targetNamespace="http://tempuri.org/PurchaseDataSet.xsd" xmlns:mstns="http://tempuri.org/PurchaseDataSet.xsd" xmlns="http://tempuri.org/PurchaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PurchaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="PurchaseDataSet" msprop:Generator_DataSetName="PurchaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PurchaseTable" msprop:Generator_RowEvHandlerName="PurchaseTableRowChangeEventHandler" msprop:Generator_RowDeletedName="PurchaseTableRowDeleted" msprop:Generator_RowDeletingName="PurchaseTableRowDeleting" msprop:Generator_RowEvArgName="PurchaseTableRowChangeEvent" msprop:Generator_TablePropName="PurchaseTable" msprop:Generator_RowChangedName="PurchaseTableRowChanged" msprop:Generator_RowChangingName="PurchaseTableRowChanging" msprop:Generator_TableClassName="PurchaseTableDataTable" msprop:Generator_RowClassName="PurchaseTableRow" msprop:Generator_TableVarName="tablePurchaseTable" msprop:Generator_UserTableName="PurchaseTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Item" msprop:Generator_ColumnPropNameInRow="Item" msprop:Generator_ColumnPropNameInTable="ItemColumn" msprop:Generator_ColumnVarNameInTable="columnItem" msprop:Generator_UserColumnName="Item" type="xs:string" minOccurs="0" />
+              <xs:element name="Weight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_UserColumnName="Weight" type="xs:double" minOccurs="0" />
+              <xs:element name="Bags" msprop:Generator_ColumnPropNameInRow="Bags" msprop:Generator_ColumnPropNameInTable="BagsColumn" msprop:Generator_ColumnVarNameInTable="columnBags" msprop:Generator_UserColumnName="Bags" type="xs:int" minOccurs="0" />
+              <xs:element name="NetWeight" msprop:Generator_ColumnPropNameInRow="NetWeight" msprop:Generator_ColumnPropNameInTable="NetWeightColumn" msprop:Generator_ColumnVarNameInTable="columnNetWeight" msprop:Generator_UserColumnName="NetWeight" type="xs:double" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_UserColumnName="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

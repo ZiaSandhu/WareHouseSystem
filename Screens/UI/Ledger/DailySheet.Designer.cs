@@ -91,7 +91,7 @@
             this.ToDate.Location = new System.Drawing.Point(239, 22);
             this.ToDate.Name = "ToDate";
             this.ToDate.Size = new System.Drawing.Size(127, 26);
-            this.ToDate.TabIndex = 26;
+            this.ToDate.TabIndex = 1;
             // 
             // FromDate
             // 
@@ -100,7 +100,7 @@
             this.FromDate.Location = new System.Drawing.Point(73, 22);
             this.FromDate.Name = "FromDate";
             this.FromDate.Size = new System.Drawing.Size(127, 26);
-            this.FromDate.TabIndex = 26;
+            this.FromDate.TabIndex = 0;
             // 
             // label14
             // 
@@ -132,7 +132,7 @@
             this.btnRefresh.Location = new System.Drawing.Point(706, 19);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(89, 35);
-            this.btnRefresh.TabIndex = 8;
+            this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "    Reset";
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@
             this.btnSearch.Location = new System.Drawing.Point(611, 19);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(89, 35);
-            this.btnSearch.TabIndex = 7;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;

@@ -169,5 +169,7 @@ namespace WareHouseSystem.Screens.UI.Manage
             LoadComboBox();
             PopulateSupplierGrid();
         }
+
+        
     }
 }

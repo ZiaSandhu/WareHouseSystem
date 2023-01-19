@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHouseSystem.General;
+using WareHouseSystem.Reports;
 using WareHouseSystem.Screens.UI.Manage;
 
 namespace WareHouseSystem.Screens.UI.Invoices
@@ -585,6 +587,56 @@ namespace WareHouseSystem.Screens.UI.Invoices
         {
             if(!first)
                 LoadItemName();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (IsSaved )
+            {
+                PrintReport();
+            }
+            else if(IsUpdate)
+            {
+                UpdateInvoice();
+                PrintReport();
+            }
+            else
+            {
+                SavingInvoice();
+                PrintReport();
+            }
+        }
+
+        private void PrintReport()
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Sr", typeof(Int32));
+            dt.Columns.Add("Item", typeof(string));
+            dt.Columns.Add("Weight", typeof(double));
+            dt.Columns.Add("Rate", typeof(decimal));
+            dt.Columns.Add("Total", typeof(Decimal));
+
+            DataRow dr;
+            foreach (DataGridViewRow row in GDVitemDetail.Rows)
+            {
+                dr = dt.NewRow();
+
+                dr[0] = Convert.ToInt32(row.Cells[0].Value);
+                dr[1] = row.Cells[2].Value.ToString();
+                dr[2] = Convert.ToDouble(row.Cells[3].Value);
+                dr[3] = Convert.ToDecimal(row.Cells[4].Value);
+                dr[4] = Convert.ToDecimal(row.Cells[5].Value);
+
+                dt.Rows.Add(dr);
+            }
+            InvoiceReportScreen rc = new InvoiceReportScreen();
+            rc.ReportAddress = "F:\\Projects\\Software C#\\WareHouseSystem\\Reports\\SaleInvoiceReport.rpt";
+            rc.ReportDataSet = dt;
+            rc.PName = CusName.Text;
+            rc.InvoiceDate = dateInvoice.Value.Date;
+            rc.InvoiceId = SaleId;
+            rc.Show();
         }
     }
 }

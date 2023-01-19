@@ -26,7 +26,7 @@
     <ProductName>ScrapStockSystem</ProductName>
     <PublisherName>Zia Ur Rehman</PublisherName>
     <SuiteName>WareHouseSystem</SuiteName>
-    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationRevision>20</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -65,6 +65,13 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>D:\Softwares\_Getintopc.com_Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
     </Reference>
@@ -77,6 +84,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -89,9 +98,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetForReports\LedgerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LedgerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForReports\PurchaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForReports\SaleDataSet.cs">
+      <DependentUpon>SaleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForReports\SaleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="General\database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\InvoiceReportScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InvoiceReportScreen.Designer.cs">
+      <DependentUpon>InvoiceReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PurchaseReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportScreen.Designer.cs">
+      <DependentUpon>ReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LedgerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LedgerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SaleInvoiceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleInvoiceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Screens\Templates\MetroTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,17 +173,23 @@
     <Compile Include="Screens\UI\Database\Backup.Designer.cs">
       <DependentUpon>Backup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\UI\Database\Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\Database\Restore.Designer.cs">
+      <DependentUpon>Restore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\UI\Employees\AddEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\UI\Employees\AddEmployees.Designer.cs">
       <DependentUpon>AddEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\UI\Employees\EmployeeLedger.cs">
+    <Compile Include="Screens\UI\Employees\EmployeesLedger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\UI\Employees\EmployeeLedger.Designer.cs">
-      <DependentUpon>EmployeeLedger.cs</DependentUpon>
+    <Compile Include="Screens\UI\Employees\EmployeesLedger.Designer.cs">
+      <DependentUpon>EmployeesLedger.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UI\Invoices\Purchase.cs">
       <SubType>Form</SubType>
@@ -215,6 +278,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\InvoiceReportScreen.resx">
+      <DependentUpon>InvoiceReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PurchaseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurchaseReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportScreen.resx">
+      <DependentUpon>ReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LedgerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LedgerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SaleInvoiceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SaleInvoiceReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Templates\MetroTemplate.resx">
       <DependentUpon>MetroTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,11 +308,14 @@
     <EmbeddedResource Include="Screens\UI\Database\Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\Database\Restore.resx">
+      <DependentUpon>Restore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\Employees\AddEmployees.resx">
       <DependentUpon>AddEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\UI\Employees\EmployeeLedger.resx">
-      <DependentUpon>EmployeeLedger.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\UI\Employees\EmployeesLedger.resx">
+      <DependentUpon>EmployeesLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\Invoices\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
@@ -272,6 +356,39 @@
     <EmbeddedResource Include="Screens\UI\View\ViewSale.resx">
       <DependentUpon>ViewSale.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetForReports\LedgerDataSet.xsc">
+      <DependentUpon>LedgerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForReports\LedgerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LedgerDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForReports\LedgerDataSet.xss">
+      <DependentUpon>LedgerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForReports\PurchaseDataSet.xsc">
+      <DependentUpon>PurchaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForReports\PurchaseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PurchaseDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForReports\PurchaseDataSet.xss">
+      <DependentUpon>PurchaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForReports\SaleDataSet.xsc">
+      <DependentUpon>SaleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForReports\SaleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaleDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForReports\SaleDataSet.xss">
+      <DependentUpon>SaleDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -289,13 +406,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
-    <Content Include="WarHouseSystem.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="WarHouseSystem_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>WarHouseSystem.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -308,6 +418,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHouseSystem.General;
+using WareHouseSystem.Reports;
 using WareHouseSystem.Screens.UI.Manage;
 
 namespace WareHouseSystem.Screens.UI.Invoices
@@ -624,6 +625,40 @@ namespace WareHouseSystem.Screens.UI.Invoices
         {
             if(!first)
                 GetCost();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Item", typeof(string));
+            dt.Columns.Add("Weight", typeof(double));
+            dt.Columns.Add("Bags", typeof(Int32));
+            dt.Columns.Add("NetWeight", typeof(double));
+            dt.Columns.Add("Rate", typeof(decimal));
+            dt.Columns.Add("Total", typeof(string));
+
+            DataRow dr;
+            foreach (DataGridViewRow row in GDVitemDetail.Rows)
+            {
+                dr = dt.NewRow();
+
+                dr[0] = row.Cells[2].Value.ToString();
+                dr[1] = Convert.ToDouble(row.Cells[3].Value);
+                dr[2] = Convert.ToInt32(row.Cells[4].Value);
+                dr[3] = Convert.ToDouble(row.Cells[5].Value);
+                dr[4] = Convert.ToDecimal(row.Cells[6].Value);
+                dr[5] = Convert.ToDecimal(row.Cells[7].Value);
+
+                dt.Rows.Add(dr);
+            }
+            InvoiceReportScreen rc = new InvoiceReportScreen();
+            rc.ReportAddress = "F:\\Projects\\Software C#\\WareHouseSystem\\Reports\\PurchaseReport.rpt";
+            rc.ReportDataSet = dt;
+            rc.PName = SupName.Text;
+            rc.InvoiceDate = dateInvoice.Value.Date;
+            rc.InvoiceId = PurchaseId;
+            rc.Show();
         }
     }
 }

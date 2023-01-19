@@ -63,7 +63,7 @@
             this.UserRecords.Controls.Add(this.btnSearch);
             this.UserRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserRecords.ForeColor = System.Drawing.Color.Black;
-            this.UserRecords.Location = new System.Drawing.Point(12, 71);
+            this.UserRecords.Location = new System.Drawing.Point(12, 63);
             this.UserRecords.Name = "UserRecords";
             this.UserRecords.Size = new System.Drawing.Size(824, 481);
             this.UserRecords.TabIndex = 131;
@@ -113,7 +113,7 @@
             this.ViewReocord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewDetailsToolStripMenuItem});
             this.ViewReocord.Name = "contextMenuStrip1";
-            this.ViewReocord.Size = new System.Drawing.Size(193, 48);
+            this.ViewReocord.Size = new System.Drawing.Size(193, 26);
             this.ViewReocord.Opening += new System.ComponentModel.CancelEventHandler(this.ViewReocord_Opening);
             // 
             // viewDetailsToolStripMenuItem

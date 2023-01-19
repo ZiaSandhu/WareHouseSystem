@@ -15,8 +15,9 @@ namespace WareHouseSystem.General
 {
     public class database
     {
+        public static string ConnectionString = @"Data Source=DESKTOP-4CCDK29;Initial Catalog=ScrapSystem;Integrated Security=True";
         //public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ziar4\OneDrive\Documents\WareHouseSystem.mdf;Integrated Security=True;Connect Timeout=30";
-        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Projects\Software C#\WareHouseSystem\WarHouseSystem.mdf;Integrated Security=True";
+        //public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Projects\Software C#\WareHouseSystem\WarHouseSystem.mdf;Integrated Security=True";
 
         public static void PopulatGrid(string query, DataGridView datagrid)
         {
@@ -161,7 +162,7 @@ namespace WareHouseSystem.General
             if (File.Exists(filePath))
             {
                 string[] path = File.ReadLines(filePath).ToArray();
-                string query = "BACKUP DATABASE WarHouseSystem TO DISK='" + path[0] + "\\Buisness_Solution " + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".bak'";
+                string query = "BACKUP DATABASE ScrapSystem TO DISK='" + path[0] + "\\Buisness_Solution " + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".bak'";
                 database.RunQuery(query);
                 MessageBox.Show("Backuped Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }

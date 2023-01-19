@@ -123,7 +123,7 @@
             this.TotalBags.Location = new System.Drawing.Point(235, 77);
             this.TotalBags.Name = "TotalBags";
             this.TotalBags.Size = new System.Drawing.Size(86, 28);
-            this.TotalBags.TabIndex = 3;
+            this.TotalBags.TabIndex = 4;
             this.TotalBags.SelectedIndexChanged += new System.EventHandler(this.TotalBags_SelectedIndexChanged);
             // 
             // label4
@@ -143,7 +143,7 @@
             this.txtItemTotal.Location = new System.Drawing.Point(443, 68);
             this.txtItemTotal.Name = "txtItemTotal";
             this.txtItemTotal.Size = new System.Drawing.Size(128, 29);
-            this.txtItemTotal.TabIndex = 148;
+            this.txtItemTotal.TabIndex = 146;
             // 
             // label2
             // 
@@ -179,7 +179,7 @@
             this.btnAdd.Location = new System.Drawing.Point(712, 25);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 76);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -192,7 +192,7 @@
             this.txtRate.MaxLength = 7;
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(74, 29);
-            this.txtRate.TabIndex = 2;
+            this.txtRate.TabIndex = 3;
             this.txtRate.TextChanged += new System.EventHandler(this.txtRate_TextChanged);
             this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRate_KeyPress);
             // 
@@ -214,7 +214,7 @@
             this.txtWeight.MaxLength = 7;
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(100, 29);
-            this.txtWeight.TabIndex = 1;
+            this.txtWeight.TabIndex = 2;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
@@ -237,7 +237,7 @@
             this.ItemName.Location = new System.Drawing.Point(123, 30);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(198, 28);
-            this.ItemName.TabIndex = 0;
+            this.ItemName.TabIndex = 1;
             this.ItemName.SelectedIndexChanged += new System.EventHandler(this.ItemName_SelectedIndexChanged);
             // 
             // label8
@@ -275,7 +275,7 @@
             this.SupName.Location = new System.Drawing.Point(76, 19);
             this.SupName.Name = "SupName";
             this.SupName.Size = new System.Drawing.Size(208, 28);
-            this.SupName.TabIndex = 149;
+            this.SupName.TabIndex = 0;
             this.SupName.SelectedIndexChanged += new System.EventHandler(this.SupName_SelectedIndexChanged);
             // 
             // btnAddCus
@@ -393,7 +393,7 @@
             this.txtCash.Location = new System.Drawing.Point(74, 249);
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(108, 29);
-            this.txtCash.TabIndex = 5;
+            this.txtCash.TabIndex = 6;
             this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged);
             this.txtCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCash_KeyPress);
             // 
@@ -502,6 +502,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             // 
             // button1
             // 
@@ -511,7 +512,7 @@
             this.button1.Location = new System.Drawing.Point(6, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 50);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 8;
             this.button1.Text = "New ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -527,6 +528,7 @@
             this.btnPrint.TabIndex = 14;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnExit
             // 
@@ -536,7 +538,7 @@
             this.btnExit.Location = new System.Drawing.Point(6, 414);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(92, 50);
-            this.btnExit.TabIndex = 13;
+            this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -549,7 +551,7 @@
             this.btnSave.Location = new System.Drawing.Point(6, 25);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(92, 50);
-            this.btnSave.TabIndex = 10;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);

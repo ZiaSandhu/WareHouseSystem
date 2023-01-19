@@ -94,14 +94,16 @@
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "Search By Name";
+            this.label6.Visible = false;
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(389, 17);
+            this.txtSearch.Location = new System.Drawing.Point(389, 18);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(210, 26);
             this.txtSearch.TabIndex = 8;
+            this.txtSearch.Visible = false;
             // 
             // groupBox1
             // 
@@ -144,7 +146,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(273, 94);
-            this.txtAddress.TabIndex = 3;
+            this.txtAddress.TabIndex = 2;
             // 
             // label8
             // 
@@ -176,7 +178,7 @@
             this.btnExit.Location = new System.Drawing.Point(374, 305);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(115, 50);
-            this.btnExit.TabIndex = 7;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -191,7 +193,7 @@
             this.btnDelete.Location = new System.Drawing.Point(132, 305);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 50);
-            this.btnDelete.TabIndex = 5;
+            this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -204,7 +206,7 @@
             this.btnReset.Location = new System.Drawing.Point(253, 305);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(115, 50);
-            this.btnReset.TabIndex = 6;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
@@ -218,7 +220,7 @@
             this.btnSave.Location = new System.Drawing.Point(11, 305);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 50);
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;

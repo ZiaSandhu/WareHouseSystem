@@ -133,7 +133,7 @@
             this.txtDebit.Location = new System.Drawing.Point(77, 115);
             this.txtDebit.Name = "txtDebit";
             this.txtDebit.Size = new System.Drawing.Size(148, 26);
-            this.txtDebit.TabIndex = 3;
+            this.txtDebit.TabIndex = 2;
             this.txtDebit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDebit_KeyPress);
             // 
             // CusNameBox
@@ -198,7 +198,7 @@
             this.btnReset.Location = new System.Drawing.Point(235, 333);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(115, 50);
-            this.btnReset.TabIndex = 8;
+            this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@
             this.btnSave.Location = new System.Drawing.Point(77, 333);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 50);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -286,10 +286,11 @@
             this.btnReport.Location = new System.Drawing.Point(617, 51);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(77, 35);
-            this.btnReport.TabIndex = 29;
+            this.btnReport.TabIndex = 12;
             this.btnReport.Text = "Report";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // CBdate
             // 
@@ -297,7 +298,7 @@
             this.CBdate.Location = new System.Drawing.Point(372, 27);
             this.CBdate.Name = "CBdate";
             this.CBdate.Size = new System.Drawing.Size(112, 21);
-            this.CBdate.TabIndex = 28;
+            this.CBdate.TabIndex = 7;
             this.CBdate.Text = "Filter By Date";
             this.CBdate.UseVisualStyleBackColor = true;
             // 
@@ -307,7 +308,7 @@
             this.CBName.Location = new System.Drawing.Point(372, 65);
             this.CBName.Name = "CBName";
             this.CBName.Size = new System.Drawing.Size(136, 21);
-            this.CBName.TabIndex = 28;
+            this.CBName.TabIndex = 9;
             this.CBName.Text = "Filter BY Supplier";
             this.CBName.UseVisualStyleBackColor = true;
             // 
@@ -322,7 +323,7 @@
             this.FilterNameBox.Location = new System.Drawing.Point(73, 60);
             this.FilterNameBox.Name = "FilterNameBox";
             this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
-            this.FilterNameBox.TabIndex = 0;
+            this.FilterNameBox.TabIndex = 8;
             // 
             // label6
             // 
@@ -342,7 +343,7 @@
             this.ToDate.Location = new System.Drawing.Point(239, 22);
             this.ToDate.Name = "ToDate";
             this.ToDate.Size = new System.Drawing.Size(127, 26);
-            this.ToDate.TabIndex = 26;
+            this.ToDate.TabIndex = 6;
             // 
             // FromDate
             // 
@@ -351,7 +352,7 @@
             this.FromDate.Location = new System.Drawing.Point(73, 22);
             this.FromDate.Name = "FromDate";
             this.FromDate.Size = new System.Drawing.Size(127, 26);
-            this.FromDate.TabIndex = 26;
+            this.FromDate.TabIndex = 5;
             // 
             // label14
             // 
@@ -383,7 +384,7 @@
             this.btnRefresh.Location = new System.Drawing.Point(522, 51);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(89, 35);
-            this.btnRefresh.TabIndex = 8;
+            this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "    Reset";
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -397,7 +398,7 @@
             this.btnSearch.Location = new System.Drawing.Point(522, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(89, 35);
-            this.btnSearch.TabIndex = 7;
+            this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Search";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;

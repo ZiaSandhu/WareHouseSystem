@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHouseSystem.General;
+using WareHouseSystem.Reports;
 
 namespace WareHouseSystem.Screens.UI.Ledger
 {
@@ -87,7 +88,7 @@ namespace WareHouseSystem.Screens.UI.Ledger
             DateTime selectedDate = FromDate.Value; //get the selected date from the date picker
             string dateString = selectedDate.ToString("yyyy-MM-dd");
             DateTime selectedDate1 = ToDate.Value; //get the selected date from the date picker
-            string dateString1 = selectedDate.ToString("yyyy-MM-dd");
+            string dateString1 = selectedDate1.ToString("yyyy-MM-dd");
             string query = "where Date>='" + dateString + "' and Date<= '" + dateString1 +"'";
             PopulateGrid(query);
         }
@@ -103,7 +104,7 @@ namespace WareHouseSystem.Screens.UI.Ledger
             DateTime selectedDate = FromDate.Value; //get the selected date from the date picker
             string dateString = selectedDate.ToString("yyyy-MM-dd");
             DateTime selectedDate1 = ToDate.Value; //get the selected date from the date picker
-            string dateString1 = selectedDate.ToString("yyyy-MM-dd");
+            string dateString1 = selectedDate1.ToString("yyyy-MM-dd");
             string query = "where Date>='" + dateString + "' and Date<= '" + dateString1 + "' and tsl.SupplierId = "+FilterNameBox.SelectedValue;
             PopulateGrid(query);
         }
@@ -236,6 +237,36 @@ namespace WareHouseSystem.Screens.UI.Ledger
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Title", typeof(string));
+            dt.Columns.Add("InvoiceDue", typeof(decimal));
+            dt.Columns.Add("Income", typeof(decimal));
+            dt.Columns.Add("Date", typeof(string));
+
+            DataRow dr;
+            foreach (DataGridViewRow row in GDVCusLedger.Rows)
+            {
+                dr = dt.NewRow();
+
+                dr[0] = row.Cells[1].Value.ToString();
+                dr[1] = row.Cells[2].Value.ToString();
+                dr[2] = Convert.ToDecimal(row.Cells[4].Value);
+                dr[3] = Convert.ToDecimal(row.Cells[5].Value);
+                dr[4] = row.Cells[6].Value.ToString().Substring(0, 10);
+
+                dt.Rows.Add(dr);
+            }
+            ReportScreen rc = new ReportScreen();
+            rc.ReportAddress = "F:\\Projects\\Software C#\\WareHouseSystem\\Reports\\LedgerReport.rpt";
+            rc.ReportDataSet = dt;
+            rc.RName = "Supplier Ledger Report";
+            rc.Show();
         }
     }
 

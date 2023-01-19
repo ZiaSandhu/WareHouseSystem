@@ -155,7 +155,12 @@ namespace WareHouseSystem.Screens.UI
 
         private void salaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new EmployeeLedger().ShowDialog();
+            new EmployeesLedger().ShowDialog();
+        }
+
+        private void restoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Restore().ShowDialog();
         }
     }
 }

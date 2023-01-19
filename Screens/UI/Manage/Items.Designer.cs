@@ -130,7 +130,7 @@
             this.CatName.Location = new System.Drawing.Point(87, 40);
             this.CatName.Name = "CatName";
             this.CatName.Size = new System.Drawing.Size(254, 28);
-            this.CatName.TabIndex = 150;
+            this.CatName.TabIndex = 0;
             // 
             // label1
             // 
@@ -150,7 +150,7 @@
             this.txtCost.MaxLength = 12;
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(254, 26);
-            this.txtCost.TabIndex = 21;
+            this.txtCost.TabIndex = 2;
             this.txtCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost_KeyPress);
             // 
             // label
@@ -184,7 +184,7 @@
             this.btnDelete.Location = new System.Drawing.Point(135, 201);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 50);
-            this.btnDelete.TabIndex = 5;
+            this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -198,7 +198,7 @@
             this.btnReset.Location = new System.Drawing.Point(256, 201);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(115, 50);
-            this.btnReset.TabIndex = 6;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@
             this.btnSave.Location = new System.Drawing.Point(14, 201);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 50);
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@
             this.txtName.Location = new System.Drawing.Point(87, 74);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(254, 26);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 1;
             // 
             // Items
             // 
