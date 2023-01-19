@@ -472,6 +472,7 @@ namespace WareHouseSystem.Screens.UI.Employees
             bunifuPages1.SetPage("tabPage2");
             BillId = GDVRecord.SelectedRows[0].Cells["Id"].Value.ToString();
             EmpNameBox.SelectedValue = GDVRecord.SelectedRows[0].Cells["EmployeeId"].Value.ToString();
+            MessageBox.Show(BillId);
             string query = "select Name,Weight from tblEmpBillItem where EmpBillId=" + BillId;
             database.PopulatGrid(query, GDVBill);
             CalculateTotalWeight();
