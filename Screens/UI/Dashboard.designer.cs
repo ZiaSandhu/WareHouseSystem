@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblBalance = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,19 +60,31 @@
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageSaleInvoicesRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managePurchaseRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.btnPurchaseInvoice = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripMenuItem5
+            // 
+            toolStripMenuItem5.Name = "toolStripMenuItem5";
+            toolStripMenuItem5.Size = new System.Drawing.Size(22, 20);
+            toolStripMenuItem5.Text = "|";
+            // 
+            // toolStripMenuItem6
+            // 
+            toolStripMenuItem6.Name = "toolStripMenuItem6";
+            toolStripMenuItem6.Size = new System.Drawing.Size(22, 20);
+            toolStripMenuItem6.Text = "|";
             // 
             // panel2
             // 
@@ -228,9 +242,9 @@
             this.ledgerToolStripMenuItem,
             this.toolStripMenuItem4,
             this.backupDatabaseToolStripMenuItem,
-            this.toolStripMenuItem5,
+            toolStripMenuItem5,
             this.viewToolStripMenuItem,
-            this.toolStripMenuItem6,
+            toolStripMenuItem6,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
@@ -341,6 +355,7 @@
             // 
             // toolStripMenuItem4
             // 
+            this.toolStripMenuItem4.Enabled = false;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(22, 20);
             this.toolStripMenuItem4.Text = "|";
@@ -357,22 +372,16 @@
             // backupDataToolStripMenuItem
             // 
             this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.backupDataToolStripMenuItem.Text = "Backup Data";
             this.backupDataToolStripMenuItem.Click += new System.EventHandler(this.backupDataToolStripMenuItem_Click);
             // 
             // restoreToolStripMenuItem
             // 
             this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
-            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.restoreToolStripMenuItem.Text = "Restore Data";
             this.restoreToolStripMenuItem.Click += new System.EventHandler(this.restoreToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem5.Text = "|";
             // 
             // viewToolStripMenuItem
             // 
@@ -396,12 +405,6 @@
             this.managePurchaseRecordToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
             this.managePurchaseRecordToolStripMenuItem1.Text = "Manage Purchase Record";
             this.managePurchaseRecordToolStripMenuItem1.Click += new System.EventHandler(this.managePurchaseRecordToolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem6.Text = "|";
             // 
             // exitToolStripMenuItem
             // 
@@ -429,6 +432,7 @@
             this.btnPurchaseInvoice.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchaseInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchaseInvoice.Image = global::WareHouseSystem.Properties.Resources.invoice_64px;
             this.btnPurchaseInvoice.Location = new System.Drawing.Point(225, 204);
             this.btnPurchaseInvoice.Name = "btnPurchaseInvoice";
             this.btnPurchaseInvoice.Size = new System.Drawing.Size(187, 98);
@@ -440,9 +444,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateBlue;
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::WareHouseSystem.Properties.Resources.return_purchase_64px;
             this.button1.Location = new System.Drawing.Point(32, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 98);
@@ -497,7 +502,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem ledgerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerLedgerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem backupDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backupDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restoreToolStripMenuItem;
@@ -514,7 +518,6 @@
         private System.Windows.Forms.Button btnPurchaseInvoice;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem cashBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageSaleInvoicesRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managePurchaseRecordToolStripMenuItem1;

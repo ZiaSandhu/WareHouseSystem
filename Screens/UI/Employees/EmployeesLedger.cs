@@ -5,10 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHouseSystem.General;
+using WareHouseSystem.Reports;
 
 namespace WareHouseSystem.Screens.UI.Employees
 {
@@ -34,7 +36,14 @@ namespace WareHouseSystem.Screens.UI.Employees
         private void newBillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage("tabPage2");
+            GDVBill.Rows.Clear();
+            TxtWeight.Text = string.Empty;
+            TxtAdvance.Text = string.Empty;
+            TxtTotalWeight.Text = string.Empty;
+            BillId = String.Empty;
+            Advance = 0;
             PopulatePage2Box();
+            IsBillSaved = false;
         }
 
         private void PopulatePage2Box()
@@ -55,6 +64,8 @@ namespace WareHouseSystem.Screens.UI.Employees
         {
             PopulateSalaryGrid();
             PopulateComboBoxes();
+            AddColumns();
+
         }
 
         private void PopulateSalaryGrid(string q="")
@@ -239,9 +250,9 @@ namespace WareHouseSystem.Screens.UI.Employees
         {
             if (RequiredFieldsToAddItem())
             {
-                AddColumns();
                 AddItems();
-                CalculateTotalWeight(); 
+                CalculateTotalWeight();
+                TxtWeight.Text = string.Empty;
             }
         }
 
@@ -274,19 +285,17 @@ namespace WareHouseSystem.Screens.UI.Employees
 
         private void AddItems()
         {
-            int sr = 0;
-            sr=GDVBill.Rows.Count;
-            string[] row = new string[] { (sr+1).ToString(), SupNameBox.Text, TxtWeight.Text.Trim() };
+            string[] row = new string[] { SupNameBox.Text, TxtWeight.Text.Trim() };
             GDVBill.Rows.Add(row);
         }
 
         private void AddColumns()
         {
             DataGridView dg = GDVBill;
-            dg.ColumnCount = 3;
-            dg.Columns[0].Name = "Sr";
-            dg.Columns[1].Name = "Name";
-            dg.Columns[2].Name = "Weight";
+            dg.ColumnCount = 2;
+            dg.Columns[0].Name = "Name";
+            dg.Columns[1].Name = "Weight";
+            dg.Columns["Name"].ReadOnly = true;
         }
 
         private void TxtTotalWeight_TextChanged(object sender, EventArgs e)
@@ -341,7 +350,7 @@ namespace WareHouseSystem.Screens.UI.Employees
         {
             if (GDVBill.Rows.Count > 0)
             {
-                if (IsBillSaved)
+                if (!IsBillSaved)
                 {
                     SavingBill();
 
@@ -367,7 +376,7 @@ namespace WareHouseSystem.Screens.UI.Employees
         {
             DateTime selectedDate = DatePickerBill.Value;
             string dateString = selectedDate.ToString("yyyy-MM-dd");
-            string query = "Update tblEmployeeBill set EmployeeId="+ EmpNameBox.SelectedValue + ",Weight="+ TxtTotalWeight.Text + ",Rate=" + TxtRate.Text + ",Total=" + TxtTotal.Text +"Advance=" + Advance + ",Balance=" + TxtBalance.Text + ",Date'" + dateString + " where Id="+BillId;
+            string query = "Update tblEmployeeBill set EmployeeId="+ EmpNameBox.SelectedValue + ",Weight="+ TxtTotalWeight.Text + ",Rate=" + TxtRate.Text + ",Total=" + TxtTotal.Text +",Advance=" + Advance + ",Balance=" + TxtBalance.Text + ",Date='" + dateString + "' where Id="+BillId;
             database.RunQuery(query);
         }
 
@@ -377,7 +386,7 @@ namespace WareHouseSystem.Screens.UI.Employees
             database.RunQuery(query);
             foreach (DataGridViewRow row in GDVBill.Rows)
             {
-                query = "Update tblEmpBillItem set Name='" + row.Cells["Name"].Value.ToString() + "',Weight=" + row.Cells["Weight"].Value.ToString() + " where EmpBillId="+BillId;
+                query = "Insert Into tblEmpBillItem Values(" + BillId + ",'" + row.Cells["Name"].Value.ToString() + "'," + row.Cells["Weight"].Value.ToString() + ")";
                 database.RunQuery(query);
 
             }
@@ -388,7 +397,15 @@ namespace WareHouseSystem.Screens.UI.Employees
             DateTime selectedDate = DatePickerBill.Value;
             string dateString = selectedDate.ToString("yyyy-MM-dd");
             string query = "Update tblEmployeeSalary set EmployeeId=" + EmpNameBox.SelectedValue + ",Salaray=" + TxtAdvance.Text + ",Date ='" + dateString + "' where Title='Advance_Bill_#_" + BillId + "'";
-            database.RunQuery(query);
+            if (database.RunQuery(query))
+            {
+                return;
+            }
+            else
+            {
+                if(Advance>0)
+                    InsertToEmployeeSalary();
+            }
         }
 
         private void UpdateDailySheetForBill()
@@ -396,7 +413,7 @@ namespace WareHouseSystem.Screens.UI.Employees
             string RefId = "EMB" + BillId;
             DateTime selectedDate = DatePickerBill.Value;
             string dateString = selectedDate.ToString("yyyy-MM-dd");
-            string query = "Update tblDailySheet set Name='" + EmpNameBox.Text + "',Title='Advance_Bill_#_" + BillId + "',Expense=" + TxtAdvance.Text.Trim() + ",Date='" + dateString + "' where RefId='" + RefId + "')";
+            string query = "Update tblDailySheet set Name='" + EmpNameBox.Text + "',Title='Advance_Bill_#_" + BillId + "',Expense=" + TxtAdvance.Text.Trim() + ",Date='" + dateString + "' where RefId='" + RefId + "'";
             database.RunQuery(query);
         }
 
@@ -424,13 +441,13 @@ namespace WareHouseSystem.Screens.UI.Employees
             string RefId = "EMB" + BillId;
             DateTime selectedDate = DatePickerBill.Value;
             string dateString = selectedDate.ToString("yyyy-MM-dd");
-            string query = "Insert into tblDailySheet(Name,Title,Expense,Date,RefId) Values('" + EmpNameBox.Text + "','Advance_Bill_#_" + BillId + "'," + TxtAdvance.Text.Trim() + ",'" + dateString + "','" + RefId + "')";
+            string query = "Insert into tblDailySheet(Name,Title,Expense,Date,RefId) Values('" + EmpNameBox.Text + "','Advance_Bill_#_" + BillId + "'," + Advance + ",'" + dateString + "','" + RefId + "')";
             database.RunQuery(query);
         }
 
         private void InsertToEmpBillItem()
         {
-            string query = "Select max(Id) from tblCustomerLedger";
+            string query = "Select max(Id) from tblEmployeeBill";
             BillId = database.ScalarQuery(query);
             foreach(DataGridViewRow row in GDVBill.Rows)
             {
@@ -469,15 +486,62 @@ namespace WareHouseSystem.Screens.UI.Employees
 
         private void viewDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GDVBill.Rows.Clear();
             bunifuPages1.SetPage("tabPage2");
+            PopulatePage2Box();
             BillId = GDVRecord.SelectedRows[0].Cells["Id"].Value.ToString();
             EmpNameBox.SelectedValue = GDVRecord.SelectedRows[0].Cells["EmployeeId"].Value.ToString();
-            MessageBox.Show(BillId);
             string query = "select Name,Weight from tblEmpBillItem where EmpBillId=" + BillId;
-            database.PopulatGrid(query, GDVBill);
+            DataTable table=database.GetTable(query);
+            foreach(DataRow row in table.Rows)
+            {
+                string[] row1 = new string[]
+                {
+                    row[0].ToString(),
+                    row[1].ToString(),
+                };
+                GDVBill.Rows.Add(row1);
+            }
             CalculateTotalWeight();
             TxtAdvance.Text = GDVRecord.SelectedRows[0].Cells["Advance"].Value.ToString();
             IsBillSaved = true;
+        }
+
+        private void GDVBill_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            CalculateTotalWeight();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Weight", typeof(double));
+
+            DataRow row;
+            foreach(DataGridViewRow row1 in GDVBill.Rows)
+            {
+                row = table.NewRow();
+
+                row[0] = row1.Cells["Name"].ToString();
+                row[1] = row1.Cells["Weight"].ToString();
+
+                table.Rows.Add(row);
+            }
+            EmployeeBillScreen rc = new EmployeeBillScreen();
+            rc.ReportAddress = "F:\\Projects\\Software C#\\WareHouseSystem\\Reports\\EmployeeBill.rpt";
+            rc.ReportDataSet = table;
+            DateTime selectedDate = DatePickerBill.Value;
+            string dateString = selectedDate.ToString("yyyy-MM-dd");
+            rc.Name = EmpNameBox.Text;
+            rc.Date = dateString;
+            rc.TotalWeight = TxtTotalWeight.Text;
+            rc.Total = TxtTotal.Text;
+            rc.Rate = TxtRate.Text;
+            rc.Advance = TxtAdvance.Text;
+            rc.Balance = TxtBalance.Text;
+            rc.InvoiceId = BillId;
+            rc.Show();
         }
     }
 }

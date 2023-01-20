@@ -26,7 +26,7 @@
     <ProductName>ScrapStockSystem</ProductName>
     <PublisherName>Zia Ur Rehman</PublisherName>
     <SuiteName>WareHouseSystem</SuiteName>
-    <ApplicationRevision>20</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -98,6 +98,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetForReports\EmployeeBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeBill.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetForReports\LedgerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +124,18 @@
     <Compile Include="General\database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\EmployeeBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeBillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeBillScreen.Designer.cs">
+      <DependentUpon>EmployeeBillScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\InvoiceReportScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,7 +294,15 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\EmployeeBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeBillScreen.resx">
+      <DependentUpon>EmployeeBillScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\InvoiceReportScreen.resx">
       <DependentUpon>InvoiceReportScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +381,17 @@
     <EmbeddedResource Include="Screens\UI\View\ViewSale.resx">
       <DependentUpon>ViewSale.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetForReports\EmployeeBill.xsc">
+      <DependentUpon>EmployeeBill.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForReports\EmployeeBill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeeBill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForReports\EmployeeBill.xss">
+      <DependentUpon>EmployeeBill.xsd</DependentUpon>
+    </None>
     <None Include="DataSetForReports\LedgerDataSet.xsc">
       <DependentUpon>LedgerDataSet.xsd</DependentUpon>
     </None>
@@ -405,6 +441,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\login-removebg.png" />
+    <None Include="Images\login_30px.png" />
+    <None Include="Images\Logout_32px.png" />
+    <None Include="Images\invoice_64px.png" />
+    <None Include="Images\return_purchase_64px.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>

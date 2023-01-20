@@ -57,3 +57,4 @@ F:\Projects\Software C#\WareHouseSystem\bin\Debug\Bunifu.UI.WinForms.BunifuPages
 F:\Projects\Software C#\WareHouseSystem\bin\Debug\Bunifu.Core.dll
 F:\Projects\Software C#\WareHouseSystem\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Employees.EmployeesLedger.resources
+F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Reports.EmployeeBillScreen.resources

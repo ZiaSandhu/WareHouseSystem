@@ -593,7 +593,6 @@
             // GDVBill
             // 
             this.GDVBill.AllowUserToAddRows = false;
-            this.GDVBill.AllowUserToDeleteRows = false;
             this.GDVBill.AllowUserToResizeRows = false;
             this.GDVBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GDVBill.BackgroundColor = System.Drawing.SystemColors.MenuBar;
@@ -602,18 +601,18 @@
             this.GDVBill.Location = new System.Drawing.Point(554, 56);
             this.GDVBill.MultiSelect = false;
             this.GDVBill.Name = "GDVBill";
-            this.GDVBill.ReadOnly = true;
             this.GDVBill.RowHeadersVisible = false;
             this.GDVBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GDVBill.Size = new System.Drawing.Size(495, 296);
             this.GDVBill.TabIndex = 47;
+            this.GDVBill.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GDVBill_CellEndEdit);
             // 
             // ViewReocord
             // 
             this.ViewReocord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewDetailsToolStripMenuItem});
             this.ViewReocord.Name = "contextMenuStrip1";
-            this.ViewReocord.Size = new System.Drawing.Size(193, 48);
+            this.ViewReocord.Size = new System.Drawing.Size(193, 26);
             // 
             // viewDetailsToolStripMenuItem
             // 
@@ -643,6 +642,7 @@
             this.button4.Text = "Print";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label16
             // 
