@@ -26,7 +26,7 @@
     <ProductName>ScrapStockSystem</ProductName>
     <PublisherName>Zia Ur Rehman</PublisherName>
     <SuiteName>WareHouseSystem</SuiteName>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

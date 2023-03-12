@@ -205,7 +205,7 @@ namespace WareHouseSystem.Screens.UI.Employees
             string dateString = selectedDate.ToString("yyyy-MM-dd");
             DateTime selectedDate1 = ToDate.Value;
             string dateString1 = selectedDate1.ToString("yyyy-MM-dd");
-            string query = "where Date>='" + dateString + "' and Date<= '" + dateString1 + "'";
+            string query = "where tsl.Date>='" + dateString + "' and tsl.Date<= '" + dateString1 + "'";
             PopulateSalaryGrid(query);
         }
 
@@ -221,7 +221,7 @@ namespace WareHouseSystem.Screens.UI.Employees
             string dateString = selectedDate.ToString("yyyy-MM-dd");
             DateTime selectedDate1 = ToDate.Value;
             string dateString1 = selectedDate1.ToString("yyyy-MM-dd");
-            string query = "where Date>='" + dateString + "' and Date<= '" + dateString1 + "' and tsl.EmployeeId = " + FilterNameBox.SelectedValue;
+            string query = "where tsl.Date>='" + dateString + "' and tsl.Date<= '" + dateString1 + "' and tsl.EmployeeId = " + FilterNameBox.SelectedValue;
             PopulateSalaryGrid(query);
         }
 
@@ -543,5 +543,60 @@ namespace WareHouseSystem.Screens.UI.Employees
             rc.InvoiceId = BillId;
             rc.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked && checkBox2.Checked)//both check boxes are checked
+            {
+                //filter by date and name
+                FilterByNameDateBill();
+            }
+            else if (!checkBox1.Checked && checkBox2.Checked)//Name checkbox is checked
+            {
+                //FilterName by name without date
+                FilterByNameWithoutDateBill();
+            }
+            else if (checkBox1.Checked & !checkBox2.Checked)//date check box is checked
+            {
+                //filter by date
+                FilterByDateBill();
+            }
+            else
+                MessageBox.Show("NO Selection", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void FilterByNameDateBill()
+        {
+            DateTime selectedDate = dateTimePicker2.Value;
+            string dateString = selectedDate.ToString("yyyy-MM-dd");
+            DateTime selectedDate1 = dateTimePicker1.Value;
+            string dateString1 = selectedDate1.ToString("yyyy-MM-dd");
+            string query = "where tsl.Date>='" + dateString + "' and tsl.Date<= '" + dateString1 + "' and tsl.EmployeeId = " + comboBox1.SelectedValue;
+            PopulaterecordGrid(query);
+        }
+
+        private void FilterByNameWithoutDateBill()
+        {
+            string query = "where tsl.EmployeeId = " + comboBox1.SelectedValue;
+            PopulaterecordGrid(query);
+        }
+
+        private void FilterByDateBill()
+        {
+
+            DateTime selectedDate = dateTimePicker2.Value;
+            string dateString = selectedDate.ToString("yyyy-MM-dd");
+            DateTime selectedDate1 = dateTimePicker1.Value;
+            string dateString1 = selectedDate1.ToString("yyyy-MM-dd");
+            string query = "where tsl.Date>='" + dateString + "' and tsl.Date<= '" + dateString1 + "'";
+            PopulaterecordGrid(query);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PopulaterecordGrid();
+        }
+
+       
     }
 }

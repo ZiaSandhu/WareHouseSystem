@@ -180,10 +180,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(20, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage3;
+            this.bunifuPages1.PageIndex = 2;
+            this.bunifuPages1.PageName = "tabPage3";
+            this.bunifuPages1.PageTitle = "tabPage3";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1082, 560);
             this.bunifuPages1.TabIndex = 18;
@@ -1006,26 +1006,28 @@
             this.button5.BackColor = System.Drawing.SystemColors.Highlight;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(704, 59);
+            this.button5.Location = new System.Drawing.Point(524, 57);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(114, 35);
             this.button5.TabIndex = 8;
             this.button5.Text = "    Reset";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Firebrick;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(704, 21);
+            this.button6.Location = new System.Drawing.Point(524, 19);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(114, 35);
             this.button6.TabIndex = 7;
             this.button6.Text = "Search";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // EmployeesLedger
             // 
