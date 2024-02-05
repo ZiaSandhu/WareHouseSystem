@@ -96,7 +96,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1066, 116);
+            this.groupBox1.Size = new System.Drawing.Size(998, 116);
             this.groupBox1.TabIndex = 124;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Product";
@@ -267,10 +267,11 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(13, 70);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1066, 57);
+            this.groupBox2.Size = new System.Drawing.Size(998, 57);
             this.groupBox2.TabIndex = 125;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Invoice Detail";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // SupName
             // 
@@ -300,7 +301,7 @@
             // dateInvoice
             // 
             this.dateInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateInvoice.Location = new System.Drawing.Point(765, 21);
+            this.dateInvoice.Location = new System.Drawing.Point(712, 21);
             this.dateInvoice.Name = "dateInvoice";
             this.dateInvoice.Size = new System.Drawing.Size(280, 26);
             this.dateInvoice.TabIndex = 135;
@@ -311,7 +312,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(706, 22);
+            this.label7.Location = new System.Drawing.Point(653, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 25);
             this.label7.TabIndex = 134;
@@ -348,7 +349,7 @@
             this.GDVitemDetail.RowTemplate.Height = 30;
             this.GDVitemDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GDVitemDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVitemDetail.Size = new System.Drawing.Size(736, 470);
+            this.GDVitemDetail.Size = new System.Drawing.Size(694, 470);
             this.GDVitemDetail.TabIndex = 126;
             this.GDVitemDetail.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GDVitemDetail_CellEndEdit);
             this.GDVitemDetail.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.GDVitemDetail_UserDeletedRow);
@@ -404,9 +405,9 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(754, 255);
+            this.groupBox3.Location = new System.Drawing.Point(712, 255);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(215, 470);
+            this.groupBox3.Size = new System.Drawing.Size(189, 470);
             this.groupBox3.TabIndex = 127;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Transaction Detail";
@@ -528,7 +529,7 @@
             this.groupBox4.Controls.Add(this.btnSave);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(976, 255);
+            this.groupBox4.Location = new System.Drawing.Point(907, 255);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(103, 470);
             this.groupBox4.TabIndex = 128;
@@ -604,13 +605,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 732);
+            this.ClientSize = new System.Drawing.Size(1022, 732);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.GDVitemDetail);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MinimumSize = new System.Drawing.Size(1102, 726);
+            this.MinimumSize = new System.Drawing.Size(1022, 718);
             this.Name = "Purchase";
             this.Text = "Purchase Invoice";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;

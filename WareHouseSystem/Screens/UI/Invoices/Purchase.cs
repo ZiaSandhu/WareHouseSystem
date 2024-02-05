@@ -382,5 +382,10 @@ namespace WareHouseSystem.Screens.UI.Invoices
                 new Purchase().ShowDialog();
             }
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
