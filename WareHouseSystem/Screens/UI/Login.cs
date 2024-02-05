@@ -33,7 +33,7 @@ namespace WareHouseSystem.Screens.UI
                 CredentialValidaiton();
             }
         }
-
+        
         private void CredentialValidaiton()
         {
             using(SqlConnection con=new SqlConnection(database.ConnectionString))
@@ -68,7 +68,7 @@ namespace WareHouseSystem.Screens.UI
         {
             using (SqlConnection con = new SqlConnection(database.ConnectionString))
             {
-                string query = "INSERT INTO tblLoginHistory Values('"+txtName.Text.Trim()+"','"+System.DateTime.Now+"')";
+                string query = "INSERT INTO tblLoginHistory(Name,Date) Values('"+txtName.Text.Trim()+"','"+System.DateTime.Now+"')";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -104,5 +104,7 @@ namespace WareHouseSystem.Screens.UI
             else
                 txtPassword.UseSystemPasswordChar = true;
         }
+
+       
     }
 }

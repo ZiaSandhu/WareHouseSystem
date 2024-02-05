@@ -82,7 +82,7 @@ namespace WareHouseSystem.Screens.UI.Manage
         private void InsertValues()
         {
             GetBalance();
-            string query = "Insert into tblSuppliers Values('"+txtName.Text.Trim()+"','"+txtPhone.Text.Trim()+"','"+txtAddress.Text.Trim()+"',"+bal+")";
+            string query = "Insert into tblSuppliers(name,phone,location,balance) Values('"+txtName.Text.Trim()+"','"+txtPhone.Text.Trim()+"','"+txtAddress.Text.Trim()+"',"+bal+")";
             if (database.RunQuery(query))
             {
                 MessageBox.Show("Supplier Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,12 +109,12 @@ namespace WareHouseSystem.Screens.UI.Manage
                 txtName.Focus();
                 return false;
             }
-            if (txtPhone.Text == string.Empty)
-            {
-                MessageBox.Show("Phone is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPhone.Focus();
-                return false;
-            }
+            //if (txtPhone.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Phone is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    txtPhone.Focus();
+            //    return false;
+            //}
             return true;
         }
 
@@ -148,8 +148,8 @@ namespace WareHouseSystem.Screens.UI.Manage
                 this.SupplierName = GDVSupplier.CurrentRow.Cells[1].Value.ToString();
                 txtName.Text = this.SupplierName;
                 txtPhone.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
-                txtAddress.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
-                txtBalance.Text = GDVSupplier.CurrentRow.Cells[4].Value.ToString();
+                txtAddress.Text = GDVSupplier.CurrentRow.Cells[4].Value.ToString();
+                txtBalance.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
 
                 btnDelete.Enabled = true;
                 btnSave.Text = "Update";
@@ -175,6 +175,11 @@ namespace WareHouseSystem.Screens.UI.Manage
         private void txtBalance_KeyPress(object sender, KeyPressEventArgs e)
         {
             database.DigitValidation(sender, e);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -13,7 +13,8 @@ namespace WareHouseSystem.General
 {
     public class database
     {
-        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ziar4\OneDrive\Documents\WareHouseSystem.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string ConnectionString = @"Data Source=DESKTOP-1ULGF16\SQLEXPRESS;Initial Catalog=warehouse;Integrated Security=True";
+
 
         public static void PopulatGrid(string query, DataGridView datagrid)
         {

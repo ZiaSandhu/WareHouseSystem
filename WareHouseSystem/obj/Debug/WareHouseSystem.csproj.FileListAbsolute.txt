@@ -19,3 +19,23 @@ F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Man
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Customers.resources
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Products.resources
 F:\Projects\Software C#\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Invoices.Purchase.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\WareHouseSystem.exe.config
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\WareHouseSystem.exe
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\WareHouseSystem.pdb
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\MetroFramework.dll
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Properties.Resources.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.MetroTemplate.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Dashboard.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Invoices.Purchase.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Login.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Customers.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Products.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Suppliers.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Users.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CopyComplete
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.exe
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.pdb

@@ -63,5 +63,10 @@ namespace WareHouseSystem.Screens.UI
         {
             new Purchase().ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

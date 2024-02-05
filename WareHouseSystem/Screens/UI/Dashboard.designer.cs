@@ -92,7 +92,7 @@
             this.panel2.Controls.Add(this.lblTdSale);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(719, 204);
+            this.panel2.Location = new System.Drawing.Point(654, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(370, 243);
             this.panel2.TabIndex = 2;
@@ -214,7 +214,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(20, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1069, 89);
+            this.panel1.Size = new System.Drawing.Size(1004, 89);
             this.panel1.TabIndex = 1;
             // 
             // lblTime
@@ -223,7 +223,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(869, 9);
+            this.lblTime.Location = new System.Drawing.Point(804, 9);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(53, 28);
             this.lblTime.TabIndex = 4;
@@ -235,7 +235,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(706, 40);
+            this.lblDate.Location = new System.Drawing.Point(641, 40);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(54, 28);
             this.lblDate.TabIndex = 3;
@@ -268,7 +268,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1069, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -472,6 +472,7 @@
             this.button3.TabIndex = 7;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -517,7 +518,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 749);
+            this.ClientSize = new System.Drawing.Size(1044, 749);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
