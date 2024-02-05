@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblBalance = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -39,14 +41,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +59,6 @@
             this.customerLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cashBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,10 +74,28 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnPurchaseInvoice = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Enabled = false;
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
+            toolStripMenuItem2.Text = "|";
+            // 
+            // toolStripMenuItem4
+            // 
+            toolStripMenuItem4.Enabled = false;
+            toolStripMenuItem4.Name = "toolStripMenuItem4";
+            toolStripMenuItem4.Size = new System.Drawing.Size(22, 20);
+            toolStripMenuItem4.Text = "|";
             // 
             // panel2
             // 
@@ -208,38 +227,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.lblUser);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(20, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1004, 89);
             this.panel1.TabIndex = 1;
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(804, 9);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(53, 28);
-            this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "time";
-            // 
-            // lblDate
-            // 
-            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(641, 40);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(54, 28);
-            this.lblDate.TabIndex = 3;
-            this.lblDate.Text = "Date";
             // 
             // lblUser
             // 
@@ -252,15 +246,54 @@
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Welcome User";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblDate);
+            this.panel3.Controls.Add(this.lblTime);
+            this.panel3.Location = new System.Drawing.Point(634, 9);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(269, 77);
+            this.panel3.TabIndex = 5;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(15, 35);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(54, 28);
+            this.lblDate.TabIndex = 3;
+            this.lblDate.Text = "Date";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(123, 9);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(53, 28);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "time";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.toolStripMenuItem2,
+            toolStripMenuItem2,
             this.administrationToolStripMenuItem,
             this.toolStripMenuItem3,
             this.ledgerToolStripMenuItem,
-            this.toolStripMenuItem4,
+            toolStripMenuItem4,
             this.backupDatabaseToolStripMenuItem,
             this.toolStripMenuItem5,
             this.viewToolStripMenuItem,
@@ -292,13 +325,6 @@
             this.purchaseInvoiceToolStripMenuItem.Name = "purchaseInvoiceToolStripMenuItem";
             this.purchaseInvoiceToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.purchaseInvoiceToolStripMenuItem.Text = "Purchase Invoice";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Enabled = false;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem2.Text = "|";
             // 
             // administrationToolStripMenuItem
             // 
@@ -374,12 +400,6 @@
             this.cashBookToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.cashBookToolStripMenuItem.Text = "CashBook";
             // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem4.Text = "|";
-            // 
             // backupDatabaseToolStripMenuItem
             // 
             this.backupDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -403,6 +423,7 @@
             // 
             // toolStripMenuItem5
             // 
+            this.toolStripMenuItem5.Enabled = false;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(22, 20);
             this.toolStripMenuItem5.Text = "|";
@@ -437,6 +458,7 @@
             // 
             // toolStripMenuItem6
             // 
+            this.toolStripMenuItem6.Enabled = false;
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(22, 20);
             this.toolStripMenuItem6.Text = "|";
@@ -514,11 +536,19 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(461, 283);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 749);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -536,6 +566,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -553,7 +585,6 @@
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageCustomersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageProductsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDate;
@@ -561,7 +592,6 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.ToolStripMenuItem manageSuppliersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseInvoiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem ledgerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerLedgerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
@@ -590,5 +620,7 @@
         private System.Windows.Forms.ToolStripMenuItem managePurchaseRecordToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem stockValueToolStripMenuItem;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
