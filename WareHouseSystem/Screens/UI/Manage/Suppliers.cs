@@ -11,7 +11,7 @@ using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.Manage
 {
-    public partial class Suppliers : MetroTemplate
+    public partial class Suppliers : Form
     {
         private string SupplierName { get; set; }
         private string SupplierID { get; set; }

@@ -72,11 +72,47 @@
     <Compile Include="Screens\UI\Dashboard.designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\UI\Dashboard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\Dashboard2.Designer.cs">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\expenses\Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\expenses\Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\UI\Invoices\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\UI\Invoices\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\customerLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\customerLedger.Designer.cs">
+      <DependentUpon>customerLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\DailySheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\DailySheet.Designer.cs">
+      <DependentUpon>DailySheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\SupplierLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\SupplierLedger.Designer.cs">
+      <DependentUpon>SupplierLedger.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UI\Login.cs">
       <SubType>Form</SubType>
@@ -123,8 +159,26 @@
     <EmbeddedResource Include="Screens\UI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\Dashboard2.resx">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\expenses\Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\Invoices\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\ledger\customerLedger.resx">
+      <DependentUpon>customerLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\ledger\DailySheet.resx">
+      <DependentUpon>DailySheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\ledger\Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\ledger\SupplierLedger.resx">
+      <DependentUpon>SupplierLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

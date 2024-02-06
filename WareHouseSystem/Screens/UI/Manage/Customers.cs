@@ -12,7 +12,7 @@ using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.Manage
 {
-    public partial class Customers : MetroTemplate
+    public partial class Customers : Form
     {
         public Customers()
         {

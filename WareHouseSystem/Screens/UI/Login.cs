@@ -59,9 +59,10 @@ namespace WareHouseSystem.Screens.UI
         private void ShowDashboard()
         {
             this.Hide();
-            Dashboard dashboard = new Dashboard();
-            dashboard.SettingLabel(txtName.Text);
-            dashboard.Show();
+            //Dashboard dashboard = new Dashboard();
+            //dashboard.SettingLabel(txtName.Text);
+            //dashboard.Show();
+            new Dashboard2().Show();
         }
 
         private void SaveLoginHistory()
