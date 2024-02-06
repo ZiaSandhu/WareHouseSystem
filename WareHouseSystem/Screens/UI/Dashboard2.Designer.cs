@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btnLedgers = new System.Windows.Forms.Button();
-            this.panelEmployees = new System.Windows.Forms.Panel();
-            this.btnEmployeeLedger = new System.Windows.Forms.Button();
-            this.btnEmployeeList = new System.Windows.Forms.Button();
-            this.btnEmployees = new System.Windows.Forms.Button();
-            this.panelSuppliers = new System.Windows.Forms.Panel();
-            this.btnSupplierLedger = new System.Windows.Forms.Button();
-            this.btnSupplierList = new System.Windows.Forms.Button();
-            this.btnSuppliers = new System.Windows.Forms.Button();
-            this.panelCustomer = new System.Windows.Forms.Panel();
+            this.panelLedger = new System.Windows.Forms.Panel();
+            this.btnDailySheet = new System.Windows.Forms.Button();
             this.btnCustomerLedger = new System.Windows.Forms.Button();
+            this.btnSupplierLedger = new System.Windows.Forms.Button();
+            this.btnEmployeeLedger = new System.Windows.Forms.Button();
+            this.btnLedgers = new System.Windows.Forms.Button();
+            this.panelManagement = new System.Windows.Forms.Panel();
+            this.btnProductList = new System.Windows.Forms.Button();
+            this.btnEmployeeList = new System.Windows.Forms.Button();
+            this.btnSupplierList = new System.Windows.Forms.Button();
             this.btnCustomerList = new System.Windows.Forms.Button();
-            this.btnCustomers = new System.Windows.Forms.Button();
+            this.btnManagement = new System.Windows.Forms.Button();
             this.btnExpenses = new System.Windows.Forms.Button();
             this.panelInvoiceSubmenu = new System.Windows.Forms.Panel();
             this.btnViewPurchaseInvoice = new System.Windows.Forms.Button();
@@ -55,9 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelSide.SuspendLayout();
-            this.panelEmployees.SuspendLayout();
-            this.panelSuppliers.SuspendLayout();
-            this.panelCustomer.SuspendLayout();
+            this.panelLedger.SuspendLayout();
+            this.panelManagement.SuspendLayout();
             this.panelInvoiceSubmenu.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -66,13 +64,10 @@
             // 
             this.panelSide.AutoScroll = true;
             this.panelSide.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelSide.Controls.Add(this.panelLedger);
             this.panelSide.Controls.Add(this.btnLedgers);
-            this.panelSide.Controls.Add(this.panelEmployees);
-            this.panelSide.Controls.Add(this.btnEmployees);
-            this.panelSide.Controls.Add(this.panelSuppliers);
-            this.panelSide.Controls.Add(this.btnSuppliers);
-            this.panelSide.Controls.Add(this.panelCustomer);
-            this.panelSide.Controls.Add(this.btnCustomers);
+            this.panelSide.Controls.Add(this.panelManagement);
+            this.panelSide.Controls.Add(this.btnManagement);
             this.panelSide.Controls.Add(this.btnExpenses);
             this.panelSide.Controls.Add(this.panelInvoiceSubmenu);
             this.panelSide.Controls.Add(this.btnInvoices);
@@ -83,89 +78,51 @@
             this.panelSide.Size = new System.Drawing.Size(200, 600);
             this.panelSide.TabIndex = 0;
             // 
-            // btnLedgers
+            // panelLedger
             // 
-            this.btnLedgers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLedgers.FlatAppearance.BorderSize = 0;
-            this.btnLedgers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLedgers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLedgers.ForeColor = System.Drawing.Color.White;
-            this.btnLedgers.Location = new System.Drawing.Point(0, 774);
-            this.btnLedgers.Name = "btnLedgers";
-            this.btnLedgers.Size = new System.Drawing.Size(183, 45);
-            this.btnLedgers.TabIndex = 10;
-            this.btnLedgers.Text = "Ledgers";
-            this.btnLedgers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLedgers.UseVisualStyleBackColor = true;
-            this.btnLedgers.Click += new System.EventHandler(this.btnLedgers_Click);
+            this.panelLedger.Controls.Add(this.btnDailySheet);
+            this.panelLedger.Controls.Add(this.btnCustomerLedger);
+            this.panelLedger.Controls.Add(this.btnSupplierLedger);
+            this.panelLedger.Controls.Add(this.btnEmployeeLedger);
+            this.panelLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLedger.Location = new System.Drawing.Point(0, 624);
+            this.panelLedger.Name = "panelLedger";
+            this.panelLedger.Size = new System.Drawing.Size(183, 217);
+            this.panelLedger.TabIndex = 11;
             // 
-            // panelEmployees
+            // btnDailySheet
             // 
-            this.panelEmployees.Controls.Add(this.btnEmployeeLedger);
-            this.panelEmployees.Controls.Add(this.btnEmployeeList);
-            this.panelEmployees.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEmployees.Location = new System.Drawing.Point(0, 678);
-            this.panelEmployees.Name = "panelEmployees";
-            this.panelEmployees.Size = new System.Drawing.Size(183, 96);
-            this.panelEmployees.TabIndex = 9;
+            this.btnDailySheet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDailySheet.FlatAppearance.BorderSize = 0;
+            this.btnDailySheet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDailySheet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDailySheet.ForeColor = System.Drawing.Color.White;
+            this.btnDailySheet.Location = new System.Drawing.Point(0, 129);
+            this.btnDailySheet.Name = "btnDailySheet";
+            this.btnDailySheet.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDailySheet.Size = new System.Drawing.Size(183, 45);
+            this.btnDailySheet.TabIndex = 7;
+            this.btnDailySheet.Text = "Daily Sheet";
+            this.btnDailySheet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDailySheet.UseVisualStyleBackColor = true;
+            this.btnDailySheet.Click += new System.EventHandler(this.btnDailySheet_Click);
             // 
-            // btnEmployeeLedger
+            // btnCustomerLedger
             // 
-            this.btnEmployeeLedger.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployeeLedger.FlatAppearance.BorderSize = 0;
-            this.btnEmployeeLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployeeLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployeeLedger.ForeColor = System.Drawing.Color.White;
-            this.btnEmployeeLedger.Location = new System.Drawing.Point(0, 45);
-            this.btnEmployeeLedger.Name = "btnEmployeeLedger";
-            this.btnEmployeeLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnEmployeeLedger.Size = new System.Drawing.Size(183, 45);
-            this.btnEmployeeLedger.TabIndex = 3;
-            this.btnEmployeeLedger.Text = "Employee Ledger";
-            this.btnEmployeeLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeeLedger.UseVisualStyleBackColor = true;
-            // 
-            // btnEmployeeList
-            // 
-            this.btnEmployeeList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployeeList.FlatAppearance.BorderSize = 0;
-            this.btnEmployeeList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployeeList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployeeList.ForeColor = System.Drawing.Color.White;
-            this.btnEmployeeList.Location = new System.Drawing.Point(0, 0);
-            this.btnEmployeeList.Name = "btnEmployeeList";
-            this.btnEmployeeList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnEmployeeList.Size = new System.Drawing.Size(183, 45);
-            this.btnEmployeeList.TabIndex = 2;
-            this.btnEmployeeList.Text = "Employee List";
-            this.btnEmployeeList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeeList.UseVisualStyleBackColor = true;
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployees.FlatAppearance.BorderSize = 0;
-            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployees.ForeColor = System.Drawing.Color.White;
-            this.btnEmployees.Location = new System.Drawing.Point(0, 633);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(183, 45);
-            this.btnEmployees.TabIndex = 8;
-            this.btnEmployees.Text = "Employees";
-            this.btnEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.UseVisualStyleBackColor = true;
-            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
-            // 
-            // panelSuppliers
-            // 
-            this.panelSuppliers.Controls.Add(this.btnSupplierLedger);
-            this.panelSuppliers.Controls.Add(this.btnSupplierList);
-            this.panelSuppliers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuppliers.Location = new System.Drawing.Point(0, 537);
-            this.panelSuppliers.Name = "panelSuppliers";
-            this.panelSuppliers.Size = new System.Drawing.Size(183, 96);
-            this.panelSuppliers.TabIndex = 7;
+            this.btnCustomerLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerLedger.FlatAppearance.BorderSize = 0;
+            this.btnCustomerLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerLedger.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerLedger.Location = new System.Drawing.Point(0, 84);
+            this.btnCustomerLedger.Name = "btnCustomerLedger";
+            this.btnCustomerLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnCustomerLedger.Size = new System.Drawing.Size(183, 45);
+            this.btnCustomerLedger.TabIndex = 5;
+            this.btnCustomerLedger.Text = "Customer Ledger";
+            this.btnCustomerLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomerLedger.UseVisualStyleBackColor = true;
+            this.btnCustomerLedger.Click += new System.EventHandler(this.btnCustomerLedger_Click);
             // 
             // btnSupplierLedger
             // 
@@ -177,12 +134,91 @@
             this.btnSupplierLedger.Location = new System.Drawing.Point(0, 45);
             this.btnSupplierLedger.Name = "btnSupplierLedger";
             this.btnSupplierLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSupplierLedger.Size = new System.Drawing.Size(183, 45);
-            this.btnSupplierLedger.TabIndex = 3;
+            this.btnSupplierLedger.Size = new System.Drawing.Size(183, 39);
+            this.btnSupplierLedger.TabIndex = 4;
             this.btnSupplierLedger.Text = "Supplier Ledger";
             this.btnSupplierLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupplierLedger.UseVisualStyleBackColor = true;
             this.btnSupplierLedger.Click += new System.EventHandler(this.btnSupplierLedger_Click);
+            // 
+            // btnEmployeeLedger
+            // 
+            this.btnEmployeeLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeLedger.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeLedger.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeLedger.Location = new System.Drawing.Point(0, 0);
+            this.btnEmployeeLedger.Name = "btnEmployeeLedger";
+            this.btnEmployeeLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEmployeeLedger.Size = new System.Drawing.Size(183, 45);
+            this.btnEmployeeLedger.TabIndex = 3;
+            this.btnEmployeeLedger.Text = "Employee Ledger";
+            this.btnEmployeeLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployeeLedger.UseVisualStyleBackColor = true;
+            this.btnEmployeeLedger.Click += new System.EventHandler(this.btnEmployeeLedger_Click);
+            // 
+            // btnLedgers
+            // 
+            this.btnLedgers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLedgers.FlatAppearance.BorderSize = 0;
+            this.btnLedgers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLedgers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLedgers.ForeColor = System.Drawing.Color.White;
+            this.btnLedgers.Location = new System.Drawing.Point(0, 579);
+            this.btnLedgers.Name = "btnLedgers";
+            this.btnLedgers.Size = new System.Drawing.Size(183, 45);
+            this.btnLedgers.TabIndex = 10;
+            this.btnLedgers.Text = "Ledgers";
+            this.btnLedgers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLedgers.UseVisualStyleBackColor = true;
+            this.btnLedgers.Click += new System.EventHandler(this.btnLedgers_Click);
+            // 
+            // panelManagement
+            // 
+            this.panelManagement.Controls.Add(this.btnProductList);
+            this.panelManagement.Controls.Add(this.btnEmployeeList);
+            this.panelManagement.Controls.Add(this.btnSupplierList);
+            this.panelManagement.Controls.Add(this.btnCustomerList);
+            this.panelManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelManagement.Location = new System.Drawing.Point(0, 396);
+            this.panelManagement.Name = "panelManagement";
+            this.panelManagement.Size = new System.Drawing.Size(183, 183);
+            this.panelManagement.TabIndex = 5;
+            // 
+            // btnProductList
+            // 
+            this.btnProductList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProductList.FlatAppearance.BorderSize = 0;
+            this.btnProductList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductList.ForeColor = System.Drawing.Color.White;
+            this.btnProductList.Location = new System.Drawing.Point(0, 135);
+            this.btnProductList.Name = "btnProductList";
+            this.btnProductList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnProductList.Size = new System.Drawing.Size(183, 45);
+            this.btnProductList.TabIndex = 5;
+            this.btnProductList.Text = "Product List";
+            this.btnProductList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductList.UseVisualStyleBackColor = true;
+            this.btnProductList.Click += new System.EventHandler(this.btnProductList_Click);
+            // 
+            // btnEmployeeList
+            // 
+            this.btnEmployeeList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeList.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeList.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeList.Location = new System.Drawing.Point(0, 90);
+            this.btnEmployeeList.Name = "btnEmployeeList";
+            this.btnEmployeeList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEmployeeList.Size = new System.Drawing.Size(183, 45);
+            this.btnEmployeeList.TabIndex = 4;
+            this.btnEmployeeList.Text = "Employee List";
+            this.btnEmployeeList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployeeList.UseVisualStyleBackColor = true;
+            this.btnEmployeeList.Click += new System.EventHandler(this.btnEmployeeList_Click);
             // 
             // btnSupplierList
             // 
@@ -191,58 +227,15 @@
             this.btnSupplierList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplierList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplierList.ForeColor = System.Drawing.Color.White;
-            this.btnSupplierList.Location = new System.Drawing.Point(0, 0);
+            this.btnSupplierList.Location = new System.Drawing.Point(0, 45);
             this.btnSupplierList.Name = "btnSupplierList";
             this.btnSupplierList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSupplierList.Size = new System.Drawing.Size(183, 45);
-            this.btnSupplierList.TabIndex = 2;
+            this.btnSupplierList.TabIndex = 3;
             this.btnSupplierList.Text = "Supplier List";
             this.btnSupplierList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupplierList.UseVisualStyleBackColor = true;
             this.btnSupplierList.Click += new System.EventHandler(this.btnSupplierList_Click);
-            // 
-            // btnSuppliers
-            // 
-            this.btnSuppliers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSuppliers.FlatAppearance.BorderSize = 0;
-            this.btnSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuppliers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuppliers.ForeColor = System.Drawing.Color.White;
-            this.btnSuppliers.Location = new System.Drawing.Point(0, 492);
-            this.btnSuppliers.Name = "btnSuppliers";
-            this.btnSuppliers.Size = new System.Drawing.Size(183, 45);
-            this.btnSuppliers.TabIndex = 6;
-            this.btnSuppliers.Text = "Suppliers";
-            this.btnSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuppliers.UseVisualStyleBackColor = true;
-            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
-            // 
-            // panelCustomer
-            // 
-            this.panelCustomer.Controls.Add(this.btnCustomerLedger);
-            this.panelCustomer.Controls.Add(this.btnCustomerList);
-            this.panelCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCustomer.Location = new System.Drawing.Point(0, 396);
-            this.panelCustomer.Name = "panelCustomer";
-            this.panelCustomer.Size = new System.Drawing.Size(183, 96);
-            this.panelCustomer.TabIndex = 5;
-            // 
-            // btnCustomerLedger
-            // 
-            this.btnCustomerLedger.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomerLedger.FlatAppearance.BorderSize = 0;
-            this.btnCustomerLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerLedger.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerLedger.Location = new System.Drawing.Point(0, 45);
-            this.btnCustomerLedger.Name = "btnCustomerLedger";
-            this.btnCustomerLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnCustomerLedger.Size = new System.Drawing.Size(183, 45);
-            this.btnCustomerLedger.TabIndex = 3;
-            this.btnCustomerLedger.Text = "Customer Ledger";
-            this.btnCustomerLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomerLedger.UseVisualStyleBackColor = true;
-            this.btnCustomerLedger.Click += new System.EventHandler(this.btnCustomerLedger_Click);
             // 
             // btnCustomerList
             // 
@@ -261,21 +254,21 @@
             this.btnCustomerList.UseVisualStyleBackColor = true;
             this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
             // 
-            // btnCustomers
+            // btnManagement
             // 
-            this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomers.FlatAppearance.BorderSize = 0;
-            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomers.ForeColor = System.Drawing.Color.White;
-            this.btnCustomers.Location = new System.Drawing.Point(0, 351);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(183, 45);
-            this.btnCustomers.TabIndex = 4;
-            this.btnCustomers.Text = "Customers";
-            this.btnCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.UseVisualStyleBackColor = true;
-            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
+            this.btnManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManagement.FlatAppearance.BorderSize = 0;
+            this.btnManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagement.ForeColor = System.Drawing.Color.White;
+            this.btnManagement.Location = new System.Drawing.Point(0, 351);
+            this.btnManagement.Name = "btnManagement";
+            this.btnManagement.Size = new System.Drawing.Size(183, 45);
+            this.btnManagement.TabIndex = 4;
+            this.btnManagement.Text = "Management";
+            this.btnManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManagement.UseVisualStyleBackColor = true;
+            this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
             // 
             // btnExpenses
             // 
@@ -450,9 +443,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard2";
             this.panelSide.ResumeLayout(false);
-            this.panelEmployees.ResumeLayout(false);
-            this.panelSuppliers.ResumeLayout(false);
-            this.panelCustomer.ResumeLayout(false);
+            this.panelLedger.ResumeLayout(false);
+            this.panelManagement.ResumeLayout(false);
             this.panelInvoiceSubmenu.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
@@ -469,18 +461,9 @@
         private System.Windows.Forms.Button btnPurchaseInvoice;
         private System.Windows.Forms.Button btnSaleInvoice;
         private System.Windows.Forms.Button btnLedgers;
-        private System.Windows.Forms.Panel panelEmployees;
-        private System.Windows.Forms.Button btnEmployeeLedger;
-        private System.Windows.Forms.Button btnEmployeeList;
-        private System.Windows.Forms.Button btnEmployees;
-        private System.Windows.Forms.Panel panelSuppliers;
-        private System.Windows.Forms.Button btnSupplierLedger;
-        private System.Windows.Forms.Button btnSupplierList;
-        private System.Windows.Forms.Button btnSuppliers;
-        private System.Windows.Forms.Panel panelCustomer;
-        private System.Windows.Forms.Button btnCustomerLedger;
+        private System.Windows.Forms.Panel panelManagement;
         private System.Windows.Forms.Button btnCustomerList;
-        private System.Windows.Forms.Button btnCustomers;
+        private System.Windows.Forms.Button btnManagement;
         private System.Windows.Forms.Button btnExpenses;
         private System.Windows.Forms.Button btnViewPurchaseInvoice;
         private System.Windows.Forms.Button btnViewSaleInvoice;
@@ -488,5 +471,13 @@
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelLedger;
+        private System.Windows.Forms.Button btnDailySheet;
+        private System.Windows.Forms.Button btnCustomerLedger;
+        private System.Windows.Forms.Button btnSupplierLedger;
+        private System.Windows.Forms.Button btnEmployeeLedger;
+        private System.Windows.Forms.Button btnProductList;
+        private System.Windows.Forms.Button btnEmployeeList;
+        private System.Windows.Forms.Button btnSupplierList;
     }
 }

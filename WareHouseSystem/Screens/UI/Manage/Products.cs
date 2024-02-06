@@ -11,7 +11,7 @@ using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.Manage
 {
-    public partial class Products : MetroTemplate
+    public partial class Products : Form
     {
         public Products()
         {

@@ -22,33 +22,30 @@ namespace WareHouseSystem.Screens.UI
 
         private void customeDesign()
         {
-            panelEmployees.Visible = false;
-            panelCustomer.Visible = false;
+            panelManagement.Visible = false;
             panelInvoiceSubmenu.Visible = false;
-            panelSuppliers.Visible = false;
+            panelLedger.Visible = false;
 
             btnInvoices.Enabled = false;
-            btnEmployees.Enabled = false;
+            btnEmployeeList.Enabled = false;
+            btnEmployeeLedger.Enabled = false;
         }
 
         private void hideSubMenus()
         {
-            if(panelCustomer.Visible)
+            if(panelManagement.Visible)
             {
-                panelCustomer.Visible = false;
+                panelManagement.Visible = false;
             }
             if(panelInvoiceSubmenu.Visible)
             {
                 panelInvoiceSubmenu.Visible = false;
             }
-            if(panelSuppliers.Visible)
+            if(panelLedger.Visible)
             {
-                panelSuppliers.Visible = false;
+                panelLedger.Visible = false;
             }
-            if(panelEmployees.Visible)
-            {
-                panelEmployees.Visible = false;
-            }
+           
         }
 
         private void showSubMenu(Panel subPanel)
@@ -71,20 +68,12 @@ namespace WareHouseSystem.Screens.UI
             showSubMenu(panelInvoiceSubmenu);
         }
 
-        private void btnCustomers_Click(object sender, EventArgs e)
+        private void btnManagement_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelCustomer);
+            showSubMenu(panelManagement);
         }
 
-        private void btnSuppliers_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelSuppliers);
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelEmployees);
-        }
+       
 
         private Form activeForm = null;
         private void openChildFormInPanel(Form childForm)
@@ -128,12 +117,32 @@ namespace WareHouseSystem.Screens.UI
 
         private void btnLedgers_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new DailySheet());
+            showSubMenu(panelLedger);
         }
 
         private void btnExpenses_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new Expenses());
+        }
+
+        private void btnEmployeeList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmployeeLedger_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDailySheet_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new DailySheet());
+        }
+
+        private void btnProductList_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Products());
         }
     }
 }
