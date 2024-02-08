@@ -30,9 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailySheet));
             this.UserRecords = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelBalance = new System.Windows.Forms.Label();
+            this.labelExpense = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelIncome = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
-            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
+            this.GDVCashbook = new System.Windows.Forms.DataGridView();
             this.ToDate = new System.Windows.Forms.DateTimePicker();
             this.FromDate = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
@@ -45,7 +53,8 @@
             this.btnCustomerLedgerForm = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.UserRecords.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCashbook)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,9 +63,10 @@
             this.UserRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.UserRecords.Controls.Add(this.panel2);
             this.UserRecords.Controls.Add(this.label1);
             this.UserRecords.Controls.Add(this.btnReport);
-            this.UserRecords.Controls.Add(this.GDVCusLedger);
+            this.UserRecords.Controls.Add(this.GDVCashbook);
             this.UserRecords.Controls.Add(this.ToDate);
             this.UserRecords.Controls.Add(this.FromDate);
             this.UserRecords.Controls.Add(this.label14);
@@ -72,6 +82,102 @@
             this.UserRecords.TabStop = false;
             this.UserRecords.Text = "Transaction Records";
             this.UserRecords.Enter += new System.EventHandler(this.UserRecords_Enter);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelBalance);
+            this.panel2.Controls.Add(this.labelExpense);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.labelIncome);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(574, 86);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(104, 318);
+            this.panel2.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(6, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Summary";
+            // 
+            // labelBalance
+            // 
+            this.labelBalance.AutoSize = true;
+            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.Location = new System.Drawing.Point(3, 237);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelBalance.Size = new System.Drawing.Size(82, 20);
+            this.labelBalance.TabIndex = 5;
+            this.labelBalance.Text = "Rs. 00000";
+            this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelExpense
+            // 
+            this.labelExpense.AutoSize = true;
+            this.labelExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExpense.Location = new System.Drawing.Point(3, 171);
+            this.labelExpense.Name = "labelExpense";
+            this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelExpense.Size = new System.Drawing.Size(82, 20);
+            this.labelExpense.TabIndex = 4;
+            this.labelExpense.Text = "Rs. 00000";
+            this.labelExpense.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(3, 217);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Balance";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(3, 138);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Expense";
+            // 
+            // labelIncome
+            // 
+            this.labelIncome.AutoSize = true;
+            this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIncome.Location = new System.Drawing.Point(3, 85);
+            this.labelIncome.Name = "labelIncome";
+            this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelIncome.Size = new System.Drawing.Size(82, 20);
+            this.labelIncome.TabIndex = 1;
+            this.labelIncome.Text = "Rs. 00000";
+            this.labelIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.Location = new System.Drawing.Point(3, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Income";
             // 
             // label1
             // 
@@ -97,25 +203,25 @@
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = false;
             // 
-            // GDVCusLedger
+            // GDVCashbook
             // 
-            this.GDVCusLedger.AllowUserToAddRows = false;
-            this.GDVCusLedger.AllowUserToDeleteRows = false;
-            this.GDVCusLedger.AllowUserToResizeRows = false;
-            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GDVCashbook.AllowUserToAddRows = false;
+            this.GDVCashbook.AllowUserToDeleteRows = false;
+            this.GDVCashbook.AllowUserToResizeRows = false;
+            this.GDVCashbook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVCusLedger.Location = new System.Drawing.Point(6, 86);
-            this.GDVCusLedger.MultiSelect = false;
-            this.GDVCusLedger.Name = "GDVCusLedger";
-            this.GDVCusLedger.ReadOnly = true;
-            this.GDVCusLedger.RowHeadersVisible = false;
-            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(668, 318);
-            this.GDVCusLedger.TabIndex = 15;
+            this.GDVCashbook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GDVCashbook.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.GDVCashbook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GDVCashbook.Location = new System.Drawing.Point(6, 86);
+            this.GDVCashbook.MultiSelect = false;
+            this.GDVCashbook.Name = "GDVCashbook";
+            this.GDVCashbook.ReadOnly = true;
+            this.GDVCashbook.RowHeadersVisible = false;
+            this.GDVCashbook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GDVCashbook.Size = new System.Drawing.Size(562, 318);
+            this.GDVCashbook.TabIndex = 15;
             // 
             // ToDate
             // 
@@ -258,7 +364,9 @@
             this.Text = "DailySheet";
             this.UserRecords.ResumeLayout(false);
             this.UserRecords.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCashbook)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -268,7 +376,7 @@
 
         private System.Windows.Forms.GroupBox UserRecords;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.DataGridView GDVCusLedger;
+        private System.Windows.Forms.DataGridView GDVCashbook;
         private System.Windows.Forms.DateTimePicker ToDate;
         private System.Windows.Forms.DateTimePicker FromDate;
         private System.Windows.Forms.Label label14;
@@ -281,5 +389,13 @@
         private System.Windows.Forms.Button btnSupplierLedgerForm;
         private System.Windows.Forms.Button btnCustomerLedgerForm;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelIncome;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelExpense;
+        private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.Label label3;
     }
 }

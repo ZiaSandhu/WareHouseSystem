@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.ledger
 {
@@ -15,6 +16,81 @@ namespace WareHouseSystem.Screens.UI.ledger
         public CustomerLedgerForm()
         {
             InitializeComponent();
+            LoadCustomerName();
+        }
+
+       
+
+        private void LoadCustomerName()
+        {
+            string query = "Select Id,Name from tblCustomers";
+            database.LoadComboBox(query, CusNameBox);
+        }
+
+        private void txtBalance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            database.DigitValidation(sender,e);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (RequiredFields())
+            {
+
+                //insert into customer ledger
+                string description;
+
+                if (textDescription.Text.Trim().Length <= 0)
+                {
+                    description = "Recieved";
+                }
+                else
+                {
+                    description = textDescription.Text;
+                }
+                DateTime date = DateTime.Now;
+                string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
+                string amount = txtAmount.Text.Trim();
+                string currentDate = datepicker.Value.Date.ToString("yyyy-MM-dd");
+                string query = "INSERT INTO tblCustomersLedger (customerId, description, amount, createdAt, updatedAt, date) " +
+               "OUTPUT INSERTED.ID " +
+               "VALUES (" + CusNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "')";
+
+                string ledgerId = database.ScalarQuery(query);
+
+                //insert into cashbook
+
+                string cashbookQuery = "Insert into tblCashBooks(description,income,userId, userLedgerId,date,createdAt,updatedAt) values('"+description+"',"+amount+","+ CusNameBox.SelectedValue + ","+ledgerId+",'"+currentDate+"','"+formattedDateTime+ "','"+formattedDateTime+"')";
+
+                database.RunQuery(cashbookQuery);
+
+            }
+        }
+
+        private bool RequiredFields()
+        {
+            if (txtAmount.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("Enter Amount!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtAmount.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        private void CustomerLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DailySheet cashbookForm = Application.OpenForms["Cashbook"] as DailySheet;
+            if (cashbookForm != null)
+            {
+                cashbookForm.PopulateGrid();
+            }
         }
     }
 }

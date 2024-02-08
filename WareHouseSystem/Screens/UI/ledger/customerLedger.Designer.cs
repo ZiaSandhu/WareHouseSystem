@@ -56,10 +56,19 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelBalance = new System.Windows.Forms.Label();
+            this.labelExpense = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelIncome = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.UserRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDescription
@@ -156,7 +165,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(684, 187);
+            this.groupBox1.Size = new System.Drawing.Size(718, 187);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Ledger";
@@ -181,7 +190,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(678, 153);
+            this.panel1.Size = new System.Drawing.Size(712, 153);
             this.panel1.TabIndex = 10;
             // 
             // label1
@@ -244,6 +253,7 @@
             this.UserRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.UserRecords.Controls.Add(this.panel2);
             this.UserRecords.Controls.Add(this.btnReport);
             this.UserRecords.Controls.Add(this.CBdate);
             this.UserRecords.Controls.Add(this.CBName);
@@ -260,7 +270,7 @@
             this.UserRecords.ForeColor = System.Drawing.Color.Black;
             this.UserRecords.Location = new System.Drawing.Point(2, 187);
             this.UserRecords.Name = "UserRecords";
-            this.UserRecords.Size = new System.Drawing.Size(680, 320);
+            this.UserRecords.Size = new System.Drawing.Size(714, 354);
             this.UserRecords.TabIndex = 16;
             this.UserRecords.TabStop = false;
             this.UserRecords.Text = "Transaction Records";
@@ -270,7 +280,7 @@
             this.btnReport.BackColor = System.Drawing.Color.Firebrick;
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(581, 15);
+            this.btnReport.Location = new System.Drawing.Point(597, 53);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(77, 35);
             this.btnReport.TabIndex = 29;
@@ -315,7 +325,7 @@
             this.GDVCusLedger.ReadOnly = true;
             this.GDVCusLedger.RowHeadersVisible = false;
             this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(664, 216);
+            this.GDVCusLedger.Size = new System.Drawing.Size(585, 254);
             this.GDVCusLedger.TabIndex = 15;
             // 
             // FilterNameBox
@@ -388,7 +398,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(525, 53);
+            this.btnRefresh.Location = new System.Drawing.Point(502, 53);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(89, 35);
             this.btnRefresh.TabIndex = 8;
@@ -402,7 +412,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(486, 15);
+            this.btnSearch.Location = new System.Drawing.Point(502, 15);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(89, 35);
             this.btnSearch.TabIndex = 7;
@@ -410,11 +420,107 @@
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelBalance);
+            this.panel2.Controls.Add(this.labelExpense);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.labelIncome);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Location = new System.Drawing.Point(597, 94);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(107, 254);
+            this.panel2.TabIndex = 32;
+            // 
+            // labelBalance
+            // 
+            this.labelBalance.AutoSize = true;
+            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.Location = new System.Drawing.Point(3, 225);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelBalance.Size = new System.Drawing.Size(82, 20);
+            this.labelBalance.TabIndex = 5;
+            this.labelBalance.Text = "Rs. 00000";
+            this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelExpense
+            // 
+            this.labelExpense.AutoSize = true;
+            this.labelExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExpense.Location = new System.Drawing.Point(3, 159);
+            this.labelExpense.Name = "labelExpense";
+            this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelExpense.Size = new System.Drawing.Size(82, 20);
+            this.labelExpense.TabIndex = 4;
+            this.labelExpense.Text = "Rs. 00000";
+            this.labelExpense.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(3, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Balance";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(3, 126);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Expense";
+            // 
+            // labelIncome
+            // 
+            this.labelIncome.AutoSize = true;
+            this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIncome.Location = new System.Drawing.Point(3, 73);
+            this.labelIncome.Name = "labelIncome";
+            this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelIncome.Size = new System.Drawing.Size(82, 20);
+            this.labelIncome.TabIndex = 1;
+            this.labelIncome.Text = "Rs. 00000";
+            this.labelIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Green;
+            this.label9.Location = new System.Drawing.Point(3, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Income";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(5, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Summary";
+            // 
             // customerLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 519);
+            this.ClientSize = new System.Drawing.Size(718, 553);
             this.Controls.Add(this.UserRecords);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -426,6 +532,8 @@
             this.UserRecords.ResumeLayout(false);
             this.UserRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,5 +566,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.Label labelExpense;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelIncome;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label3;
     }
 }

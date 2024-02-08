@@ -30,17 +30,15 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.datepicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.CusNameBox = new System.Windows.Forms.ComboBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.SupNameBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,21 +46,19 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.labelDescription);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textDescription);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.datepicker);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtBalance);
-            this.panel1.Controls.Add(this.CusNameBox);
+            this.panel1.Controls.Add(this.txtAmount);
+            this.panel1.Controls.Add(this.SupNameBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(23, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 362);
+            this.panel1.Size = new System.Drawing.Size(313, 314);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
@@ -70,40 +66,14 @@
             this.btnExit.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(174, 282);
+            this.btnExit.Location = new System.Drawing.Point(174, 236);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(89, 40);
             this.btnExit.TabIndex = 42;
             this.btnExit.Text = "Exit";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(174, 236);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(89, 40);
-            this.btnDelete.TabIndex = 40;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(79, 282);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(89, 40);
-            this.btnReset.TabIndex = 41;
-            this.btnReset.Text = "Reset";
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -117,6 +87,7 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
@@ -140,15 +111,15 @@
             this.labelDescription.TabIndex = 37;
             this.labelDescription.Text = "Description";
             // 
-            // textBox1
+            // textDescription
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(103, 155);
-            this.textBox1.MaxLength = 18;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 26);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "Recieved";
+            this.textDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDescription.Location = new System.Drawing.Point(103, 155);
+            this.textDescription.MaxLength = 18;
+            this.textDescription.Name = "textDescription";
+            this.textDescription.Size = new System.Drawing.Size(187, 26);
+            this.textDescription.TabIndex = 36;
+            this.textDescription.Text = "Recieved";
             // 
             // label1
             // 
@@ -181,31 +152,32 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Amount";
             // 
-            // txtBalance
+            // txtAmount
             // 
-            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(103, 187);
-            this.txtBalance.MaxLength = 18;
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(114, 26);
-            this.txtBalance.TabIndex = 30;
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(103, 187);
+            this.txtAmount.MaxLength = 18;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(114, 26);
+            this.txtAmount.TabIndex = 30;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBalance_KeyPress);
             // 
-            // CusNameBox
+            // SupNameBox
             // 
-            this.CusNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CusNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CusNameBox.BackColor = System.Drawing.Color.White;
-            this.CusNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CusNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CusNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.CusNameBox.Items.AddRange(new object[] {
+            this.SupNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.SupNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.SupNameBox.BackColor = System.Drawing.Color.White;
+            this.SupNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SupNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.SupNameBox.Items.AddRange(new object[] {
             "Daily Expenses",
             "Utility Bills",
             "Rent"});
-            this.CusNameBox.Location = new System.Drawing.Point(103, 117);
-            this.CusNameBox.Name = "CusNameBox";
-            this.CusNameBox.Size = new System.Drawing.Size(187, 28);
-            this.CusNameBox.TabIndex = 29;
+            this.SupNameBox.Location = new System.Drawing.Point(103, 117);
+            this.SupNameBox.Name = "SupNameBox";
+            this.SupNameBox.Size = new System.Drawing.Size(187, 28);
+            this.SupNameBox.TabIndex = 29;
             // 
             // label2
             // 
@@ -223,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(361, 418);
+            this.ClientSize = new System.Drawing.Size(361, 375);
             this.Controls.Add(this.panel1);
             this.DisplayHeader = false;
             this.Name = "SupplierLedgerForm";
@@ -232,6 +204,7 @@
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Expenses";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SupplierLedgerForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -241,18 +214,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox CusNameBox;
+        private System.Windows.Forms.ComboBox SupNameBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker datepicker;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBalance;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSave;
     }
 }

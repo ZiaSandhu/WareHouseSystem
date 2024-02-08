@@ -55,6 +55,19 @@ namespace WareHouseSystem.General
             }
         }
 
+        public static int InsertAndGetId(string query)
+        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    if (con.State != ConnectionState.Open)
+                        con.Open();
+                    return (int)cmd.ExecuteScalar(); 
+                }
+            }
+        }
+
         public static string ScalarQuery(string query)
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
@@ -69,16 +82,16 @@ namespace WareHouseSystem.General
         }
         public static void DigitValidation(Object sender,KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
 
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
+            //if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //{
+            //    e.Handled = true;
+            //}
         }
         public static void LoadComboBox(string query,ComboBox box)
         {
@@ -102,6 +115,58 @@ namespace WareHouseSystem.General
                 }
             }
         }
+
+        public static string FormatAmount(decimal number)
+        {
+            string suffix = "";
+            if (number >= 1000)
+            {
+                suffix = "K";
+                number /= 1000;
+            }
+            if (number >= 1000)
+            {
+                suffix = "M";
+                number /= 1000;
+            }
+            if (number >= 1000)
+            {
+                suffix = "B";
+                number /= 1000;
+            }
+
+            return $"{number:F2}{suffix}";
+        }
+        public static decimal CalculateColumnSum(DataGridView dataGridView, string columnName)
+        {
+            decimal sum = 0;
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (!row.IsNewRow && row.Cells[columnName].Value != null)
+                {
+                    decimal cellValue;
+                    if (Decimal.TryParse(row.Cells[columnName].Value.ToString(), out cellValue))
+                    {
+                        sum += cellValue;
+                    }
+                }
+            }
+            return sum;
+        }
+
+        public static void SetDateTimePickerToFirstDayOfMonth(DateTimePicker dateTimePicker)
+        {
+            // Get the current date
+            DateTime currentDate = DateTime.Today;
+
+            // Set the date to the first day of the current month
+            DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
+
+            // Set the value of the DateTimePicker to the first day of the current month
+            dateTimePicker.Value = firstDayOfMonth;
+        }
+
+
     }
 
 }

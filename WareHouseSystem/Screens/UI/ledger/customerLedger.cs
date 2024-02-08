@@ -18,8 +18,25 @@ namespace WareHouseSystem.Screens.UI.ledger
         {
             InitializeComponent();
             LoadCustomerName();
+            PopulateGrid();
+            CustomSetting();
+        }
+        private void CustomSetting()
+        {
+            database.SetDateTimePickerToFirstDayOfMonth(FromDate);
+        }
+        private void PopulateGrid()
+        {
+            string query = "select * from tblCustomersLedger";
+            database.PopulatGrid(query, GDVCusLedger);
+            //decimal balance = database.CalculateColumnSum(GDVCusLedger, "amount");
+
+            //labelBalance.Text = "Rs." + database.FormatAmount(balance);
         }
 
+      
+
+     
         private void LoadCustomerName()
         {
             string query = "Select Id,Name from tblCustomers";
