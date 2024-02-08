@@ -442,6 +442,7 @@
             this.Name = "Dashboard2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSide.ResumeLayout(false);
             this.panelLedger.ResumeLayout(false);
             this.panelManagement.ResumeLayout(false);

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WareHouseSystem.Screens.UI.expenses;
 using WareHouseSystem.Screens.UI.Invoices;
 using WareHouseSystem.Screens.UI.Manage;
 
@@ -72,7 +71,7 @@ namespace WareHouseSystem.Screens.UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Expenses().ShowDialog();
+            //new Expenses().ShowDialog();
         }
     }
 }

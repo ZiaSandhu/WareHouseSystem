@@ -38,11 +38,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CusNameBox = new System.Windows.Forms.ComboBox();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.datepicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateLedger = new System.Windows.Forms.DateTimePicker();
+            this.CusNameBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.UserRecords = new System.Windows.Forms.GroupBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.CBdate = new System.Windows.Forms.CheckBox();
@@ -70,6 +70,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(576, 39);
             this.txtDescription.TabIndex = 3;
+            this.txtDescription.Text = "Recieved";
             // 
             // label8
             // 
@@ -145,6 +146,7 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox1
             // 
@@ -165,10 +167,10 @@
             this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.datepicker);
+            this.panel1.Controls.Add(this.dateLedger);
             this.panel1.Controls.Add(this.CusNameBox);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtBalance);
+            this.panel1.Controls.Add(this.txtAmount);
             this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label2);
@@ -181,6 +183,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(678, 153);
             this.panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(471, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Date";
+            // 
+            // dateLedger
+            // 
+            this.dateLedger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLedger.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateLedger.Location = new System.Drawing.Point(521, 18);
+            this.dateLedger.Name = "dateLedger";
+            this.dateLedger.Size = new System.Drawing.Size(145, 26);
+            this.dateLedger.TabIndex = 28;
             // 
             // CusNameBox
             // 
@@ -195,15 +217,6 @@
             this.CusNameBox.Size = new System.Drawing.Size(187, 28);
             this.CusNameBox.TabIndex = 27;
             // 
-            // txtBalance
-            // 
-            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(351, 17);
-            this.txtBalance.MaxLength = 18;
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(114, 26);
-            this.txtBalance.TabIndex = 2;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -211,29 +224,20 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(278, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 20);
+            this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 26;
-            this.label7.Text = "Balance";
+            this.label7.Text = "Amount";
             // 
-            // datepicker
+            // txtAmount
             // 
-            this.datepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepicker.Location = new System.Drawing.Point(521, 18);
-            this.datepicker.Name = "datepicker";
-            this.datepicker.Size = new System.Drawing.Size(145, 26);
-            this.datepicker.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(471, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Date";
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(351, 17);
+            this.txtAmount.MaxLength = 18;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(114, 26);
+            this.txtAmount.TabIndex = 2;
+            this.txtAmount.Text = "1000";
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // UserRecords
             // 
@@ -436,10 +440,10 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker datepicker;
+        private System.Windows.Forms.DateTimePicker dateLedger;
         private System.Windows.Forms.ComboBox CusNameBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBalance;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox UserRecords;
         private System.Windows.Forms.Button btnReport;

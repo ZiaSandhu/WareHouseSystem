@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WareHouseSystem.Screens.UI.expenses
+namespace WareHouseSystem.Screens.UI.ledger
 {
-    public partial class Expenses : MetroTemplate
+    public partial class SupplierLedgerForm : MetroTemplate
     {
-        public Expenses()
+        public SupplierLedgerForm()
         {
             InitializeComponent();
         }

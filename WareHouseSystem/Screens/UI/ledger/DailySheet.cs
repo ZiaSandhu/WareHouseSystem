@@ -21,5 +21,20 @@ namespace WareHouseSystem.Screens.UI.ledger
         {
 
         }
+
+        private void btnExpenseForm_Click(object sender, EventArgs e)
+        {
+            new Expenses().ShowDialog();
+        }
+
+        private void btnCustomerLedgerForm_Click(object sender, EventArgs e)
+        {
+            new CustomerLedgerForm().ShowDialog();
+        }
+
+        private void btnSupplierLedgerForm_Click(object sender, EventArgs e)
+        {
+            new SupplierLedgerForm().ShowDialog();
+        }
     }
 }

@@ -39,9 +39,14 @@ C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\ob
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CopyComplete
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.exe
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.pdb
-C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.expenses.Expenses.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.dashboard2.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.customerLedger.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.SupplierLedger.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.DailySheet.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.Expenses.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\WareHouseSystem.exe.manifest
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\WareHouseSystem.application
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.exe.manifest
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.application
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.CustomerLedgerForm.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.SupplierLedgerForm.resources
