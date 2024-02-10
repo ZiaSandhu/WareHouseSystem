@@ -27,7 +27,6 @@ C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bi
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.AssemblyReference.cache
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Properties.Resources.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.MetroTemplate.resources
-C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Dashboard.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Invoices.Purchase.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Login.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Customers.resources
@@ -50,3 +49,6 @@ C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\ob
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.application
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.CustomerLedgerForm.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.SupplierLedgerForm.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Manage.Employeers.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.EmployerLedgerForm.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.EmployeeLedger.resources

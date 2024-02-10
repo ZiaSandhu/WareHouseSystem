@@ -52,6 +52,7 @@
             this.btnSupplierLedgerForm = new System.Windows.Forms.Button();
             this.btnCustomerLedgerForm = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.UserRecords.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVCashbook)).BeginInit();
@@ -293,6 +294,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnExpenseForm);
             this.panel1.Controls.Add(this.btnSupplierLedgerForm);
             this.panel1.Controls.Add(this.btnCustomerLedgerForm);
@@ -309,7 +311,7 @@
             this.btnExpenseForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpenseForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpenseForm.ForeColor = System.Drawing.Color.White;
-            this.btnExpenseForm.Location = new System.Drawing.Point(368, 24);
+            this.btnExpenseForm.Location = new System.Drawing.Point(347, 22);
             this.btnExpenseForm.Name = "btnExpenseForm";
             this.btnExpenseForm.Size = new System.Drawing.Size(157, 36);
             this.btnExpenseForm.TabIndex = 3;
@@ -323,7 +325,7 @@
             this.btnSupplierLedgerForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplierLedgerForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplierLedgerForm.ForeColor = System.Drawing.Color.White;
-            this.btnSupplierLedgerForm.Location = new System.Drawing.Point(205, 24);
+            this.btnSupplierLedgerForm.Location = new System.Drawing.Point(184, 22);
             this.btnSupplierLedgerForm.Name = "btnSupplierLedgerForm";
             this.btnSupplierLedgerForm.Size = new System.Drawing.Size(157, 36);
             this.btnSupplierLedgerForm.TabIndex = 2;
@@ -337,7 +339,7 @@
             this.btnCustomerLedgerForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerLedgerForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerLedgerForm.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerLedgerForm.Location = new System.Drawing.Point(42, 24);
+            this.btnCustomerLedgerForm.Location = new System.Drawing.Point(21, 22);
             this.btnCustomerLedgerForm.Name = "btnCustomerLedgerForm";
             this.btnCustomerLedgerForm.Size = new System.Drawing.Size(157, 36);
             this.btnCustomerLedgerForm.TabIndex = 1;
@@ -351,6 +353,20 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 35);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(510, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 36);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Employee Ledger";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DailySheet
             // 
@@ -397,5 +413,6 @@
         private System.Windows.Forms.Label labelExpense;
         private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

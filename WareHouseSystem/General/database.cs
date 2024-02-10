@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using WareHouseSystem.Screens.UI.Manage;
 
 namespace WareHouseSystem.General
 {
@@ -55,17 +56,33 @@ namespace WareHouseSystem.General
             }
         }
 
-        public static int InsertAndGetId(string query)
+        public static void LedgerGridPopulate(DataGridView datagrid,int userId,string fromDate,string toDate)
         {
+            string query = "SELECT * FROM tblUserLedger WHERE userId = @userId AND [Date] BETWEEN @fromDate AND @toDate";
+
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
+                    cmd.Parameters.AddWithValue("@userId", userId);
+                    cmd.Parameters.AddWithValue("@fromDate", fromDate);
+                    cmd.Parameters.AddWithValue("@toDate", toDate);
+
                     if (con.State != ConnectionState.Open)
                         con.Open();
-                    return (int)cmd.ExecuteScalar(); 
+
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.HasRows)
+                    {
+                        DataTable dtUser = new DataTable();
+                        dtUser.Load(sdr);
+                        datagrid.DataSource = dtUser;
+                    }
+                    else
+                        datagrid.DataSource = null;
                 }
             }
+
         }
 
         public static string ScalarQuery(string query)

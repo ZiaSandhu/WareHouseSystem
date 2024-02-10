@@ -11,9 +11,9 @@ using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.ledger
 {
-    public partial class CustomerLedgerForm : MetroTemplate
+    public partial class EmployerLedgerForm : MetroTemplate
     {
-        public CustomerLedgerForm()
+        public EmployerLedgerForm()
         {
             InitializeComponent();
             LoadCustomerName();
@@ -23,7 +23,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         private void LoadCustomerName()
         {
-            string query = "Select Id,Name from tblStakeholders where role='Customer'";
+            string query = "Select Id,Name from tblStakeholders where role='Employee'";
             database.LoadComboBox(query, CusNameBox);
         }
 
@@ -57,9 +57,9 @@ namespace WareHouseSystem.Screens.UI.ledger
                 string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
                 string amount = txtAmount.Text.Trim();
                 string currentDate = datepicker.Value.Date.ToString("yyyy-MM-dd");
-                string query = "INSERT INTO tblUserLedger (userId, description, income, createdAt, updatedAt, date,role) " +
+                string query = "INSERT INTO tblCustomersLedger (customerId, description, amount, createdAt, updatedAt, date,role) " +
                "OUTPUT INSERTED.ID " +
-               "VALUES (" + CusNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Customer')";
+               "VALUES (" + CusNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Employee')";
 
                 string ledgerId = database.ScalarQuery(query);
 

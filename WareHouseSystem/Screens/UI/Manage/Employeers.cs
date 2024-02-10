@@ -35,7 +35,7 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void PopulateSupplierGrid()
         {
-            string query = "Select * from tblCustomers";
+            string query = "Select id,name,balance as salary,mobile,location from tblStakeholders where role='Employee'";
             database.PopulatGrid(query, GDVSupplier);
         }
 
@@ -67,7 +67,9 @@ namespace WareHouseSystem.Screens.UI.Manage
         private void UpdateValues()
         {
             GetBalance();
-            string query = "Update tblCustomers set Name='" + txtName.Text.Trim() + "',Phone='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance=" + bal + " where Id='" + this.CustomerID + "'";
+            DateTime date = DateTime.Now;
+            string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = "Update tblStakeholders set Name='" + txtName.Text.Trim() + "',Mobile='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance=" + bal + ",updatedAt='" + formattedDateTime + "' where Id='" + this.CustomerID + "'";
             if (database.RunQuery(query))
             {
                 MessageBox.Show("Customers Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,10 +85,12 @@ namespace WareHouseSystem.Screens.UI.Manage
         private void InsertValues()
         {
             GetBalance();
-            string query = "Insert into tblCustomers(name,phone,location,balance) Values('" + txtName.Text.Trim() + "','" + txtPhone.Text.Trim() + "','" + txtAddress.Text.Trim() + "'," + bal + ")";
+            DateTime date = DateTime.Now;
+            string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = "Insert into tblStakeholders(name,mobile,location,balance,role,createdAt,updatedAt) Values('" + txtName.Text.Trim() + "','" + txtPhone.Text.Trim() + "','" + txtAddress.Text.Trim() + "'," + bal + ",'Employee','"+formattedDateTime+ "','"+formattedDateTime+"')";
             if (database.RunQuery(query))
             {
-                MessageBox.Show("Supplier Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Employee Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ResetFormControls();
                 PopulateSupplierGrid();
             }
@@ -126,7 +130,7 @@ namespace WareHouseSystem.Screens.UI.Manage
             {
                 if (MessageBox.Show("Are You Sure ? \n Delete Customer " + txtName.Text + " from System.", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    string query = "delete from tblCustomers where Id='" + this.CustomerID + "'";
+                    string query = "delete from tblStakeholders where Id='" + this.CustomerID + "'";
                     if (database.RunQuery(query))
                     {
                         MessageBox.Show("Customer Record Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -148,9 +152,9 @@ namespace WareHouseSystem.Screens.UI.Manage
                 this.CustomerID = GDVSupplier.CurrentRow.Cells[0].Value.ToString();
                 this.CustomerName = GDVSupplier.CurrentRow.Cells[1].Value.ToString();
                 txtName.Text = this.CustomerName;
-                txtPhone.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
-                txtAddress.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
-                txtBalance.Text = GDVSupplier.CurrentRow.Cells[4].Value.ToString();
+                txtPhone.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
+                txtAddress.Text = GDVSupplier.CurrentRow.Cells[4].Value.ToString();
+                txtBalance.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
 
                 btnDelete.Enabled = true;
                 btnSave.Text = "Update";
@@ -178,14 +182,5 @@ namespace WareHouseSystem.Screens.UI.Manage
             database.DigitValidation(sender, e);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void UserRecords_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

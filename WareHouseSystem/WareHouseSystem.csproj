@@ -98,14 +98,8 @@
     <Compile Include="Screens\UI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\UI\Dashboard.designer.cs">
+    <Compile Include="Screens\UI\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\UI\Dashboard2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\UI\Dashboard2.Designer.cs">
-      <DependentUpon>Dashboard2.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UI\Invoices\Purchase.cs">
       <SubType>Form</SubType>
@@ -118,6 +112,18 @@
     </Compile>
     <Compile Include="Screens\UI\ledger\customerLedger.Designer.cs">
       <DependentUpon>customerLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\EmployerLedgerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\EmployerLedgerForm.Designer.cs">
+      <DependentUpon>EmployerLedgerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\EmployeeLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\ledger\EmployeeLedger.Designer.cs">
+      <DependentUpon>EmployeeLedger.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UI\ledger\SupplierLedgerForm.cs">
       <SubType>Form</SubType>
@@ -200,14 +206,17 @@
     <EmbeddedResource Include="Screens\UI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\UI\Dashboard2.resx">
-      <DependentUpon>Dashboard2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\Invoices\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\ledger\customerLedger.resx">
       <DependentUpon>customerLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\ledger\EmployerLedgerForm.resx">
+      <DependentUpon>EmployerLedgerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UI\ledger\EmployeeLedger.resx">
+      <DependentUpon>EmployeeLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\ledger\SupplierLedgerForm.resx">
       <DependentUpon>SupplierLedgerForm.cs</DependentUpon>

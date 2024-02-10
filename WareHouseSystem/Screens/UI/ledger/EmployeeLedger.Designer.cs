@@ -1,6 +1,6 @@
 ﻿namespace WareHouseSystem.Screens.UI.ledger
 {
-    partial class SupplierLedger
+    partial class EmployeeLedger
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
-            this.FilterNameBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ToDate = new System.Windows.Forms.DateTimePicker();
             this.FromDate = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
             this.labelExpense = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnReport = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
+            this.FilterNameBox = new System.Windows.Forms.ComboBox();
+            this.labelIncome = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.labelIncome = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnReport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
             this.panel3.SuspendLayout();
@@ -55,39 +55,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // GDVCusLedger
+            // label1
             // 
-            this.GDVCusLedger.AllowUserToAddRows = false;
-            this.GDVCusLedger.AllowUserToDeleteRows = false;
-            this.GDVCusLedger.AllowUserToResizeRows = false;
-            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVCusLedger.Location = new System.Drawing.Point(12, 86);
-            this.GDVCusLedger.MultiSelect = false;
-            this.GDVCusLedger.Name = "GDVCusLedger";
-            this.GDVCusLedger.ReadOnly = true;
-            this.GDVCusLedger.RowHeadersVisible = false;
-            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(602, 391);
-            this.GDVCusLedger.TabIndex = 36;
-            // 
-            // FilterNameBox
-            // 
-            this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.FilterNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.FilterNameBox.BackColor = System.Drawing.Color.White;
-            this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.FilterNameBox.Location = new System.Drawing.Point(73, 52);
-            this.FilterNameBox.Name = "FilterNameBox";
-            this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
-            this.FilterNameBox.TabIndex = 35;
-            this.FilterNameBox.SelectedIndexChanged += new System.EventHandler(this.FilterNameBox_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(271, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 45);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Employee Ledger";
             // 
             // label6
             // 
@@ -118,18 +95,17 @@
             this.FromDate.Name = "FromDate";
             this.FromDate.Size = new System.Drawing.Size(127, 26);
             this.FromDate.TabIndex = 40;
-            this.FromDate.ValueChanged += new System.EventHandler(this.FromDate_ValueChanged);
             // 
-            // label13
+            // label14
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(21, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 20);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "From";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(206, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 20);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "To";
             // 
             // label3
             // 
@@ -177,19 +153,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Balance";
             // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.Green;
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(473, 45);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(77, 35);
-            this.btnReport.TabIndex = 42;
-            this.btnReport.Text = "Report";
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReport.UseVisualStyleBackColor = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -200,6 +163,52 @@
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "Expense";
+            // 
+            // GDVCusLedger
+            // 
+            this.GDVCusLedger.AllowUserToAddRows = false;
+            this.GDVCusLedger.AllowUserToDeleteRows = false;
+            this.GDVCusLedger.AllowUserToResizeRows = false;
+            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GDVCusLedger.Location = new System.Drawing.Point(12, 86);
+            this.GDVCusLedger.MultiSelect = false;
+            this.GDVCusLedger.Name = "GDVCusLedger";
+            this.GDVCusLedger.ReadOnly = true;
+            this.GDVCusLedger.RowHeadersVisible = false;
+            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GDVCusLedger.Size = new System.Drawing.Size(602, 391);
+            this.GDVCusLedger.TabIndex = 36;
+            // 
+            // FilterNameBox
+            // 
+            this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.FilterNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.FilterNameBox.BackColor = System.Drawing.Color.White;
+            this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.FilterNameBox.Location = new System.Drawing.Point(73, 52);
+            this.FilterNameBox.Name = "FilterNameBox";
+            this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
+            this.FilterNameBox.TabIndex = 35;
+            this.FilterNameBox.SelectedIndexChanged += new System.EventHandler(this.FilterNameBox_SelectedIndexChanged);
+            // 
+            // labelIncome
+            // 
+            this.labelIncome.AutoSize = true;
+            this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIncome.Location = new System.Drawing.Point(3, 73);
+            this.labelIncome.Name = "labelIncome";
+            this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelIncome.Size = new System.Drawing.Size(82, 20);
+            this.labelIncome.TabIndex = 1;
+            this.labelIncome.Text = "Rs. 00000";
+            this.labelIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
@@ -238,7 +247,7 @@
             this.button1.Text = "Close";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnExit_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -256,28 +265,16 @@
             this.panel3.Size = new System.Drawing.Size(121, 254);
             this.panel3.TabIndex = 43;
             // 
-            // labelIncome
+            // label13
             // 
-            this.labelIncome.AutoSize = true;
-            this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIncome.Location = new System.Drawing.Point(3, 73);
-            this.labelIncome.Name = "labelIncome";
-            this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelIncome.Size = new System.Drawing.Size(82, 20);
-            this.labelIncome.TabIndex = 1;
-            this.labelIncome.Text = "Rs. 00000";
-            this.labelIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(206, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 20);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "To";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(21, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 20);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "From";
             // 
             // panel2
             // 
@@ -297,17 +294,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 489);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // btnReport
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(271, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 45);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Supplier Ledger";
+            this.btnReport.BackColor = System.Drawing.Color.Green;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(473, 45);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(77, 35);
+            this.btnReport.TabIndex = 42;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -318,7 +318,7 @@
             this.panel1.Size = new System.Drawing.Size(750, 64);
             this.panel1.TabIndex = 2;
             // 
-            // SupplierLedger
+            // EmployeeLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -326,7 +326,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SupplierLedger";
+            this.Name = "EmployeeLedger";
             this.Text = "SupplierLedger";
             ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -341,26 +341,26 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GDVCusLedger;
-        private System.Windows.Forms.ComboBox FilterNameBox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker ToDate;
         private System.Windows.Forms.DateTimePicker FromDate;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.Label labelExpense;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView GDVCusLedger;
+        private System.Windows.Forms.ComboBox FilterNameBox;
+        private System.Windows.Forms.Label labelIncome;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label labelIncome;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Panel panel1;
     }
 }

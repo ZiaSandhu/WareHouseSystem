@@ -76,6 +76,16 @@ namespace WareHouseSystem.Screens.UI.ledger
             PopulateGrid();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EmployerLedgerForm employeeLedgerForm = new EmployerLedgerForm();
+            employeeLedgerForm.FormClosed += EmployerLedgerForm_FormClosed;
+            employeeLedgerForm.ShowDialog();
 
+        }
+        private void EmployerLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PopulateGrid();
+        }
     }
 }

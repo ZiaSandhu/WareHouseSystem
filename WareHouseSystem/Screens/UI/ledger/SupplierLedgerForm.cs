@@ -22,7 +22,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         private void LoadSupplierName()
         {
-            string query = "Select Id,Name from tblSuppliers";
+            string query = "Select Id,Name from tblStakeholders where role='Supplier'";
             database.LoadComboBox(query, SupNameBox);
         }
 
@@ -51,9 +51,9 @@ namespace WareHouseSystem.Screens.UI.ledger
                 string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
                 string amount = txtAmount.Text.Trim();
                 string currentDate = datepicker.Value.Date.ToString("yyyy-MM-dd");
-                string query = "INSERT INTO tblSuppliersLedger (supplierId, description, amount, createdAt, updatedAt, date) " +
+                string query = "INSERT INTO tblUserLedger (userId, description, expense, createdAt, updatedAt, date,role) " +
                "OUTPUT INSERTED.ID " +
-               "VALUES (" + SupNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "')";
+               "VALUES (" + SupNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Supplier')";
 
                 string ledgerId = database.ScalarQuery(query);
 

@@ -28,592 +28,456 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblExpense = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblIncome = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblTdSale = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panelSide = new System.Windows.Forms.Panel();
+            this.panelLedger = new System.Windows.Forms.Panel();
+            this.btnDailySheet = new System.Windows.Forms.Button();
+            this.btnCustomerLedger = new System.Windows.Forms.Button();
+            this.btnSupplierLedger = new System.Windows.Forms.Button();
+            this.btnEmployeeLedger = new System.Windows.Forms.Button();
+            this.btnLedgers = new System.Windows.Forms.Button();
+            this.panelManagement = new System.Windows.Forms.Panel();
+            this.btnProductList = new System.Windows.Forms.Button();
+            this.btnEmployeeList = new System.Windows.Forms.Button();
+            this.btnSupplierList = new System.Windows.Forms.Button();
+            this.btnCustomerList = new System.Windows.Forms.Button();
+            this.btnManagement = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelClose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.purchaseInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageSuppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ledgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supplierLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cashBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageSaleInvoicesRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.managePurchaseRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockValueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.btnExpenses = new System.Windows.Forms.Button();
+            this.btnInvoices = new System.Windows.Forms.Button();
+            this.panelInvoiceSubmenu = new System.Windows.Forms.Panel();
+            this.btnViewPurchaseInvoice = new System.Windows.Forms.Button();
+            this.btnViewSaleInvoice = new System.Windows.Forms.Button();
             this.btnPurchaseInvoice = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.btnSaleInvoice = new System.Windows.Forms.Button();
+            this.panelSide.SuspendLayout();
+            this.panelLedger.SuspendLayout();
+            this.panelManagement.SuspendLayout();
+            this.panelTop.SuspendLayout();
+            this.panelInvoiceSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStripMenuItem2
+            // panelSide
             // 
-            toolStripMenuItem2.Enabled = false;
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
-            toolStripMenuItem2.Text = "|";
+            this.panelSide.AutoScroll = true;
+            this.panelSide.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelSide.Controls.Add(this.panelInvoiceSubmenu);
+            this.panelSide.Controls.Add(this.btnInvoices);
+            this.panelSide.Controls.Add(this.panelLedger);
+            this.panelSide.Controls.Add(this.btnLedgers);
+            this.panelSide.Controls.Add(this.panelManagement);
+            this.panelSide.Controls.Add(this.btnManagement);
+            this.panelSide.Controls.Add(this.btnExpenses);
+            this.panelSide.Controls.Add(this.panelLogo);
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(200, 600);
+            this.panelSide.TabIndex = 0;
             // 
-            // toolStripMenuItem4
+            // panelLedger
             // 
-            toolStripMenuItem4.Enabled = false;
-            toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new System.Drawing.Size(22, 20);
-            toolStripMenuItem4.Text = "|";
+            this.panelLedger.Controls.Add(this.btnDailySheet);
+            this.panelLedger.Controls.Add(this.btnCustomerLedger);
+            this.panelLedger.Controls.Add(this.btnSupplierLedger);
+            this.panelLedger.Controls.Add(this.btnEmployeeLedger);
+            this.panelLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLedger.Location = new System.Drawing.Point(0, 418);
+            this.panelLedger.Name = "panelLedger";
+            this.panelLedger.Size = new System.Drawing.Size(183, 187);
+            this.panelLedger.TabIndex = 11;
             // 
-            // panel2
+            // btnDailySheet
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Blue;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblBalance);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblExpense);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.lblIncome);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.lblTdSale);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(654, 204);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(370, 243);
-            this.panel2.TabIndex = 2;
+            this.btnDailySheet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDailySheet.FlatAppearance.BorderSize = 0;
+            this.btnDailySheet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDailySheet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDailySheet.ForeColor = System.Drawing.Color.White;
+            this.btnDailySheet.Location = new System.Drawing.Point(0, 129);
+            this.btnDailySheet.Name = "btnDailySheet";
+            this.btnDailySheet.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDailySheet.Size = new System.Drawing.Size(183, 45);
+            this.btnDailySheet.TabIndex = 7;
+            this.btnDailySheet.Text = "Daily Sheet";
+            this.btnDailySheet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDailySheet.UseVisualStyleBackColor = true;
+            this.btnDailySheet.Click += new System.EventHandler(this.btnDailySheet_Click);
             // 
-            // lblBalance
+            // btnCustomerLedger
             // 
-            this.lblBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.ForeColor = System.Drawing.Color.White;
-            this.lblBalance.Location = new System.Drawing.Point(197, 186);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(23, 28);
-            this.lblBalance.TabIndex = 13;
-            this.lblBalance.Text = "0";
+            this.btnCustomerLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerLedger.FlatAppearance.BorderSize = 0;
+            this.btnCustomerLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerLedger.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerLedger.Location = new System.Drawing.Point(0, 84);
+            this.btnCustomerLedger.Name = "btnCustomerLedger";
+            this.btnCustomerLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnCustomerLedger.Size = new System.Drawing.Size(183, 45);
+            this.btnCustomerLedger.TabIndex = 5;
+            this.btnCustomerLedger.Text = "Customer Ledger";
+            this.btnCustomerLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomerLedger.UseVisualStyleBackColor = true;
+            this.btnCustomerLedger.Click += new System.EventHandler(this.btnCustomerLedger_Click);
             // 
-            // label9
+            // btnSupplierLedger
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(1, 186);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(199, 28);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Running Balance(Rs)";
+            this.btnSupplierLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSupplierLedger.FlatAppearance.BorderSize = 0;
+            this.btnSupplierLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplierLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplierLedger.ForeColor = System.Drawing.Color.White;
+            this.btnSupplierLedger.Location = new System.Drawing.Point(0, 45);
+            this.btnSupplierLedger.Name = "btnSupplierLedger";
+            this.btnSupplierLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSupplierLedger.Size = new System.Drawing.Size(183, 39);
+            this.btnSupplierLedger.TabIndex = 4;
+            this.btnSupplierLedger.Text = "Supplier Ledger";
+            this.btnSupplierLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupplierLedger.UseVisualStyleBackColor = true;
+            this.btnSupplierLedger.Click += new System.EventHandler(this.btnSupplierLedger_Click);
             // 
-            // lblExpense
+            // btnEmployeeLedger
             // 
-            this.lblExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblExpense.AutoSize = true;
-            this.lblExpense.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpense.ForeColor = System.Drawing.Color.White;
-            this.lblExpense.Location = new System.Drawing.Point(197, 144);
-            this.lblExpense.Name = "lblExpense";
-            this.lblExpense.Size = new System.Drawing.Size(23, 28);
-            this.lblExpense.TabIndex = 11;
-            this.lblExpense.Text = "0";
+            this.btnEmployeeLedger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeLedger.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeLedger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeLedger.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeLedger.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeLedger.Location = new System.Drawing.Point(0, 0);
+            this.btnEmployeeLedger.Name = "btnEmployeeLedger";
+            this.btnEmployeeLedger.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEmployeeLedger.Size = new System.Drawing.Size(183, 45);
+            this.btnEmployeeLedger.TabIndex = 3;
+            this.btnEmployeeLedger.Text = "Employee Ledger";
+            this.btnEmployeeLedger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployeeLedger.UseVisualStyleBackColor = true;
+            this.btnEmployeeLedger.Click += new System.EventHandler(this.btnEmployeeLedger_Click);
             // 
-            // label7
+            // btnLedgers
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(1, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(190, 28);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Today Expenses(Rs)";
+            this.btnLedgers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLedgers.FlatAppearance.BorderSize = 0;
+            this.btnLedgers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLedgers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLedgers.ForeColor = System.Drawing.Color.White;
+            this.btnLedgers.Location = new System.Drawing.Point(0, 373);
+            this.btnLedgers.Name = "btnLedgers";
+            this.btnLedgers.Size = new System.Drawing.Size(183, 45);
+            this.btnLedgers.TabIndex = 10;
+            this.btnLedgers.Text = "Ledgers";
+            this.btnLedgers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLedgers.UseVisualStyleBackColor = true;
+            this.btnLedgers.Click += new System.EventHandler(this.btnLedgers_Click);
             // 
-            // lblIncome
+            // panelManagement
             // 
-            this.lblIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblIncome.AutoSize = true;
-            this.lblIncome.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIncome.ForeColor = System.Drawing.Color.White;
-            this.lblIncome.Location = new System.Drawing.Point(197, 97);
-            this.lblIncome.Name = "lblIncome";
-            this.lblIncome.Size = new System.Drawing.Size(23, 28);
-            this.lblIncome.TabIndex = 9;
-            this.lblIncome.Text = "0";
+            this.panelManagement.Controls.Add(this.btnProductList);
+            this.panelManagement.Controls.Add(this.btnEmployeeList);
+            this.panelManagement.Controls.Add(this.btnSupplierList);
+            this.panelManagement.Controls.Add(this.btnCustomerList);
+            this.panelManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelManagement.Location = new System.Drawing.Point(0, 190);
+            this.panelManagement.Name = "panelManagement";
+            this.panelManagement.Size = new System.Drawing.Size(183, 183);
+            this.panelManagement.TabIndex = 5;
             // 
-            // label5
+            // btnProductList
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 28);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Today Income(Rs)";
+            this.btnProductList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProductList.FlatAppearance.BorderSize = 0;
+            this.btnProductList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductList.ForeColor = System.Drawing.Color.White;
+            this.btnProductList.Location = new System.Drawing.Point(0, 135);
+            this.btnProductList.Name = "btnProductList";
+            this.btnProductList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnProductList.Size = new System.Drawing.Size(183, 45);
+            this.btnProductList.TabIndex = 5;
+            this.btnProductList.Text = "Product List";
+            this.btnProductList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductList.UseVisualStyleBackColor = true;
+            this.btnProductList.Click += new System.EventHandler(this.btnProductList_Click);
             // 
-            // lblTdSale
+            // btnEmployeeList
             // 
-            this.lblTdSale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTdSale.AutoSize = true;
-            this.lblTdSale.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTdSale.ForeColor = System.Drawing.Color.White;
-            this.lblTdSale.Location = new System.Drawing.Point(197, 51);
-            this.lblTdSale.Name = "lblTdSale";
-            this.lblTdSale.Size = new System.Drawing.Size(23, 28);
-            this.lblTdSale.TabIndex = 7;
-            this.lblTdSale.Text = "0";
+            this.btnEmployeeList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeList.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeList.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeList.Location = new System.Drawing.Point(0, 90);
+            this.btnEmployeeList.Name = "btnEmployeeList";
+            this.btnEmployeeList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEmployeeList.Size = new System.Drawing.Size(183, 45);
+            this.btnEmployeeList.TabIndex = 4;
+            this.btnEmployeeList.Text = "Employee List";
+            this.btnEmployeeList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployeeList.UseVisualStyleBackColor = true;
+            this.btnEmployeeList.Click += new System.EventHandler(this.btnEmployeeList_Click);
             // 
-            // label2
+            // btnSupplierList
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Today Sale(Rs)";
+            this.btnSupplierList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSupplierList.FlatAppearance.BorderSize = 0;
+            this.btnSupplierList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplierList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplierList.ForeColor = System.Drawing.Color.White;
+            this.btnSupplierList.Location = new System.Drawing.Point(0, 45);
+            this.btnSupplierList.Name = "btnSupplierList";
+            this.btnSupplierList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSupplierList.Size = new System.Drawing.Size(183, 45);
+            this.btnSupplierList.TabIndex = 3;
+            this.btnSupplierList.Text = "Supplier List";
+            this.btnSupplierList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupplierList.UseVisualStyleBackColor = true;
+            this.btnSupplierList.Click += new System.EventHandler(this.btnSupplierList_Click);
+            // 
+            // btnCustomerList
+            // 
+            this.btnCustomerList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerList.FlatAppearance.BorderSize = 0;
+            this.btnCustomerList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerList.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerList.Location = new System.Drawing.Point(0, 0);
+            this.btnCustomerList.Name = "btnCustomerList";
+            this.btnCustomerList.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnCustomerList.Size = new System.Drawing.Size(183, 45);
+            this.btnCustomerList.TabIndex = 2;
+            this.btnCustomerList.Text = "Customer List";
+            this.btnCustomerList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomerList.UseVisualStyleBackColor = true;
+            this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
+            // 
+            // btnManagement
+            // 
+            this.btnManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManagement.FlatAppearance.BorderSize = 0;
+            this.btnManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagement.ForeColor = System.Drawing.Color.White;
+            this.btnManagement.Location = new System.Drawing.Point(0, 145);
+            this.btnManagement.Name = "btnManagement";
+            this.btnManagement.Size = new System.Drawing.Size(183, 45);
+            this.btnManagement.TabIndex = 4;
+            this.btnManagement.Text = "Management";
+            this.btnManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManagement.UseVisualStyleBackColor = true;
+            this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(183, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Controls.Add(this.label1);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTop.Location = new System.Drawing.Point(200, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(700, 42);
+            this.panelTop.TabIndex = 1;
+            // 
+            // labelClose
+            // 
+            this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelClose.Location = new System.Drawing.Point(661, 9);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(27, 30);
+            this.labelClose.TabIndex = 1;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(116, 0);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(185, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 37);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Quick Info";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.lblUser);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(20, 84);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1004, 89);
-            this.panel1.TabIndex = 1;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(3, 18);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(283, 54);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Welcome User";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblDate);
-            this.panel3.Controls.Add(this.lblTime);
-            this.panel3.Location = new System.Drawing.Point(634, 9);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(269, 77);
-            this.panel3.TabIndex = 5;
-            // 
-            // lblDate
-            // 
-            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(15, 35);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(54, 28);
-            this.lblDate.TabIndex = 3;
-            this.lblDate.Text = "Date";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(123, 9);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(53, 28);
-            this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "time";
-            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            toolStripMenuItem2,
-            this.administrationToolStripMenuItem,
-            this.toolStripMenuItem3,
-            this.ledgerToolStripMenuItem,
-            toolStripMenuItem4,
-            this.backupDatabaseToolStripMenuItem,
-            this.toolStripMenuItem5,
-            this.viewToolStripMenuItem,
-            this.toolStripMenuItem6,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.purchaseInvoiceToolStripMenuItem});
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.homeToolStripMenuItem.Text = "Home";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.toolStripMenuItem1.Text = "Sale Invoice";
-            // 
-            // purchaseInvoiceToolStripMenuItem
-            // 
-            this.purchaseInvoiceToolStripMenuItem.Name = "purchaseInvoiceToolStripMenuItem";
-            this.purchaseInvoiceToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.purchaseInvoiceToolStripMenuItem.Text = "Purchase Invoice";
-            // 
-            // administrationToolStripMenuItem
-            // 
-            this.administrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageUsersToolStripMenuItem,
-            this.manageCustomersToolStripMenuItem,
-            this.manageProductsToolStripMenuItem,
-            this.manageSuppliersToolStripMenuItem});
-            this.administrationToolStripMenuItem.Name = "administrationToolStripMenuItem";
-            this.administrationToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-            this.administrationToolStripMenuItem.Text = "Administration";
-            // 
-            // manageUsersToolStripMenuItem
-            // 
-            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.manageUsersToolStripMenuItem.Text = "Manage Users";
-            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
-            // 
-            // manageCustomersToolStripMenuItem
-            // 
-            this.manageCustomersToolStripMenuItem.Name = "manageCustomersToolStripMenuItem";
-            this.manageCustomersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.manageCustomersToolStripMenuItem.Text = "Manage Customers";
-            this.manageCustomersToolStripMenuItem.Click += new System.EventHandler(this.manageCustomersToolStripMenuItem_Click);
-            // 
-            // manageProductsToolStripMenuItem
-            // 
-            this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
-            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.manageProductsToolStripMenuItem.Text = "Manage Products";
-            this.manageProductsToolStripMenuItem.Click += new System.EventHandler(this.manageProductsToolStripMenuItem_Click);
-            // 
-            // manageSuppliersToolStripMenuItem
-            // 
-            this.manageSuppliersToolStripMenuItem.Name = "manageSuppliersToolStripMenuItem";
-            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.manageSuppliersToolStripMenuItem.Text = "Manage Suppliers";
-            this.manageSuppliersToolStripMenuItem.Click += new System.EventHandler(this.manageSuppliersToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Enabled = false;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem3.Text = "|";
-            // 
-            // ledgerToolStripMenuItem
-            // 
-            this.ledgerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerLedgerToolStripMenuItem,
-            this.supplierLedgerToolStripMenuItem,
-            this.cashBookToolStripMenuItem});
-            this.ledgerToolStripMenuItem.Name = "ledgerToolStripMenuItem";
-            this.ledgerToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.ledgerToolStripMenuItem.Text = "Ledger";
-            // 
-            // customerLedgerToolStripMenuItem
-            // 
-            this.customerLedgerToolStripMenuItem.Name = "customerLedgerToolStripMenuItem";
-            this.customerLedgerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.customerLedgerToolStripMenuItem.Text = "Customer Ledger";
-            // 
-            // supplierLedgerToolStripMenuItem
-            // 
-            this.supplierLedgerToolStripMenuItem.Name = "supplierLedgerToolStripMenuItem";
-            this.supplierLedgerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.supplierLedgerToolStripMenuItem.Text = "Supplier Ledger";
-            // 
-            // cashBookToolStripMenuItem
-            // 
-            this.cashBookToolStripMenuItem.Name = "cashBookToolStripMenuItem";
-            this.cashBookToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.cashBookToolStripMenuItem.Text = "CashBook";
-            // 
-            // backupDatabaseToolStripMenuItem
-            // 
-            this.backupDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backupDataToolStripMenuItem,
-            this.restoreToolStripMenuItem});
-            this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
-            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
-            this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
-            // 
-            // backupDataToolStripMenuItem
-            // 
-            this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.backupDataToolStripMenuItem.Text = "Backup Data";
-            // 
-            // restoreToolStripMenuItem
-            // 
-            this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
-            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.restoreToolStripMenuItem.Text = "Restore Data";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Enabled = false;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem5.Text = "|";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageSaleInvoicesRecordToolStripMenuItem,
-            this.managePurchaseRecordToolStripMenuItem1,
-            this.stockValueToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // manageSaleInvoicesRecordToolStripMenuItem
-            // 
-            this.manageSaleInvoicesRecordToolStripMenuItem.Name = "manageSaleInvoicesRecordToolStripMenuItem";
-            this.manageSaleInvoicesRecordToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.manageSaleInvoicesRecordToolStripMenuItem.Text = "Manage SaleInvoices Record";
-            // 
-            // managePurchaseRecordToolStripMenuItem1
-            // 
-            this.managePurchaseRecordToolStripMenuItem1.Name = "managePurchaseRecordToolStripMenuItem1";
-            this.managePurchaseRecordToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
-            this.managePurchaseRecordToolStripMenuItem1.Text = "Manage Purchase Record";
-            // 
-            // stockValueToolStripMenuItem
-            // 
-            this.stockValueToolStripMenuItem.Name = "stockValueToolStripMenuItem";
-            this.stockValueToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.stockValueToolStripMenuItem.Text = "Stock Value";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Enabled = false;
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem6.Text = "|";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.SkyBlue;
-            this.button5.Enabled = false;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(225, 308);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(187, 98);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Payment In";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(32, 606);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 98);
-            this.button3.TabIndex = 7;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(32, 308);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(187, 98);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Expenses";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label1.Size = new System.Drawing.Size(209, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "New Pride PVC Pipe";
+            // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(200, 42);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(700, 558);
+            this.panelMain.TabIndex = 2;
+            // 
+            // btnExpenses
+            // 
+            this.btnExpenses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExpenses.FlatAppearance.BorderSize = 0;
+            this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpenses.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpenses.ForeColor = System.Drawing.Color.White;
+            this.btnExpenses.Location = new System.Drawing.Point(0, 100);
+            this.btnExpenses.Name = "btnExpenses";
+            this.btnExpenses.Size = new System.Drawing.Size(183, 45);
+            this.btnExpenses.TabIndex = 3;
+            this.btnExpenses.Text = "Dashboard";
+            this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpenses.UseVisualStyleBackColor = true;
+            this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
+            // 
+            // btnInvoices
+            // 
+            this.btnInvoices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInvoices.FlatAppearance.BorderSize = 0;
+            this.btnInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvoices.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoices.ForeColor = System.Drawing.Color.White;
+            this.btnInvoices.Location = new System.Drawing.Point(0, 605);
+            this.btnInvoices.Name = "btnInvoices";
+            this.btnInvoices.Size = new System.Drawing.Size(183, 45);
+            this.btnInvoices.TabIndex = 12;
+            this.btnInvoices.Text = "Invoices";
+            this.btnInvoices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoices.UseVisualStyleBackColor = true;
+            // 
+            // panelInvoiceSubmenu
+            // 
+            this.panelInvoiceSubmenu.Controls.Add(this.btnViewPurchaseInvoice);
+            this.panelInvoiceSubmenu.Controls.Add(this.btnViewSaleInvoice);
+            this.panelInvoiceSubmenu.Controls.Add(this.btnPurchaseInvoice);
+            this.panelInvoiceSubmenu.Controls.Add(this.btnSaleInvoice);
+            this.panelInvoiceSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInvoiceSubmenu.Location = new System.Drawing.Point(0, 650);
+            this.panelInvoiceSubmenu.Name = "panelInvoiceSubmenu";
+            this.panelInvoiceSubmenu.Size = new System.Drawing.Size(183, 161);
+            this.panelInvoiceSubmenu.TabIndex = 13;
+            // 
+            // btnViewPurchaseInvoice
+            // 
+            this.btnViewPurchaseInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewPurchaseInvoice.FlatAppearance.BorderSize = 0;
+            this.btnViewPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewPurchaseInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewPurchaseInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnViewPurchaseInvoice.Location = new System.Drawing.Point(0, 120);
+            this.btnViewPurchaseInvoice.Name = "btnViewPurchaseInvoice";
+            this.btnViewPurchaseInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnViewPurchaseInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnViewPurchaseInvoice.TabIndex = 5;
+            this.btnViewPurchaseInvoice.Text = "View Purchase Inv.";
+            this.btnViewPurchaseInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewPurchaseInvoice.UseVisualStyleBackColor = true;
+            // 
+            // btnViewSaleInvoice
+            // 
+            this.btnViewSaleInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewSaleInvoice.FlatAppearance.BorderSize = 0;
+            this.btnViewSaleInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewSaleInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewSaleInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnViewSaleInvoice.Location = new System.Drawing.Point(0, 80);
+            this.btnViewSaleInvoice.Name = "btnViewSaleInvoice";
+            this.btnViewSaleInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnViewSaleInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnViewSaleInvoice.TabIndex = 4;
+            this.btnViewSaleInvoice.Text = "View Sale Invoice";
+            this.btnViewSaleInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewSaleInvoice.UseVisualStyleBackColor = true;
             // 
             // btnPurchaseInvoice
             // 
-            this.btnPurchaseInvoice.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPurchaseInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchaseInvoice.FlatAppearance.BorderSize = 0;
             this.btnPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchaseInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurchaseInvoice.Location = new System.Drawing.Point(225, 204);
+            this.btnPurchaseInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchaseInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnPurchaseInvoice.Location = new System.Drawing.Point(0, 40);
             this.btnPurchaseInvoice.Name = "btnPurchaseInvoice";
-            this.btnPurchaseInvoice.Size = new System.Drawing.Size(187, 98);
-            this.btnPurchaseInvoice.TabIndex = 5;
+            this.btnPurchaseInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnPurchaseInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnPurchaseInvoice.TabIndex = 3;
             this.btnPurchaseInvoice.Text = "Purchase Invoice";
-            this.btnPurchaseInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPurchaseInvoice.UseVisualStyleBackColor = false;
-            this.btnPurchaseInvoice.Click += new System.EventHandler(this.btnPurchaseInvoice_Click);
+            this.btnPurchaseInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchaseInvoice.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSaleInvoice
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateBlue;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 98);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Sale Invoice";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSaleInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSaleInvoice.FlatAppearance.BorderSize = 0;
+            this.btnSaleInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaleInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnSaleInvoice.Location = new System.Drawing.Point(0, 0);
+            this.btnSaleInvoice.Name = "btnSaleInvoice";
+            this.btnSaleInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSaleInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnSaleInvoice.TabIndex = 2;
+            this.btnSaleInvoice.Text = "Sale Invoice";
+            this.btnSaleInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaleInvoice.UseVisualStyleBackColor = true;
             // 
-            // Dashboard
+            // Dashboard2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 749);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btnPurchaseInvoice);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = true;
-            this.Name = "Dashboard";
-            this.Text = "Dashboard";
+            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.panelSide);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Dashboard2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dashboard2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panelSide.ResumeLayout(false);
+            this.panelLedger.ResumeLayout(false);
+            this.panelManagement.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            this.panelInvoiceSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem administrationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageCustomersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageProductsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.ToolStripMenuItem manageSuppliersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem purchaseInvoiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ledgerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerLedgerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem backupDatabaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backupDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restoreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supplierLedgerToolStripMenuItem;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblBalance;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblExpense;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblIncome;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblTdSale;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button btnLedgers;
+        private System.Windows.Forms.Panel panelManagement;
+        private System.Windows.Forms.Button btnCustomerList;
+        private System.Windows.Forms.Button btnManagement;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelLedger;
+        private System.Windows.Forms.Button btnDailySheet;
+        private System.Windows.Forms.Button btnCustomerLedger;
+        private System.Windows.Forms.Button btnSupplierLedger;
+        private System.Windows.Forms.Button btnEmployeeLedger;
+        private System.Windows.Forms.Button btnProductList;
+        private System.Windows.Forms.Button btnEmployeeList;
+        private System.Windows.Forms.Button btnSupplierList;
+        private System.Windows.Forms.Button btnExpenses;
+        private System.Windows.Forms.Panel panelInvoiceSubmenu;
+        private System.Windows.Forms.Button btnViewPurchaseInvoice;
+        private System.Windows.Forms.Button btnViewSaleInvoice;
         private System.Windows.Forms.Button btnPurchaseInvoice;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ToolStripMenuItem cashBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageSaleInvoicesRecordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem managePurchaseRecordToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem stockValueToolStripMenuItem;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnSaleInvoice;
+        private System.Windows.Forms.Button btnInvoices;
     }
 }

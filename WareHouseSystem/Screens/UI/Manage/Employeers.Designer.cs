@@ -68,7 +68,6 @@
             this.UserRecords.TabIndex = 10;
             this.UserRecords.TabStop = false;
             this.UserRecords.Text = "Employee Records";
-            this.UserRecords.Enter += new System.EventHandler(this.UserRecords_Enter);
             // 
             // GDVSupplier
             // 
@@ -148,7 +147,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(674, 153);
             this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label7
             // 
@@ -164,10 +162,10 @@
             // txtBalance
             // 
             this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(552, 14);
+            this.txtBalance.Location = new System.Drawing.Point(538, 14);
             this.txtBalance.MaxLength = 18;
             this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(114, 26);
+            this.txtBalance.Size = new System.Drawing.Size(128, 26);
             this.txtBalance.TabIndex = 2;
             this.txtBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBalance_KeyPress);
             // 

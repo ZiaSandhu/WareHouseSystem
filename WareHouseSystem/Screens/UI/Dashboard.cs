@@ -7,71 +7,142 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WareHouseSystem.Screens.UI.Invoices;
 using WareHouseSystem.Screens.UI.Manage;
+using WareHouseSystem.Screens.UI.ledger;
 
 namespace WareHouseSystem.Screens.UI
 {
-    public partial class Dashboard : MetroTemplate
+    public partial class Dashboard : Form
     {
         public Dashboard()
         {
             InitializeComponent();
+            customeDesign();
         }
-        async void RunTime()
+
+        private void customeDesign()
         {
-            while (true)
+            panelManagement.Visible = false;
+            panelInvoiceSubmenu.Visible = false;
+            panelLedger.Visible = false;
+
+            btnInvoices.Enabled = false;
+            //btnEmployeeList.Enabled = false;
+            //btnEmployeeLedger.Enabled = false;
+        }
+
+        private void hideSubMenus()
+        {
+            if(panelManagement.Visible)
             {
-                lblTime.Text = DateTime.Now.ToString("T");
-                await Task.Delay(1000);
+                panelManagement.Visible = false;
+            }
+            if(panelInvoiceSubmenu.Visible)
+            {
+                panelInvoiceSubmenu.Visible = false;
+            }
+            if(panelLedger.Visible)
+            {
+                panelLedger.Visible = false;
+            }
+           
+        }
+
+        private void showSubMenu(Panel subPanel)
+        {
+            if (!subPanel.Visible)
+            {
+                hideSubMenus();
+                subPanel.Visible = true;
+            }
+            else
+            {
+               subPanel.Visible=false;
             }
         }
-        public void SettingLabel(string name)
-        {
 
-            lblUser.Text = "Welcome " + name + "";
-            lblDate.Text = System.DateTime.Now.ToString("D");
-            RunTime();
+        
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelInvoiceSubmenu);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnManagement_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            showSubMenu(panelManagement);
         }
 
-        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+       
+
+        private Form activeForm = null;
+        private void openChildFormInPanel(Form childForm)
         {
-            new Users().ShowDialog();
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void manageSuppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
-            new Suppliers().ShowDialog();
+            Application.Exit(); 
         }
 
-        private void manageCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCustomerList_Click(object sender, EventArgs e)
         {
-            new Customers().ShowDialog();
+            openChildFormInPanel(new Customers());
         }
 
-        private void manageProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnSupplierList_Click(object sender, EventArgs e)
         {
-            new Products().ShowDialog();
+            openChildFormInPanel(new Suppliers());
         }
 
-        private void btnPurchaseInvoice_Click(object sender, EventArgs e)
+        private void btnCustomerLedger_Click(object sender, EventArgs e)
         {
-            new Purchase().ShowDialog();
+            openChildFormInPanel(new customerLedger());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSupplierLedger_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            openChildFormInPanel(new SupplierLedger()); 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnLedgers_Click(object sender, EventArgs e)
         {
-            //new Expenses().ShowDialog();
+            showSubMenu(panelLedger);
+        }
+
+        private void btnExpenses_Click(object sender, EventArgs e)
+        {
+           // openChildFormInPanel(new Expenses());
+        }
+
+        private void btnEmployeeList_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Employeers()); 
+        }
+
+        private void btnEmployeeLedger_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new EmployeeLedger()); 
+        }
+
+        private void btnDailySheet_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new DailySheet());
+        }
+
+        private void btnProductList_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Products());
         }
     }
 }

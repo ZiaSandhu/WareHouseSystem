@@ -35,7 +35,7 @@ namespace WareHouseSystem.Screens.UI.Manage
 
         private void PopulateSupplierGrid()
         {
-            string query = "Select * from tblSuppliers";
+            string query = "Select id,name,balance,mobile,location from tblStakeholders where role='Supplier'";
             database.PopulatGrid(query,GDVSupplier);
         }
 
@@ -66,7 +66,9 @@ namespace WareHouseSystem.Screens.UI.Manage
         private void UpdateValues()
         {
             GetBalance();
-            string query = "Update tblSuppliers set Name='" + txtName.Text.Trim() + "',Phone='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance=" + bal + " where Id='"+this.SupplierID+"'";
+             DateTime date = DateTime.Now;
+            string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = "Update tblStakeholders set Name='" + txtName.Text.Trim() + "',Mobile='" + txtPhone.Text.Trim() + "',Location='" + txtAddress.Text.Trim() + "',Balance=" + bal + ",updatedAt='" + formattedDateTime + "' where Id='" + this.SupplierID + "'";
             if (database.RunQuery(query))
             {
                 MessageBox.Show("Supplier Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -82,10 +84,12 @@ namespace WareHouseSystem.Screens.UI.Manage
         private void InsertValues()
         {
             GetBalance();
-            string query = "Insert into tblSuppliers(name,phone,location,balance) Values('"+txtName.Text.Trim()+"','"+txtPhone.Text.Trim()+"','"+txtAddress.Text.Trim()+"',"+bal+")";
+            DateTime date = DateTime.Now;
+            string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = "Insert into tblStakeholders(name,mobile,location,balance,role,createdAt,updatedAt) Values('" + txtName.Text.Trim() + "','" + txtPhone.Text.Trim() + "','" + txtAddress.Text.Trim() + "'," + bal + ",'Supplier','" + formattedDateTime + "','" + formattedDateTime + "')";
             if (database.RunQuery(query))
             {
-                MessageBox.Show("Supplier Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Employee Record Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ResetFormControls();
                 PopulateSupplierGrid();
             }
@@ -125,7 +129,7 @@ namespace WareHouseSystem.Screens.UI.Manage
             {
                 if (MessageBox.Show("Are You Sure ? \n Delete Supplier " + txtName.Text + " from System.", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    string query = "delete from tblSuppliers where Id='" + this.SupplierID + "'";
+                    string query = "delete from tblStakeholders where Id='" + this.SupplierID + "'";
                     if (database.RunQuery(query))
                     {
                         MessageBox.Show("Supplier Record Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -147,9 +151,9 @@ namespace WareHouseSystem.Screens.UI.Manage
                 this.SupplierID = GDVSupplier.CurrentRow.Cells[0].Value.ToString();
                 this.SupplierName = GDVSupplier.CurrentRow.Cells[1].Value.ToString();
                 txtName.Text = this.SupplierName;
-                txtPhone.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
+                txtPhone.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
                 txtAddress.Text = GDVSupplier.CurrentRow.Cells[4].Value.ToString();
-                txtBalance.Text = GDVSupplier.CurrentRow.Cells[3].Value.ToString();
+                txtBalance.Text = GDVSupplier.CurrentRow.Cells[2].Value.ToString();
 
                 btnDelete.Enabled = true;
                 btnSave.Text = "Update";

@@ -1,6 +1,6 @@
 ﻿namespace WareHouseSystem.Screens.UI.ledger
 {
-    partial class CustomerLedgerForm
+    partial class EmployerLedgerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -94,11 +94,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(74, 21);
+            this.label3.Location = new System.Drawing.Point(45, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 26);
+            this.label3.Size = new System.Drawing.Size(243, 26);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Customer Income";
+            this.label3.Text = "Employee Record Entry";
             // 
             // labelDescription
             // 
@@ -186,7 +186,7 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Name";
             // 
-            // CustomerLedgerForm
+            // EmployerLedgerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +194,7 @@
             this.ClientSize = new System.Drawing.Size(361, 354);
             this.Controls.Add(this.panel1);
             this.DisplayHeader = false;
-            this.Name = "CustomerLedgerForm";
+            this.Name = "EmployerLedgerForm";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.DropShadow;
             this.Style = MetroFramework.MetroColorStyle.Silver;

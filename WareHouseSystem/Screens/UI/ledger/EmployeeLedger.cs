@@ -2,28 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WareHouseSystem.General;
-using WareHouseSystem.Screens.UI.Manage;
 
 namespace WareHouseSystem.Screens.UI.ledger
 {
-    public partial class customerLedger : Form
+    public partial class EmployeeLedger : Form
     {
-        public customerLedger()
+        public EmployeeLedger()
         {
             InitializeComponent();
-            LoadCustomerName();
+            LoadComboBox();
             CustomSetting();
             PopulateGrid();
         }
-
         private bool isFirstSelection = true;
 
         private void CustomSetting()
@@ -32,28 +28,26 @@ namespace WareHouseSystem.Screens.UI.ledger
         }
         private void PopulateGrid()
         {
-
             int userId = (int)FilterNameBox.SelectedValue;
             string fromDate = FromDate.Value.Date.ToString("yyyy-MM-dd");
             string toDate = ToDate.Value.Date.ToString("yyyy-MM-dd");
 
             database.LedgerGridPopulate(GDVCusLedger, userId, fromDate, toDate);
+
             decimal income = database.CalculateColumnSum(GDVCusLedger, "income");
             decimal expense = database.CalculateColumnSum(GDVCusLedger, "expense");
-            decimal balance =  expense - income;
+            decimal balance = expense - income;
 
             labelBalance.Text = "Rs." + database.FormatAmount(balance);
             labelIncome.Text = "Rs." + database.FormatAmount(income);
             labelExpense.Text = "Rs." + database.FormatAmount(expense);
+
         }
 
-     
-        private void LoadCustomerName()
+        private void LoadComboBox()
         {
-            string query = "Select Id,Name from tblStakeholders where role='Customer'";
+            string query = "Select Id,Name from tblStakeholders where role='Employee'";
             database.LoadComboBox(query, FilterNameBox);
-
-            isFirstSelection = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,7 +55,7 @@ namespace WareHouseSystem.Screens.UI.ledger
             this.Close();
         }
 
-        private void FromDate_ValueChanged(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
             PopulateGrid();
         }
@@ -74,7 +68,9 @@ namespace WareHouseSystem.Screens.UI.ledger
         private void FilterNameBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(!isFirstSelection)
+            {
                 PopulateGrid();
+            }
         }
     }
 }

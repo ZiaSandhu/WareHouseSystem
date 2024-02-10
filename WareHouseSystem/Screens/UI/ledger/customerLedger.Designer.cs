@@ -28,25 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(customerLedger));
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateLedger = new System.Windows.Forms.DateTimePicker();
-            this.CusNameBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
-            this.UserRecords = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelBalance = new System.Windows.Forms.Label();
+            this.labelExpense = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelIncome = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
-            this.CBdate = new System.Windows.Forms.CheckBox();
-            this.CBName = new System.Windows.Forms.CheckBox();
             this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.FilterNameBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,387 +49,104 @@
             this.FromDate = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelBalance = new System.Windows.Forms.Label();
-            this.labelExpense = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelIncome = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.UserRecords.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(90, 49);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(576, 39);
-            this.txtDescription.TabIndex = 3;
-            this.txtDescription.Text = "Recieved";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(4, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 20);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Description";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(28, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Name";
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(456, 94);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(115, 50);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(211, 94);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(115, 50);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(335, 94);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(115, 50);
-            this.btnReset.TabIndex = 6;
-            this.btnReset.Text = "Reset";
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(90, 94);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 50);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 187);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Customer Ledger";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MintCream;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateLedger);
-            this.panel1.Controls.Add(this.CusNameBox);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtAmount);
-            this.panel1.Controls.Add(this.txtDescription);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnReset);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 31);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 153);
-            this.panel1.TabIndex = 10;
+            this.panel1.Size = new System.Drawing.Size(750, 64);
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(471, 23);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(271, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Date";
-            // 
-            // dateLedger
-            // 
-            this.dateLedger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLedger.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateLedger.Location = new System.Drawing.Point(521, 18);
-            this.dateLedger.Name = "dateLedger";
-            this.dateLedger.Size = new System.Drawing.Size(145, 26);
-            this.dateLedger.TabIndex = 28;
-            // 
-            // CusNameBox
-            // 
-            this.CusNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CusNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CusNameBox.BackColor = System.Drawing.Color.White;
-            this.CusNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CusNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CusNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.CusNameBox.Location = new System.Drawing.Point(85, 17);
-            this.CusNameBox.Name = "CusNameBox";
-            this.CusNameBox.Size = new System.Drawing.Size(187, 28);
-            this.CusNameBox.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(278, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Amount";
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(351, 17);
-            this.txtAmount.MaxLength = 18;
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(114, 26);
-            this.txtAmount.TabIndex = 2;
-            this.txtAmount.Text = "1000";
-            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
-            // 
-            // UserRecords
-            // 
-            this.UserRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserRecords.Controls.Add(this.panel2);
-            this.UserRecords.Controls.Add(this.btnReport);
-            this.UserRecords.Controls.Add(this.CBdate);
-            this.UserRecords.Controls.Add(this.CBName);
-            this.UserRecords.Controls.Add(this.GDVCusLedger);
-            this.UserRecords.Controls.Add(this.FilterNameBox);
-            this.UserRecords.Controls.Add(this.label6);
-            this.UserRecords.Controls.Add(this.ToDate);
-            this.UserRecords.Controls.Add(this.FromDate);
-            this.UserRecords.Controls.Add(this.label14);
-            this.UserRecords.Controls.Add(this.label13);
-            this.UserRecords.Controls.Add(this.btnRefresh);
-            this.UserRecords.Controls.Add(this.btnSearch);
-            this.UserRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserRecords.ForeColor = System.Drawing.Color.Black;
-            this.UserRecords.Location = new System.Drawing.Point(2, 187);
-            this.UserRecords.Name = "UserRecords";
-            this.UserRecords.Size = new System.Drawing.Size(714, 354);
-            this.UserRecords.TabIndex = 16;
-            this.UserRecords.TabStop = false;
-            this.UserRecords.Text = "Transaction Records";
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.Firebrick;
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(597, 53);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(77, 35);
-            this.btnReport.TabIndex = 29;
-            this.btnReport.Text = "Report";
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReport.UseVisualStyleBackColor = false;
-            // 
-            // CBdate
-            // 
-            this.CBdate.AutoSize = true;
-            this.CBdate.Location = new System.Drawing.Point(358, 29);
-            this.CBdate.Name = "CBdate";
-            this.CBdate.Size = new System.Drawing.Size(112, 21);
-            this.CBdate.TabIndex = 28;
-            this.CBdate.Text = "Filter By Date";
-            this.CBdate.UseVisualStyleBackColor = true;
-            // 
-            // CBName
-            // 
-            this.CBName.AutoSize = true;
-            this.CBName.Location = new System.Drawing.Point(358, 67);
-            this.CBName.Name = "CBName";
-            this.CBName.Size = new System.Drawing.Size(144, 21);
-            this.CBName.TabIndex = 28;
-            this.CBName.Text = "Filter BY Customer";
-            this.CBName.UseVisualStyleBackColor = true;
-            // 
-            // GDVCusLedger
-            // 
-            this.GDVCusLedger.AllowUserToAddRows = false;
-            this.GDVCusLedger.AllowUserToDeleteRows = false;
-            this.GDVCusLedger.AllowUserToResizeRows = false;
-            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVCusLedger.Location = new System.Drawing.Point(6, 94);
-            this.GDVCusLedger.MultiSelect = false;
-            this.GDVCusLedger.Name = "GDVCusLedger";
-            this.GDVCusLedger.ReadOnly = true;
-            this.GDVCusLedger.RowHeadersVisible = false;
-            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(585, 254);
-            this.GDVCusLedger.TabIndex = 15;
-            // 
-            // FilterNameBox
-            // 
-            this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.FilterNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.FilterNameBox.BackColor = System.Drawing.Color.White;
-            this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.FilterNameBox.Location = new System.Drawing.Point(59, 62);
-            this.FilterNameBox.Name = "FilterNameBox";
-            this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
-            this.FilterNameBox.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(2, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Name";
-            // 
-            // ToDate
-            // 
-            this.ToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ToDate.Location = new System.Drawing.Point(225, 24);
-            this.ToDate.Name = "ToDate";
-            this.ToDate.Size = new System.Drawing.Size(127, 26);
-            this.ToDate.TabIndex = 26;
-            // 
-            // FromDate
-            // 
-            this.FromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FromDate.Location = new System.Drawing.Point(59, 24);
-            this.FromDate.Name = "FromDate";
-            this.FromDate.Size = new System.Drawing.Size(127, 26);
-            this.FromDate.TabIndex = 26;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(192, 29);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 20);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "To";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(7, 29);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 20);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "From";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(502, 53);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(89, 35);
-            this.btnRefresh.TabIndex = 8;
-            this.btnRefresh.Text = "    Reset";
-            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Firebrick;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(502, 15);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(89, 35);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.label1.Size = new System.Drawing.Size(262, 45);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Customer Ledger";
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.labelBalance);
-            this.panel2.Controls.Add(this.labelExpense);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.labelIncome);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(597, 94);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.btnReport);
+            this.panel2.Controls.Add(this.GDVCusLedger);
+            this.panel2.Controls.Add(this.FilterNameBox);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.ToDate);
+            this.panel2.Controls.Add(this.FromDate);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(107, 254);
-            this.panel2.TabIndex = 32;
+            this.panel2.Size = new System.Drawing.Size(750, 489);
+            this.panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(390, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 35);
+            this.button2.TabIndex = 45;
+            this.button2.Text = "Reset";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(617, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 70);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Close";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.labelBalance);
+            this.panel3.Controls.Add(this.labelExpense);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.labelIncome);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(617, 86);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(121, 254);
+            this.panel3.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(5, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Summary";
             // 
             // labelBalance
             // 
@@ -505,58 +217,142 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Income";
             // 
-            // label3
+            // btnReport
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(5, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Summary";
+            this.btnReport.BackColor = System.Drawing.Color.Green;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(473, 45);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(77, 35);
+            this.btnReport.TabIndex = 42;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
+            // 
+            // GDVCusLedger
+            // 
+            this.GDVCusLedger.AllowUserToAddRows = false;
+            this.GDVCusLedger.AllowUserToDeleteRows = false;
+            this.GDVCusLedger.AllowUserToResizeRows = false;
+            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GDVCusLedger.Location = new System.Drawing.Point(12, 86);
+            this.GDVCusLedger.MultiSelect = false;
+            this.GDVCusLedger.Name = "GDVCusLedger";
+            this.GDVCusLedger.ReadOnly = true;
+            this.GDVCusLedger.RowHeadersVisible = false;
+            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GDVCusLedger.Size = new System.Drawing.Size(602, 391);
+            this.GDVCusLedger.TabIndex = 36;
+            // 
+            // FilterNameBox
+            // 
+            this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.FilterNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.FilterNameBox.BackColor = System.Drawing.Color.White;
+            this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.FilterNameBox.Location = new System.Drawing.Point(73, 52);
+            this.FilterNameBox.Name = "FilterNameBox";
+            this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
+            this.FilterNameBox.TabIndex = 35;
+            this.FilterNameBox.SelectedIndexChanged += new System.EventHandler(this.FilterNameBox_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(16, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Name";
+            // 
+            // ToDate
+            // 
+            this.ToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToDate.Location = new System.Drawing.Point(239, 14);
+            this.ToDate.Name = "ToDate";
+            this.ToDate.Size = new System.Drawing.Size(127, 26);
+            this.ToDate.TabIndex = 39;
+            this.ToDate.ValueChanged += new System.EventHandler(this.ToDate_ValueChanged);
+            // 
+            // FromDate
+            // 
+            this.FromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromDate.Location = new System.Drawing.Point(73, 14);
+            this.FromDate.Name = "FromDate";
+            this.FromDate.Size = new System.Drawing.Size(127, 26);
+            this.FromDate.TabIndex = 40;
+            this.FromDate.ValueChanged += new System.EventHandler(this.FromDate_ValueChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(206, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 20);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "To";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(21, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 20);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "From";
             // 
             // customerLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 553);
-            this.Controls.Add(this.UserRecords);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(750, 553);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "customerLedger";
             this.Text = "customerLedger";
-            this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.UserRecords.ResumeLayout(false);
-            this.UserRecords.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.GroupBox groupBox1;
+
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dateLedger;
-        private System.Windows.Forms.ComboBox CusNameBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtAmount;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox UserRecords;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.Label labelExpense;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelIncome;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.CheckBox CBdate;
-        private System.Windows.Forms.CheckBox CBName;
         private System.Windows.Forms.DataGridView GDVCusLedger;
         private System.Windows.Forms.ComboBox FilterNameBox;
         private System.Windows.Forms.Label label6;
@@ -564,15 +360,6 @@
         private System.Windows.Forms.DateTimePicker FromDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label labelBalance;
-        private System.Windows.Forms.Label labelExpense;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelIncome;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

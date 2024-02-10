@@ -62,7 +62,7 @@ namespace WareHouseSystem.Screens.UI
             //Dashboard dashboard = new Dashboard();
             //dashboard.SettingLabel(txtName.Text);
             //dashboard.Show();
-            new Dashboard2().Show();
+            new Dashboard().Show();
         }
 
         private void SaveLoginHistory()
