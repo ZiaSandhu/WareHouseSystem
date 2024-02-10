@@ -36,7 +36,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtBalance = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.panelMonth = new System.Windows.Forms.Panel();
             this.listMonths = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -108,7 +108,7 @@
             this.panel5.Controls.Add(this.btnExit);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.btnSave);
-            this.panel5.Controls.Add(this.txtBalance);
+            this.panel5.Controls.Add(this.txtAmount);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 183);
             this.panel5.Name = "panel5";
@@ -154,14 +154,15 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtBalance
+            // txtAmount
             // 
-            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(99, 6);
-            this.txtBalance.MaxLength = 18;
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(114, 26);
-            this.txtBalance.TabIndex = 30;
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(99, 6);
+            this.txtAmount.MaxLength = 18;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(114, 26);
+            this.txtAmount.TabIndex = 30;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // panelMonth
             // 
@@ -368,6 +369,7 @@
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Expenses";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Expenses_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -396,7 +398,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker datepicker;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBalance;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Button btnExit;

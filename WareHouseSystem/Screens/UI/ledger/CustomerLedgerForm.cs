@@ -68,6 +68,12 @@ namespace WareHouseSystem.Screens.UI.ledger
                 string cashbookQuery = "Insert into tblCashBooks(description,income,userId, userLedgerId,date,createdAt,updatedAt) values('"+description+"',"+amount+","+ CusNameBox.SelectedValue + ","+ledgerId+",'"+currentDate+"','"+formattedDateTime+ "','"+formattedDateTime+"')";
 
                 database.RunQuery(cashbookQuery);
+                
+                txtAmount.Text = "";
+
+                // udpate customer balance
+
+                MessageBox.Show("Ledger Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }

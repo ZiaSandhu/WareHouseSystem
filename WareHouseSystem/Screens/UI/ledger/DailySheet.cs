@@ -45,9 +45,15 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         private void btnExpenseForm_Click(object sender, EventArgs e)
         {
-            new Expenses().ShowDialog();
-        }
+            Expenses expensesForm = new Expenses();
+            expensesForm.FormClosed += ExpensesForm_FormClosed;
+            expensesForm.ShowDialog();
 
+        }
+        private void ExpensesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PopulateGrid();
+        }
         private void btnCustomerLedgerForm_Click(object sender, EventArgs e)
         {
             CustomerLedgerForm customerLedgerForm = new CustomerLedgerForm();
