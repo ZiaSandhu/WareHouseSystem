@@ -19,7 +19,7 @@ namespace WareHouseSystem.Screens.UI
             InitializeComponent();
             customeDesign();
         }
-
+          
         private void customeDesign()
         {
             panelManagement.Visible = false;
@@ -137,7 +137,7 @@ namespace WareHouseSystem.Screens.UI
 
         private void btnDailySheet_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new DailySheet());
+            openChildFormInPanel(new Cashbook());
         }
 
         private void btnProductList_Click(object sender, EventArgs e)

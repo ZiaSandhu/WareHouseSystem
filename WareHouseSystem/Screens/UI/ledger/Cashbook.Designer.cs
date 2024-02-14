@@ -1,6 +1,6 @@
 ﻿namespace WareHouseSystem.Screens.UI.ledger
 {
-    partial class DailySheet
+    partial class Cashbook
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailySheet));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cashbook));
             this.UserRecords = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,11 +48,11 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnExpenseForm = new System.Windows.Forms.Button();
             this.btnSupplierLedgerForm = new System.Windows.Forms.Button();
             this.btnCustomerLedgerForm = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.UserRecords.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GDVCashbook)).BeginInit();
@@ -118,9 +118,9 @@
             this.labelBalance.Location = new System.Drawing.Point(3, 237);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelBalance.Size = new System.Drawing.Size(82, 20);
+            this.labelBalance.Size = new System.Drawing.Size(78, 20);
             this.labelBalance.TabIndex = 5;
-            this.labelBalance.Text = "Rs. 00000";
+            this.labelBalance.Text = "Rs 00000";
             this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelExpense
@@ -130,9 +130,9 @@
             this.labelExpense.Location = new System.Drawing.Point(3, 171);
             this.labelExpense.Name = "labelExpense";
             this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelExpense.Size = new System.Drawing.Size(82, 20);
+            this.labelExpense.Size = new System.Drawing.Size(78, 20);
             this.labelExpense.TabIndex = 4;
-            this.labelExpense.Text = "Rs. 00000";
+            this.labelExpense.Text = "Rs 00000";
             this.labelExpense.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -164,9 +164,9 @@
             this.labelIncome.Location = new System.Drawing.Point(3, 85);
             this.labelIncome.Name = "labelIncome";
             this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelIncome.Size = new System.Drawing.Size(82, 20);
+            this.labelIncome.Size = new System.Drawing.Size(78, 20);
             this.labelIncome.TabIndex = 1;
-            this.labelIncome.Text = "Rs. 00000";
+            this.labelIncome.Text = "Rs 00000";
             this.labelIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -232,6 +232,7 @@
             this.ToDate.Name = "ToDate";
             this.ToDate.Size = new System.Drawing.Size(127, 26);
             this.ToDate.TabIndex = 26;
+            this.ToDate.ValueChanged += new System.EventHandler(this.ToDate_ValueChanged);
             // 
             // FromDate
             // 
@@ -241,6 +242,7 @@
             this.FromDate.Name = "FromDate";
             this.FromDate.Size = new System.Drawing.Size(127, 26);
             this.FromDate.TabIndex = 26;
+            this.FromDate.ValueChanged += new System.EventHandler(this.FromDate_ValueChanged);
             // 
             // label14
             // 
@@ -305,6 +307,20 @@
             this.panel1.Size = new System.Drawing.Size(684, 91);
             this.panel1.TabIndex = 18;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(510, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 36);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Employee Ledger";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnExpenseForm
             // 
             this.btnExpenseForm.BackColor = System.Drawing.Color.Teal;
@@ -354,21 +370,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 35);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(510, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Employee Ledger";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // DailySheet
+            // Cashbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,7 +378,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DailySheet";
+            this.Name = "Cashbook";
             this.Text = "DailySheet";
             this.UserRecords.ResumeLayout(false);
             this.UserRecords.PerformLayout();

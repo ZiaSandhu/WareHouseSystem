@@ -11,9 +11,9 @@ using WareHouseSystem.General;
 
 namespace WareHouseSystem.Screens.UI.ledger
 {
-    public partial class DailySheet : Form
+    public partial class Cashbook : Form
     {
-        public DailySheet()
+        public Cashbook()
         {
             InitializeComponent();
             PopulateGrid();
@@ -27,15 +27,30 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         public void PopulateGrid()
         {
-            string query = "select * from tblCashbooks";
-            database.PopulatGrid(query, GDVCashbook);
-            decimal income = database.CalculateColumnSum(GDVCashbook,"income");
-            decimal expense = database.CalculateColumnSum(GDVCashbook, "expense");
-            decimal balance = income-expense;
+            string fromDate = FromDate.Value.Date.ToString("yyyy-MM-dd");
+            string toDate = ToDate.Value.Date.ToString("yyyy-MM-dd");
 
-            labelBalance.Text = "Rs."+database.FormatAmount(balance);
-            labelIncome.Text = "Rs." + database.FormatAmount(income);
-            labelExpense.Text = "Rs." + database.FormatAmount(expense);
+            string query = @"
+    SELECT ul.date, sh.name, ul.description, ul.income, ul.expense
+    FROM tblCashbooks ul
+    LEFT JOIN tblStakeHolders sh ON ul.userId = sh.ID
+    WHERE ul.date >= '"+fromDate+ "' AND ul.date <=  '"+toDate+"'";
+
+            database.PopulatGrid(query, GDVCashbook);
+
+            string query1 = "SELECT SUM(income) as allincome, SUM(expense) as allexpense, SUM(income) -sum(expense) AS balance FROM tblCashbooks";
+
+
+            Dictionary<string, object> result = database.GetAggregatedValues(query1);
+
+            // Access the values using the keys
+            decimal income = (decimal)result["allincome"];
+            decimal expense = (decimal)result["allexpense"];
+            decimal balance = (decimal)result["balance"];
+
+            labelBalance.Text = "Rs"+database.FormatAmount(balance);
+            labelIncome.Text = "Rs" + database.FormatAmount(income);
+            labelExpense.Text = "Rs" + database.FormatAmount(expense);
         }
 
         private void UserRecords_Enter(object sender, EventArgs e)
@@ -84,6 +99,16 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         }
         private void EmployerLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PopulateGrid();
+        }
+
+        private void FromDate_ValueChanged(object sender, EventArgs e)
+        {
+            PopulateGrid();
+        }
+
+        private void ToDate_ValueChanged(object sender, EventArgs e)
         {
             PopulateGrid();
         }

@@ -113,7 +113,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         private void Expenses_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DailySheet cashbookForm = Application.OpenForms["Cashbook"] as DailySheet;
+            Cashbook cashbookForm = Application.OpenForms["Cashbook"] as Cashbook;
             if (cashbookForm != null)
             {
                 cashbookForm.PopulateGrid();

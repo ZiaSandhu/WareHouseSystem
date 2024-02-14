@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using WareHouseSystem.Screens.UI.Manage;
+using System.Reflection;
 
 namespace WareHouseSystem.General
 {
@@ -55,18 +56,45 @@ namespace WareHouseSystem.General
                 }
             }
         }
-
-        public static void LedgerGridPopulate(DataGridView datagrid,int userId,string fromDate,string toDate)
+        public static Dictionary<string, object> GetAggregatedValues(string query)
         {
-            string query = "SELECT * FROM tblUserLedger WHERE userId = @userId AND [Date] BETWEEN @fromDate AND @toDate";
+            Dictionary<string, object> aggregatedValues = new Dictionary<string, object>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    if (con.State != ConnectionState.Open)
+                        con.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                aggregatedValues.Add(reader.GetName(i), reader.GetValue(i));
+                            }
+                        }
+                    }
+                }
+            }
+
+            return aggregatedValues;
+        }
+
+        public static void LedgerGridPopulate(DataGridView datagrid,int userId)
+        {
+            string query = @"SELECT ul.date, sh.name, ul.description, ul.income, ul.expense
+                    FROM tblUserLedger ul
+                    INNER JOIN tblStakeHolders sh ON ul.userId = sh.ID
+                    WHERE ul.userId = @userId";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@userId", userId);
-                    cmd.Parameters.AddWithValue("@fromDate", fromDate);
-                    cmd.Parameters.AddWithValue("@toDate", toDate);
 
                     if (con.State != ConnectionState.Open)
                         con.Open();

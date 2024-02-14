@@ -88,7 +88,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         private void SupplierLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DailySheet cashbookForm = Application.OpenForms["Cashbook"] as DailySheet;
+            Cashbook cashbookForm = Application.OpenForms["Cashbook"] as Cashbook;
             if (cashbookForm != null)
             {
                 cashbookForm.PopulateGrid();

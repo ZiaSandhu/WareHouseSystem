@@ -17,23 +17,23 @@ namespace WareHouseSystem.Screens.UI.ledger
         {
             InitializeComponent();
             LoadComboBox();
-            CustomSetting();
             PopulateGrid();
+            customSetting();
+        }
+
+        private void customSetting()
+        {
+           btnReport.Visible = false;
         }
 
         private bool isFirstSelection = true;
 
-        private void CustomSetting()
-        {
-            database.SetDateTimePickerToFirstDayOfMonth(FromDate);
-        }
+        
         private void PopulateGrid()
         {
             int userId = (int)FilterNameBox.SelectedValue;
-            string fromDate = FromDate.Value.Date.ToString("yyyy-MM-dd");
-            string toDate = ToDate.Value.Date.ToString("yyyy-MM-dd");
 
-            database.LedgerGridPopulate(GDVCusLedger, userId, fromDate, toDate);
+            database.LedgerGridPopulate(GDVCusLedger, userId);
             decimal income = database.CalculateColumnSum(GDVCusLedger, "income");
             decimal expense = database.CalculateColumnSum(GDVCusLedger, "expense");
             decimal balance =  income - expense ;

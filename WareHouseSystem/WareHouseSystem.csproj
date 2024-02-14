@@ -101,6 +101,12 @@
     <Compile Include="Screens\UI\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\UI\DashboardStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UI\DashboardStats.Designer.cs">
+      <DependentUpon>DashboardStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\UI\Invoices\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +137,11 @@
     <Compile Include="Screens\UI\ledger\SupplierLedgerForm.Designer.cs">
       <DependentUpon>SupplierLedgerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\UI\ledger\DailySheet.cs">
+    <Compile Include="Screens\UI\ledger\Cashbook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\UI\ledger\DailySheet.Designer.cs">
-      <DependentUpon>DailySheet.cs</DependentUpon>
+    <Compile Include="Screens\UI\ledger\Cashbook.Designer.cs">
+      <DependentUpon>Cashbook.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UI\ledger\CustomerLedgerForm.cs">
       <SubType>Form</SubType>
@@ -221,8 +227,8 @@
     <EmbeddedResource Include="Screens\UI\ledger\SupplierLedgerForm.resx">
       <DependentUpon>SupplierLedgerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\UI\ledger\DailySheet.resx">
-      <DependentUpon>DailySheet.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\UI\ledger\Cashbook.resx">
+      <DependentUpon>Cashbook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UI\ledger\CustomerLedgerForm.resx">
       <DependentUpon>CustomerLedgerForm.cs</DependentUpon>

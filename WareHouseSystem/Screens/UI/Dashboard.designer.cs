@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.panelSide = new System.Windows.Forms.Panel();
+            this.panelInvoiceSubmenu = new System.Windows.Forms.Panel();
+            this.btnViewPurchaseInvoice = new System.Windows.Forms.Button();
+            this.btnViewSaleInvoice = new System.Windows.Forms.Button();
+            this.btnPurchaseInvoice = new System.Windows.Forms.Button();
+            this.btnSaleInvoice = new System.Windows.Forms.Button();
+            this.btnInvoices = new System.Windows.Forms.Button();
             this.panelLedger = new System.Windows.Forms.Panel();
             this.btnDailySheet = new System.Windows.Forms.Button();
             this.btnCustomerLedger = new System.Windows.Forms.Button();
@@ -41,23 +47,17 @@
             this.btnSupplierList = new System.Windows.Forms.Button();
             this.btnCustomerList = new System.Windows.Forms.Button();
             this.btnManagement = new System.Windows.Forms.Button();
+            this.btnExpenses = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
             this.labelClose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnExpenses = new System.Windows.Forms.Button();
-            this.btnInvoices = new System.Windows.Forms.Button();
-            this.panelInvoiceSubmenu = new System.Windows.Forms.Panel();
-            this.btnViewPurchaseInvoice = new System.Windows.Forms.Button();
-            this.btnViewSaleInvoice = new System.Windows.Forms.Button();
-            this.btnPurchaseInvoice = new System.Windows.Forms.Button();
-            this.btnSaleInvoice = new System.Windows.Forms.Button();
             this.panelSide.SuspendLayout();
+            this.panelInvoiceSubmenu.SuspendLayout();
             this.panelLedger.SuspendLayout();
             this.panelManagement.SuspendLayout();
             this.panelTop.SuspendLayout();
-            this.panelInvoiceSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSide
@@ -77,6 +77,97 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(200, 600);
             this.panelSide.TabIndex = 0;
+            // 
+            // panelInvoiceSubmenu
+            // 
+            this.panelInvoiceSubmenu.Controls.Add(this.btnViewPurchaseInvoice);
+            this.panelInvoiceSubmenu.Controls.Add(this.btnViewSaleInvoice);
+            this.panelInvoiceSubmenu.Controls.Add(this.btnPurchaseInvoice);
+            this.panelInvoiceSubmenu.Controls.Add(this.btnSaleInvoice);
+            this.panelInvoiceSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInvoiceSubmenu.Location = new System.Drawing.Point(0, 650);
+            this.panelInvoiceSubmenu.Name = "panelInvoiceSubmenu";
+            this.panelInvoiceSubmenu.Size = new System.Drawing.Size(183, 161);
+            this.panelInvoiceSubmenu.TabIndex = 13;
+            // 
+            // btnViewPurchaseInvoice
+            // 
+            this.btnViewPurchaseInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewPurchaseInvoice.FlatAppearance.BorderSize = 0;
+            this.btnViewPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewPurchaseInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewPurchaseInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnViewPurchaseInvoice.Location = new System.Drawing.Point(0, 120);
+            this.btnViewPurchaseInvoice.Name = "btnViewPurchaseInvoice";
+            this.btnViewPurchaseInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnViewPurchaseInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnViewPurchaseInvoice.TabIndex = 5;
+            this.btnViewPurchaseInvoice.Text = "View Purchase Inv.";
+            this.btnViewPurchaseInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewPurchaseInvoice.UseVisualStyleBackColor = true;
+            // 
+            // btnViewSaleInvoice
+            // 
+            this.btnViewSaleInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewSaleInvoice.FlatAppearance.BorderSize = 0;
+            this.btnViewSaleInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewSaleInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewSaleInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnViewSaleInvoice.Location = new System.Drawing.Point(0, 80);
+            this.btnViewSaleInvoice.Name = "btnViewSaleInvoice";
+            this.btnViewSaleInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnViewSaleInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnViewSaleInvoice.TabIndex = 4;
+            this.btnViewSaleInvoice.Text = "View Sale Invoice";
+            this.btnViewSaleInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewSaleInvoice.UseVisualStyleBackColor = true;
+            // 
+            // btnPurchaseInvoice
+            // 
+            this.btnPurchaseInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchaseInvoice.FlatAppearance.BorderSize = 0;
+            this.btnPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchaseInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchaseInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnPurchaseInvoice.Location = new System.Drawing.Point(0, 40);
+            this.btnPurchaseInvoice.Name = "btnPurchaseInvoice";
+            this.btnPurchaseInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnPurchaseInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnPurchaseInvoice.TabIndex = 3;
+            this.btnPurchaseInvoice.Text = "Purchase Invoice";
+            this.btnPurchaseInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchaseInvoice.UseVisualStyleBackColor = true;
+            // 
+            // btnSaleInvoice
+            // 
+            this.btnSaleInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSaleInvoice.FlatAppearance.BorderSize = 0;
+            this.btnSaleInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaleInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleInvoice.ForeColor = System.Drawing.Color.White;
+            this.btnSaleInvoice.Location = new System.Drawing.Point(0, 0);
+            this.btnSaleInvoice.Name = "btnSaleInvoice";
+            this.btnSaleInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSaleInvoice.Size = new System.Drawing.Size(183, 40);
+            this.btnSaleInvoice.TabIndex = 2;
+            this.btnSaleInvoice.Text = "Sale Invoice";
+            this.btnSaleInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaleInvoice.UseVisualStyleBackColor = true;
+            // 
+            // btnInvoices
+            // 
+            this.btnInvoices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInvoices.FlatAppearance.BorderSize = 0;
+            this.btnInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvoices.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoices.ForeColor = System.Drawing.Color.White;
+            this.btnInvoices.Location = new System.Drawing.Point(0, 605);
+            this.btnInvoices.Name = "btnInvoices";
+            this.btnInvoices.Size = new System.Drawing.Size(183, 45);
+            this.btnInvoices.TabIndex = 12;
+            this.btnInvoices.Text = "Invoices";
+            this.btnInvoices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoices.UseVisualStyleBackColor = true;
             // 
             // panelLedger
             // 
@@ -102,7 +193,7 @@
             this.btnDailySheet.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDailySheet.Size = new System.Drawing.Size(183, 45);
             this.btnDailySheet.TabIndex = 7;
-            this.btnDailySheet.Text = "Daily Sheet";
+            this.btnDailySheet.Text = "Cashbook";
             this.btnDailySheet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDailySheet.UseVisualStyleBackColor = true;
             this.btnDailySheet.Click += new System.EventHandler(this.btnDailySheet_Click);
@@ -270,6 +361,22 @@
             this.btnManagement.UseVisualStyleBackColor = true;
             this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
             // 
+            // btnExpenses
+            // 
+            this.btnExpenses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExpenses.FlatAppearance.BorderSize = 0;
+            this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpenses.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpenses.ForeColor = System.Drawing.Color.White;
+            this.btnExpenses.Location = new System.Drawing.Point(0, 100);
+            this.btnExpenses.Name = "btnExpenses";
+            this.btnExpenses.Size = new System.Drawing.Size(183, 45);
+            this.btnExpenses.TabIndex = 3;
+            this.btnExpenses.Text = "Dashboard";
+            this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpenses.UseVisualStyleBackColor = true;
+            this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
+            // 
             // panelLogo
             // 
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -322,114 +429,7 @@
             this.panelMain.Size = new System.Drawing.Size(700, 558);
             this.panelMain.TabIndex = 2;
             // 
-            // btnExpenses
-            // 
-            this.btnExpenses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExpenses.FlatAppearance.BorderSize = 0;
-            this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpenses.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpenses.ForeColor = System.Drawing.Color.White;
-            this.btnExpenses.Location = new System.Drawing.Point(0, 100);
-            this.btnExpenses.Name = "btnExpenses";
-            this.btnExpenses.Size = new System.Drawing.Size(183, 45);
-            this.btnExpenses.TabIndex = 3;
-            this.btnExpenses.Text = "Dashboard";
-            this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpenses.UseVisualStyleBackColor = true;
-            this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
-            // 
-            // btnInvoices
-            // 
-            this.btnInvoices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInvoices.FlatAppearance.BorderSize = 0;
-            this.btnInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInvoices.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvoices.ForeColor = System.Drawing.Color.White;
-            this.btnInvoices.Location = new System.Drawing.Point(0, 605);
-            this.btnInvoices.Name = "btnInvoices";
-            this.btnInvoices.Size = new System.Drawing.Size(183, 45);
-            this.btnInvoices.TabIndex = 12;
-            this.btnInvoices.Text = "Invoices";
-            this.btnInvoices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInvoices.UseVisualStyleBackColor = true;
-            // 
-            // panelInvoiceSubmenu
-            // 
-            this.panelInvoiceSubmenu.Controls.Add(this.btnViewPurchaseInvoice);
-            this.panelInvoiceSubmenu.Controls.Add(this.btnViewSaleInvoice);
-            this.panelInvoiceSubmenu.Controls.Add(this.btnPurchaseInvoice);
-            this.panelInvoiceSubmenu.Controls.Add(this.btnSaleInvoice);
-            this.panelInvoiceSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInvoiceSubmenu.Location = new System.Drawing.Point(0, 650);
-            this.panelInvoiceSubmenu.Name = "panelInvoiceSubmenu";
-            this.panelInvoiceSubmenu.Size = new System.Drawing.Size(183, 161);
-            this.panelInvoiceSubmenu.TabIndex = 13;
-            // 
-            // btnViewPurchaseInvoice
-            // 
-            this.btnViewPurchaseInvoice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewPurchaseInvoice.FlatAppearance.BorderSize = 0;
-            this.btnViewPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewPurchaseInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewPurchaseInvoice.ForeColor = System.Drawing.Color.White;
-            this.btnViewPurchaseInvoice.Location = new System.Drawing.Point(0, 120);
-            this.btnViewPurchaseInvoice.Name = "btnViewPurchaseInvoice";
-            this.btnViewPurchaseInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnViewPurchaseInvoice.Size = new System.Drawing.Size(183, 40);
-            this.btnViewPurchaseInvoice.TabIndex = 5;
-            this.btnViewPurchaseInvoice.Text = "View Purchase Inv.";
-            this.btnViewPurchaseInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewPurchaseInvoice.UseVisualStyleBackColor = true;
-            // 
-            // btnViewSaleInvoice
-            // 
-            this.btnViewSaleInvoice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewSaleInvoice.FlatAppearance.BorderSize = 0;
-            this.btnViewSaleInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewSaleInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewSaleInvoice.ForeColor = System.Drawing.Color.White;
-            this.btnViewSaleInvoice.Location = new System.Drawing.Point(0, 80);
-            this.btnViewSaleInvoice.Name = "btnViewSaleInvoice";
-            this.btnViewSaleInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnViewSaleInvoice.Size = new System.Drawing.Size(183, 40);
-            this.btnViewSaleInvoice.TabIndex = 4;
-            this.btnViewSaleInvoice.Text = "View Sale Invoice";
-            this.btnViewSaleInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewSaleInvoice.UseVisualStyleBackColor = true;
-            // 
-            // btnPurchaseInvoice
-            // 
-            this.btnPurchaseInvoice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurchaseInvoice.FlatAppearance.BorderSize = 0;
-            this.btnPurchaseInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchaseInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurchaseInvoice.ForeColor = System.Drawing.Color.White;
-            this.btnPurchaseInvoice.Location = new System.Drawing.Point(0, 40);
-            this.btnPurchaseInvoice.Name = "btnPurchaseInvoice";
-            this.btnPurchaseInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnPurchaseInvoice.Size = new System.Drawing.Size(183, 40);
-            this.btnPurchaseInvoice.TabIndex = 3;
-            this.btnPurchaseInvoice.Text = "Purchase Invoice";
-            this.btnPurchaseInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchaseInvoice.UseVisualStyleBackColor = true;
-            // 
-            // btnSaleInvoice
-            // 
-            this.btnSaleInvoice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSaleInvoice.FlatAppearance.BorderSize = 0;
-            this.btnSaleInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaleInvoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaleInvoice.ForeColor = System.Drawing.Color.White;
-            this.btnSaleInvoice.Location = new System.Drawing.Point(0, 0);
-            this.btnSaleInvoice.Name = "btnSaleInvoice";
-            this.btnSaleInvoice.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSaleInvoice.Size = new System.Drawing.Size(183, 40);
-            this.btnSaleInvoice.TabIndex = 2;
-            this.btnSaleInvoice.Text = "Sale Invoice";
-            this.btnSaleInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaleInvoice.UseVisualStyleBackColor = true;
-            // 
-            // Dashboard2
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -438,16 +438,16 @@
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelSide);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard2";
+            this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSide.ResumeLayout(false);
+            this.panelInvoiceSubmenu.ResumeLayout(false);
             this.panelLedger.ResumeLayout(false);
             this.panelManagement.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            this.panelInvoiceSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

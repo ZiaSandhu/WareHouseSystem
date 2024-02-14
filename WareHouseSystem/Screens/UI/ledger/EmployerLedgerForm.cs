@@ -57,15 +57,16 @@ namespace WareHouseSystem.Screens.UI.ledger
                 string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
                 string amount = txtAmount.Text.Trim();
                 string currentDate = datepicker.Value.Date.ToString("yyyy-MM-dd");
-                string query = "INSERT INTO tblCustomersLedger (customerId, description, amount, createdAt, updatedAt, date,role) " +
-               "OUTPUT INSERTED.ID " +
-               "VALUES (" + CusNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Employee')";
+                string query = "INSERT INTO tblUserLedger (userId, description, expense, createdAt, updatedAt, date,role) " +
+              "OUTPUT INSERTED.ID " +
+              "VALUES (" + CusNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Employee')";
+
 
                 string ledgerId = database.ScalarQuery(query);
 
                 //insert into cashbook
 
-                string cashbookQuery = "Insert into tblCashBooks(description,income,userId, userLedgerId,date,createdAt,updatedAt) values('"+description+"',"+amount+","+ CusNameBox.SelectedValue + ","+ledgerId+",'"+currentDate+"','"+formattedDateTime+ "','"+formattedDateTime+"')";
+                string cashbookQuery = "Insert into tblCashBooks(description,expense,userId, userLedgerId,date,createdAt,updatedAt) values('"+description+"',"+amount+","+ CusNameBox.SelectedValue + ","+ledgerId+",'"+currentDate+"','"+formattedDateTime+ "','"+formattedDateTime+"')";
 
                 database.RunQuery(cashbookQuery);
                 
@@ -92,7 +93,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
         private void CustomerLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DailySheet cashbookForm = Application.OpenForms["Cashbook"] as DailySheet;
+            Cashbook cashbookForm = Application.OpenForms["Cashbook"] as Cashbook;
             if (cashbookForm != null)
             {
                 cashbookForm.PopulateGrid();

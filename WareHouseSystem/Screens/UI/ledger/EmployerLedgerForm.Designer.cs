@@ -119,7 +119,7 @@
             this.textDescription.Name = "textDescription";
             this.textDescription.Size = new System.Drawing.Size(187, 26);
             this.textDescription.TabIndex = 36;
-            this.textDescription.Text = "Recieved";
+            this.textDescription.Text = "Salary";
             // 
             // label1
             // 
