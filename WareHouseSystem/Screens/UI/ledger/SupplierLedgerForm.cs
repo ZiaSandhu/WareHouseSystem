@@ -13,11 +13,14 @@ namespace WareHouseSystem.Screens.UI.ledger
 {
     public partial class SupplierLedgerForm : MetroTemplate
     {
-        public SupplierLedgerForm()
+        private bool isBill = false;
+        public SupplierLedgerForm(bool isBillTrue = false)
         {
             InitializeComponent();
             LoadSupplierName();
 
+            isBill = isBillTrue;
+            textDescription.Text = isBill ? "Bill # " : "Paid";
         }
 
         private void LoadSupplierName()
@@ -41,7 +44,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
                 if (textDescription.Text.Trim().Length <= 0)
                 {
-                    description = "Recieved";
+                    description = isBill ? "Bill # " : "Paid";
                 }
                 else
                 {
@@ -51,18 +54,30 @@ namespace WareHouseSystem.Screens.UI.ledger
                 string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
                 string amount = txtAmount.Text.Trim();
                 string currentDate = datepicker.Value.Date.ToString("yyyy-MM-dd");
-                string query = "INSERT INTO tblUserLedger (userId, description, expense, createdAt, updatedAt, date,role) " +
-               "OUTPUT INSERTED.ID " +
-               "VALUES (" + SupNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Supplier')";
 
-                string ledgerId = database.ScalarQuery(query);
+                if (!isBill)
+                {
+                    string query = "INSERT INTO tblUserLedger (userId, description, expense, createdAt, updatedAt, date,role) " +
+             "OUTPUT INSERTED.ID " +
+             "VALUES (" + SupNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Supplier')";
 
-                //insert into cashbook
+                    string ledgerId = database.ScalarQuery(query);
 
-                string cashbookQuery = "Insert into tblCashBooks(description,expense,userId, userLedgerId,date,createdAt,updatedAt) values('" + description + "'," + amount + "," + SupNameBox.SelectedValue + "," + ledgerId + ",'" + currentDate + "','" + formattedDateTime + "','" + formattedDateTime + "')";
+                    //insert into cashbook
 
-                database.RunQuery(cashbookQuery);
+                    string cashbookQuery = "Insert into tblCashBooks(description,expense,userId, userLedgerId,date,createdAt,updatedAt) values('" + description + "'," + amount + "," + SupNameBox.SelectedValue + "," + ledgerId + ",'" + currentDate + "','" + formattedDateTime + "','" + formattedDateTime + "')";
+
+                    database.RunQuery(cashbookQuery);
+                }
+                else if (isBill)
+                {
+                    string query = "INSERT INTO tblUserLedger (userId, description, income, createdAt, updatedAt, date,role) " +
+            "OUTPUT INSERTED.ID " +
+            "VALUES (" + SupNameBox.SelectedValue + ", '" + description + "', " + amount + ", '" + formattedDateTime + "', '" + formattedDateTime + "','" + currentDate + "','Supplier')";
+                    database.RunQuery (query);  
+                }
                 txtAmount.Text = "";
+
                 // udpate customer balance
 
                 MessageBox.Show("Ledger Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

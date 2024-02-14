@@ -115,13 +115,19 @@ namespace WareHouseSystem.General
         }
 
 
-        public static void LedgerGridPopulate(DataGridView datagrid,int userId)
+        public static void LedgerGridPopulate(DataGridView datagrid,int userId,bool isCustomer=false)
         {
             string query = @"SELECT ul.date, sh.name, ul.description, ul.income, ul.expense
                     FROM tblUserLedger ul
                     INNER JOIN tblStakeHolders sh ON ul.userId = sh.ID
                     WHERE ul.userId = @userId";
-
+            if (isCustomer)
+            {
+                query = @"SELECT ul.date, sh.name, ul.description, ul.expense , ul.income
+                    FROM tblUserLedger ul
+                    INNER JOIN tblStakeHolders sh ON ul.userId = sh.ID
+                    WHERE ul.userId = @userId";
+            }
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))

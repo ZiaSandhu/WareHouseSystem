@@ -41,9 +41,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelIncome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBillPayment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -206,6 +206,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnBillPayment);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.GDVCusLedger);
@@ -216,6 +217,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 489);
             this.panel2.TabIndex = 3;
+            // 
+            // btnBillPayment
+            // 
+            this.btnBillPayment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBillPayment.BackColor = System.Drawing.Color.Teal;
+            this.btnBillPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBillPayment.ForeColor = System.Drawing.Color.White;
+            this.btnBillPayment.Location = new System.Drawing.Point(418, 14);
+            this.btnBillPayment.Name = "btnBillPayment";
+            this.btnBillPayment.Size = new System.Drawing.Size(196, 32);
+            this.btnBillPayment.TabIndex = 45;
+            this.btnBillPayment.Text = "Add Bill Payment";
+            this.btnBillPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBillPayment.UseVisualStyleBackColor = false;
+            this.btnBillPayment.Click += new System.EventHandler(this.btnBillPayment_Click);
             // 
             // label1
             // 
@@ -230,26 +247,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 64);
             this.panel1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(698, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 45);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // SupplierLedger
             // 
@@ -289,6 +292,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBillPayment;
     }
 }

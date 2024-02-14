@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBillPayment = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.FilterNameBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -52,7 +52,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -73,6 +72,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnBillPayment);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.GDVCusLedger);
@@ -83,6 +83,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 489);
             this.panel2.TabIndex = 1;
+            // 
+            // btnBillPayment
+            // 
+            this.btnBillPayment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBillPayment.BackColor = System.Drawing.Color.Teal;
+            this.btnBillPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBillPayment.ForeColor = System.Drawing.Color.White;
+            this.btnBillPayment.Location = new System.Drawing.Point(418, 18);
+            this.btnBillPayment.Name = "btnBillPayment";
+            this.btnBillPayment.Size = new System.Drawing.Size(196, 32);
+            this.btnBillPayment.TabIndex = 44;
+            this.btnBillPayment.Text = "Add Bill Payment";
+            this.btnBillPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBillPayment.UseVisualStyleBackColor = false;
+            this.btnBillPayment.Click += new System.EventHandler(this.btnBillPayment_Click);
             // 
             // panel3
             // 
@@ -127,7 +143,7 @@
             // 
             this.labelExpense.AutoSize = true;
             this.labelExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExpense.Location = new System.Drawing.Point(3, 159);
+            this.labelExpense.Location = new System.Drawing.Point(3, 81);
             this.labelExpense.Name = "labelExpense";
             this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelExpense.Size = new System.Drawing.Size(82, 20);
@@ -151,7 +167,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(3, 126);
+            this.label5.Location = new System.Drawing.Point(5, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 2;
@@ -161,7 +177,7 @@
             // 
             this.labelIncome.AutoSize = true;
             this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIncome.Location = new System.Drawing.Point(3, 73);
+            this.labelIncome.Location = new System.Drawing.Point(7, 159);
             this.labelIncome.Name = "labelIncome";
             this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelIncome.Size = new System.Drawing.Size(82, 20);
@@ -174,7 +190,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Green;
-            this.label9.Location = new System.Drawing.Point(3, 43);
+            this.label9.Location = new System.Drawing.Point(5, 139);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 0;
@@ -238,19 +254,6 @@
             this.label6.TabIndex = 41;
             this.label6.Text = "Name";
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(698, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 45);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.button1_Click);
-            // 
             // customerLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +292,6 @@
         private System.Windows.Forms.ComboBox FilterNameBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBillPayment;
     }
 }

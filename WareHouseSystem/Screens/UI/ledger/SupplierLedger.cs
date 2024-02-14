@@ -71,5 +71,16 @@ namespace WareHouseSystem.Screens.UI.ledger
                 PopulateGrid();
             }
         }
+
+        private void btnBillPayment_Click(object sender, EventArgs e)
+        {
+            SupplierLedgerForm supplierLedgerForm = new SupplierLedgerForm(true);
+            supplierLedgerForm.FormClosed += SupplierLedgerForm_FormClosed;
+            supplierLedgerForm.ShowDialog();
+        }
+        private void SupplierLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PopulateGrid();
+        }
     }
 }

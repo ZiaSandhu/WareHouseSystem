@@ -42,6 +42,7 @@ namespace WareHouseSystem.Screens.UI
             panelLedger.Visible = false;
 
             btnInvoices.Enabled = false;
+            btnProductList.Enabled = false; 
             //btnEmployeeList.Enabled = false;
             //btnEmployeeLedger.Enabled = false;
 

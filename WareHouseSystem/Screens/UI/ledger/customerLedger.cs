@@ -16,6 +16,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 {
     public partial class customerLedger : Form
     {
+
         public customerLedger()
         {
             InitializeComponent();
@@ -30,12 +31,13 @@ namespace WareHouseSystem.Screens.UI.ledger
         {
             btnReport.Visible = false;
         }
+
         private void PopulateGrid()
         {
 
             int userId = (int)FilterNameBox.SelectedValue;
 
-            database.LedgerGridPopulate(GDVCusLedger, userId);
+            database.LedgerGridPopulate(GDVCusLedger, userId,true);
             decimal income = database.CalculateColumnSum(GDVCusLedger, "income");
             decimal expense = database.CalculateColumnSum(GDVCusLedger, "expense");
             decimal balance =  expense - income;
@@ -44,7 +46,6 @@ namespace WareHouseSystem.Screens.UI.ledger
             labelIncome.Text = "Rs." + database.FormatAmount(income);
             labelExpense.Text = "Rs." + database.FormatAmount(expense);
         }
-
      
         private void LoadCustomerName()
         {
@@ -59,20 +60,23 @@ namespace WareHouseSystem.Screens.UI.ledger
             this.Close();
         }
 
-        private void FromDate_ValueChanged(object sender, EventArgs e)
-        {
-            PopulateGrid();
-        }
-
-        private void ToDate_ValueChanged(object sender, EventArgs e)
-        {
-            PopulateGrid();
-        }
-
         private void FilterNameBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(!isFirstSelection)
                 PopulateGrid();
+        }
+
+        private void btnBillPayment_Click(object sender, EventArgs e)
+        {
+            CustomerLedgerForm customerLedgerForm = new CustomerLedgerForm(true);
+            customerLedgerForm.FormClosed += CustomerLedgerForm_FormClosed;
+            customerLedgerForm.ShowDialog();
+        }
+
+       
+        private void CustomerLedgerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PopulateGrid();
         }
     }
 }
