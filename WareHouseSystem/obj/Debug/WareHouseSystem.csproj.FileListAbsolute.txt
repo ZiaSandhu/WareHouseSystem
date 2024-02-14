@@ -52,3 +52,4 @@ C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\ob
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.EmployeeLedger.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Dashboard.resources
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.ledger.Cashbook.resources
+C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.Screens.UI.Stats.resources

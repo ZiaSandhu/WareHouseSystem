@@ -83,6 +83,38 @@ namespace WareHouseSystem.General
             return aggregatedValues;
         }
 
+        public static Dictionary<string, int> GetRoleCounts()
+        {
+            Dictionary<string, int> roleCounts = new Dictionary<string, int>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                string query = @"
+            SELECT role, COUNT(*) AS count
+            FROM tblStakeHolders
+            WHERE role IN ('customer', 'supplier', 'employee')
+            GROUP BY role";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string role = reader["role"].ToString();
+                            int count = Convert.ToInt32(reader["count"]);
+                            roleCounts.Add(role, count);
+                        }
+                    }
+                }
+            }
+
+            return roleCounts;
+        }
+
+
         public static void LedgerGridPopulate(DataGridView datagrid,int userId)
         {
             string query = @"SELECT ul.date, sh.name, ul.description, ul.income, ul.expense

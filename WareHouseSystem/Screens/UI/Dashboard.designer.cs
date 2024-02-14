@@ -47,7 +47,7 @@
             this.btnSupplierList = new System.Windows.Forms.Button();
             this.btnCustomerList = new System.Windows.Forms.Button();
             this.btnManagement = new System.Windows.Forms.Button();
-            this.btnExpenses = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
             this.labelClose = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.panelSide.Controls.Add(this.btnLedgers);
             this.panelSide.Controls.Add(this.panelManagement);
             this.panelSide.Controls.Add(this.btnManagement);
-            this.panelSide.Controls.Add(this.btnExpenses);
+            this.panelSide.Controls.Add(this.btnHome);
             this.panelSide.Controls.Add(this.panelLogo);
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 0);
@@ -361,21 +361,21 @@
             this.btnManagement.UseVisualStyleBackColor = true;
             this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
             // 
-            // btnExpenses
+            // btnHome
             // 
-            this.btnExpenses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExpenses.FlatAppearance.BorderSize = 0;
-            this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpenses.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpenses.ForeColor = System.Drawing.Color.White;
-            this.btnExpenses.Location = new System.Drawing.Point(0, 100);
-            this.btnExpenses.Name = "btnExpenses";
-            this.btnExpenses.Size = new System.Drawing.Size(183, 45);
-            this.btnExpenses.TabIndex = 3;
-            this.btnExpenses.Text = "Dashboard";
-            this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpenses.UseVisualStyleBackColor = true;
-            this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(0, 100);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(183, 45);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "Dashboard";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnExpenses_Click);
             // 
             // panelLogo
             // 
@@ -472,7 +472,7 @@
         private System.Windows.Forms.Button btnProductList;
         private System.Windows.Forms.Button btnEmployeeList;
         private System.Windows.Forms.Button btnSupplierList;
-        private System.Windows.Forms.Button btnExpenses;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelInvoiceSubmenu;
         private System.Windows.Forms.Button btnViewPurchaseInvoice;
         private System.Windows.Forms.Button btnViewSaleInvoice;

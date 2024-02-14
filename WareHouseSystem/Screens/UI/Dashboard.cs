@@ -19,7 +19,22 @@ namespace WareHouseSystem.Screens.UI
             InitializeComponent();
             customeDesign();
         }
-          
+
+        private Form activeForm = null;
+        private void openChildFormInPanel(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void customeDesign()
         {
             panelManagement.Visible = false;
@@ -29,6 +44,8 @@ namespace WareHouseSystem.Screens.UI
             btnInvoices.Enabled = false;
             //btnEmployeeList.Enabled = false;
             //btnEmployeeLedger.Enabled = false;
+
+            openChildFormInPanel(new Stats());
         }
 
         private void hideSubMenus()
@@ -75,20 +92,7 @@ namespace WareHouseSystem.Screens.UI
 
        
 
-        private Form activeForm = null;
-        private void openChildFormInPanel(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(childForm);
-            panelMain.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
+        
 
         private void labelClose_Click(object sender, EventArgs e)
         {
@@ -122,7 +126,7 @@ namespace WareHouseSystem.Screens.UI
 
         private void btnExpenses_Click(object sender, EventArgs e)
         {
-           // openChildFormInPanel(new Expenses());
+            openChildFormInPanel(new Stats());
         }
 
         private void btnEmployeeList_Click(object sender, EventArgs e)
