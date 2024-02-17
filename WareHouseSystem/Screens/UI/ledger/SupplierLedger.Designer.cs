@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.FilterNameBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,31 +44,12 @@
             this.btnBillPayment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
+            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GDVCusLedger
-            // 
-            this.GDVCusLedger.AllowUserToAddRows = false;
-            this.GDVCusLedger.AllowUserToDeleteRows = false;
-            this.GDVCusLedger.AllowUserToResizeRows = false;
-            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVCusLedger.Location = new System.Drawing.Point(12, 51);
-            this.GDVCusLedger.MultiSelect = false;
-            this.GDVCusLedger.Name = "GDVCusLedger";
-            this.GDVCusLedger.ReadOnly = true;
-            this.GDVCusLedger.RowHeadersVisible = false;
-            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(602, 426);
-            this.GDVCusLedger.TabIndex = 36;
             // 
             // FilterNameBox
             // 
@@ -78,7 +59,7 @@
             this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.FilterNameBox.Location = new System.Drawing.Point(79, 16);
+            this.FilterNameBox.Location = new System.Drawing.Point(69, 18);
             this.FilterNameBox.Name = "FilterNameBox";
             this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
             this.FilterNameBox.TabIndex = 35;
@@ -89,7 +70,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(22, 19);
+            this.label6.Location = new System.Drawing.Point(12, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 41;
@@ -110,6 +91,7 @@
             // 
             this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.ForeColor = System.Drawing.Color.Black;
             this.labelBalance.Location = new System.Drawing.Point(3, 225);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -122,6 +104,7 @@
             // 
             this.labelExpense.AutoSize = true;
             this.labelExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExpense.ForeColor = System.Drawing.Color.Black;
             this.labelExpense.Location = new System.Drawing.Point(3, 159);
             this.labelExpense.Name = "labelExpense";
             this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -187,15 +170,16 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.labelIncome);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(617, 51);
+            this.panel3.Location = new System.Drawing.Point(606, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(121, 289);
+            this.panel3.Size = new System.Drawing.Size(132, 289);
             this.panel3.TabIndex = 43;
             // 
             // labelIncome
             // 
             this.labelIncome.AutoSize = true;
             this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIncome.ForeColor = System.Drawing.Color.Black;
             this.labelIncome.Location = new System.Drawing.Point(3, 73);
             this.labelIncome.Name = "labelIncome";
             this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -206,10 +190,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.GDVCusLedger);
             this.panel2.Controls.Add(this.btnBillPayment);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnReport);
-            this.panel2.Controls.Add(this.GDVCusLedger);
             this.panel2.Controls.Add(this.FilterNameBox);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -225,7 +209,7 @@
             this.btnBillPayment.BackColor = System.Drawing.Color.Teal;
             this.btnBillPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBillPayment.ForeColor = System.Drawing.Color.White;
-            this.btnBillPayment.Location = new System.Drawing.Point(418, 14);
+            this.btnBillPayment.Location = new System.Drawing.Point(404, 13);
             this.btnBillPayment.Name = "btnBillPayment";
             this.btnBillPayment.Size = new System.Drawing.Size(196, 32);
             this.btnBillPayment.TabIndex = 45;
@@ -254,6 +238,29 @@
             this.panel1.Size = new System.Drawing.Size(750, 64);
             this.panel1.TabIndex = 2;
             // 
+            // GDVCusLedger
+            // 
+            this.GDVCusLedger.AllowUserToAddRows = false;
+            this.GDVCusLedger.AllowUserToDeleteRows = false;
+            this.GDVCusLedger.AllowUserToResizeRows = false;
+            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GDVCusLedger.Location = new System.Drawing.Point(12, 52);
+            this.GDVCusLedger.MultiSelect = false;
+            this.GDVCusLedger.Name = "GDVCusLedger";
+            this.GDVCusLedger.ReadOnly = true;
+            this.GDVCusLedger.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.GDVCusLedger.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GDVCusLedger.Size = new System.Drawing.Size(588, 425);
+            this.GDVCusLedger.TabIndex = 46;
+            // 
             // SupplierLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,20 +271,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupplierLedger";
             this.Text = "SupplierLedger";
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView GDVCusLedger;
         private System.Windows.Forms.ComboBox FilterNameBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
@@ -293,5 +298,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBillPayment;
+        private System.Windows.Forms.DataGridView GDVCusLedger;
     }
 }

@@ -38,15 +38,43 @@ namespace WareHouseSystem.Screens.UI.ledger
 
             database.PopulatGrid(query, GDVCashbook);
 
-            string query1 = "SELECT SUM(income) as allincome, SUM(expense) as allexpense, SUM(income) -sum(expense) AS balance FROM tblCashbooks";
-
+            string query1 = "SELECT SUM(income) as allincome, SUM(expense) as allexpense, SUM(income) - SUM(expense) AS balance FROM tblCashbooks";
 
             Dictionary<string, object> result = database.GetAggregatedValues(query1);
 
-            // Access the values using the keys
-            decimal income = (decimal)result["allincome"];
-            decimal expense = (decimal)result["allexpense"];
-            decimal balance = (decimal)result["balance"];
+            // Define default values for income, expense, and balance
+            decimal income = 0;
+            decimal expense = 0;
+            decimal balance = 0;
+
+            // Check if the dictionary contains the keys before accessing them
+            if (result.ContainsKey("allincome"))
+            {
+                // Attempt to parse the value to decimal
+                if (decimal.TryParse(result["allincome"].ToString(), out decimal parsedIncome))
+                {
+                    income = parsedIncome;
+                }
+            }
+
+            if (result.ContainsKey("allexpense"))
+            {
+                // Attempt to parse the value to decimal
+                if (decimal.TryParse(result["allexpense"].ToString(), out decimal parsedExpense))
+                {
+                    expense = parsedExpense;
+                }
+            }
+
+            if (result.ContainsKey("balance"))
+            {
+                // Attempt to parse the value to decimal
+                if (decimal.TryParse(result["balance"].ToString(), out decimal parsedBalance))
+                {
+                    balance = parsedBalance;
+                }
+            }
+
 
             labelBalance.Text = "Rs"+database.FormatAmount(balance);
             labelIncome.Text = "Rs" + database.FormatAmount(income);

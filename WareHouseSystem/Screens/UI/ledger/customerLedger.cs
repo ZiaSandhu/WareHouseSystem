@@ -78,5 +78,10 @@ namespace WareHouseSystem.Screens.UI.ledger
         {
             PopulateGrid();
         }
+
+        private void GDVCusLedger_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

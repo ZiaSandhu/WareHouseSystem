@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.labelCustomer = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelSupplier = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.labelEmployee = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelBalance = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,25 +64,16 @@
             this.panel1.Size = new System.Drawing.Size(187, 154);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // labelCustomer
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Controls.Add(this.labelSupplier);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(284, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 154);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.Controls.Add(this.labelEmployee);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(475, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(187, 154);
-            this.panel3.TabIndex = 2;
+            this.labelCustomer.AutoSize = true;
+            this.labelCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomer.ForeColor = System.Drawing.Color.Teal;
+            this.labelCustomer.Location = new System.Drawing.Point(21, 83);
+            this.labelCustomer.Name = "labelCustomer";
+            this.labelCustomer.Size = new System.Drawing.Size(29, 31);
+            this.labelCustomer.TabIndex = 1;
+            this.labelCustomer.Text = "0";
             // 
             // label1
             // 
@@ -95,38 +86,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Customers";
             // 
-            // label2
+            // panel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(31, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Suppliers";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(20, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Employee";
-            // 
-            // labelCustomer
-            // 
-            this.labelCustomer.AutoSize = true;
-            this.labelCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomer.ForeColor = System.Drawing.Color.Teal;
-            this.labelCustomer.Location = new System.Drawing.Point(21, 83);
-            this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(29, 31);
-            this.labelCustomer.TabIndex = 1;
-            this.labelCustomer.Text = "0";
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.Controls.Add(this.labelSupplier);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(284, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 154);
+            this.panel2.TabIndex = 1;
             // 
             // labelSupplier
             // 
@@ -139,6 +107,27 @@
             this.labelSupplier.TabIndex = 2;
             this.labelSupplier.Text = "0";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(31, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Suppliers";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Controls.Add(this.labelEmployee);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(475, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(187, 154);
+            this.panel3.TabIndex = 2;
+            // 
             // labelEmployee
             // 
             this.labelEmployee.AutoSize = true;
@@ -149,6 +138,17 @@
             this.labelEmployee.Size = new System.Drawing.Size(29, 31);
             this.labelEmployee.TabIndex = 3;
             this.labelEmployee.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
+            this.label3.Location = new System.Drawing.Point(20, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 31);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Employee";
             // 
             // panel4
             // 

@@ -15,8 +15,13 @@ namespace WareHouseSystem.General
 {
     public class database
     {
-        public static string ConnectionString = @"Data Source=DESKTOP-1ULGF16\SQLEXPRESS;Initial Catalog=warehouse;Integrated Security=True";
+        //public static string ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\database\newpridepvc.mdf;Integrated Security=True;User Instance=True";
 
+        //DESKTOP-0RPIUHH
+
+        //public static string ConnectionString = @"Data Source=DESKTOP-0RPIUHH\SQLEXPRESS;Initial Catalog=newpridepvc;Integrated Security=True";
+
+        public static string ConnectionString = @"Data Source=DESKTOP-1ULGF16\SQLEXPRESS;Initial Catalog=warehouse;Integrated Security=True";
 
         public static void PopulatGrid(string query, DataGridView datagrid)
         {

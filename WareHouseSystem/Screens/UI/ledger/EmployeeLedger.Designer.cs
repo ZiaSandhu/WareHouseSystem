@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.labelExpense = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.FilterNameBox = new System.Windows.Forms.ComboBox();
             this.labelIncome = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -43,10 +43,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
+            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +87,7 @@
             // 
             this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.ForeColor = System.Drawing.Color.Black;
             this.labelBalance.Location = new System.Drawing.Point(3, 225);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -98,6 +100,7 @@
             // 
             this.labelExpense.AutoSize = true;
             this.labelExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExpense.ForeColor = System.Drawing.Color.Black;
             this.labelExpense.Location = new System.Drawing.Point(3, 159);
             this.labelExpense.Name = "labelExpense";
             this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -128,26 +131,6 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Expense";
             // 
-            // GDVCusLedger
-            // 
-            this.GDVCusLedger.AllowUserToAddRows = false;
-            this.GDVCusLedger.AllowUserToDeleteRows = false;
-            this.GDVCusLedger.AllowUserToResizeRows = false;
-            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVCusLedger.Location = new System.Drawing.Point(12, 51);
-            this.GDVCusLedger.MultiSelect = false;
-            this.GDVCusLedger.Name = "GDVCusLedger";
-            this.GDVCusLedger.ReadOnly = true;
-            this.GDVCusLedger.RowHeadersVisible = false;
-            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(602, 426);
-            this.GDVCusLedger.TabIndex = 36;
-            // 
             // FilterNameBox
             // 
             this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -166,6 +149,7 @@
             // 
             this.labelIncome.AutoSize = true;
             this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIncome.ForeColor = System.Drawing.Color.Black;
             this.labelIncome.Location = new System.Drawing.Point(3, 73);
             this.labelIncome.Name = "labelIncome";
             this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -203,9 +187,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.GDVCusLedger);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnReport);
-            this.panel2.Controls.Add(this.GDVCusLedger);
             this.panel2.Controls.Add(this.FilterNameBox);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -238,6 +222,29 @@
             this.panel1.Size = new System.Drawing.Size(750, 64);
             this.panel1.TabIndex = 2;
             // 
+            // GDVCusLedger
+            // 
+            this.GDVCusLedger.AllowUserToAddRows = false;
+            this.GDVCusLedger.AllowUserToDeleteRows = false;
+            this.GDVCusLedger.AllowUserToResizeRows = false;
+            this.GDVCusLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GDVCusLedger.Location = new System.Drawing.Point(23, 51);
+            this.GDVCusLedger.MultiSelect = false;
+            this.GDVCusLedger.Name = "GDVCusLedger";
+            this.GDVCusLedger.ReadOnly = true;
+            this.GDVCusLedger.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.GDVCusLedger.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GDVCusLedger.Size = new System.Drawing.Size(588, 425);
+            this.GDVCusLedger.TabIndex = 47;
+            // 
             // EmployeeLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,13 +255,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmployeeLedger";
             this.Text = "SupplierLedger";
-            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GDVCusLedger)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,7 +275,6 @@
         private System.Windows.Forms.Label labelExpense;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView GDVCusLedger;
         private System.Windows.Forms.ComboBox FilterNameBox;
         private System.Windows.Forms.Label labelIncome;
         private System.Windows.Forms.Label label9;
@@ -276,5 +282,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView GDVCusLedger;
     }
 }

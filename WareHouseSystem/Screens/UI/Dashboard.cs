@@ -149,5 +149,10 @@ namespace WareHouseSystem.Screens.UI
         {
             openChildFormInPanel(new Products());
         }
+
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

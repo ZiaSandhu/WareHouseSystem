@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,9 +42,9 @@
             this.labelIncome = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
-            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.FilterNameBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.GDVCusLedger = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,10 +73,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.GDVCusLedger);
             this.panel2.Controls.Add(this.btnBillPayment);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnReport);
-            this.panel2.Controls.Add(this.GDVCusLedger);
             this.panel2.Controls.Add(this.FilterNameBox);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -91,7 +92,7 @@
             this.btnBillPayment.BackColor = System.Drawing.Color.Teal;
             this.btnBillPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBillPayment.ForeColor = System.Drawing.Color.White;
-            this.btnBillPayment.Location = new System.Drawing.Point(418, 18);
+            this.btnBillPayment.Location = new System.Drawing.Point(403, 18);
             this.btnBillPayment.Name = "btnBillPayment";
             this.btnBillPayment.Size = new System.Drawing.Size(196, 32);
             this.btnBillPayment.TabIndex = 44;
@@ -111,9 +112,9 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.labelIncome);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(617, 56);
+            this.panel3.Location = new System.Drawing.Point(605, 56);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(121, 284);
+            this.panel3.Size = new System.Drawing.Size(133, 284);
             this.panel3.TabIndex = 43;
             // 
             // label3
@@ -131,6 +132,7 @@
             // 
             this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.ForeColor = System.Drawing.Color.Black;
             this.labelBalance.Location = new System.Drawing.Point(3, 225);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -143,6 +145,7 @@
             // 
             this.labelExpense.AutoSize = true;
             this.labelExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExpense.ForeColor = System.Drawing.Color.Black;
             this.labelExpense.Location = new System.Drawing.Point(3, 81);
             this.labelExpense.Name = "labelExpense";
             this.labelExpense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -177,6 +180,7 @@
             // 
             this.labelIncome.AutoSize = true;
             this.labelIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIncome.ForeColor = System.Drawing.Color.Black;
             this.labelIncome.Location = new System.Drawing.Point(7, 159);
             this.labelIncome.Name = "labelIncome";
             this.labelIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -209,6 +213,31 @@
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = false;
             // 
+            // FilterNameBox
+            // 
+            this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.FilterNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.FilterNameBox.BackColor = System.Drawing.Color.White;
+            this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.FilterNameBox.Location = new System.Drawing.Point(73, 20);
+            this.FilterNameBox.Name = "FilterNameBox";
+            this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
+            this.FilterNameBox.TabIndex = 35;
+            this.FilterNameBox.SelectedIndexChanged += new System.EventHandler(this.FilterNameBox_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(16, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Name";
+            // 
             // GDVCusLedger
             // 
             this.GDVCusLedger.AllowUserToAddRows = false;
@@ -220,39 +249,17 @@
             this.GDVCusLedger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GDVCusLedger.BackgroundColor = System.Drawing.SystemColors.MenuBar;
             this.GDVCusLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GDVCusLedger.Location = new System.Drawing.Point(12, 56);
+            this.GDVCusLedger.Location = new System.Drawing.Point(12, 54);
             this.GDVCusLedger.MultiSelect = false;
             this.GDVCusLedger.Name = "GDVCusLedger";
             this.GDVCusLedger.ReadOnly = true;
             this.GDVCusLedger.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.GDVCusLedger.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.GDVCusLedger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVCusLedger.Size = new System.Drawing.Size(602, 421);
-            this.GDVCusLedger.TabIndex = 36;
-            // 
-            // FilterNameBox
-            // 
-            this.FilterNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.FilterNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.FilterNameBox.BackColor = System.Drawing.Color.White;
-            this.FilterNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FilterNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.FilterNameBox.Location = new System.Drawing.Point(85, 22);
-            this.FilterNameBox.Name = "FilterNameBox";
-            this.FilterNameBox.Size = new System.Drawing.Size(293, 28);
-            this.FilterNameBox.TabIndex = 35;
-            this.FilterNameBox.SelectedIndexChanged += new System.EventHandler(this.FilterNameBox_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(28, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Name";
+            this.GDVCusLedger.Size = new System.Drawing.Size(587, 425);
+            this.GDVCusLedger.TabIndex = 47;
             // 
             // customerLedger
             // 
@@ -288,10 +295,10 @@
         private System.Windows.Forms.Label labelIncome;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.DataGridView GDVCusLedger;
         private System.Windows.Forms.ComboBox FilterNameBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBillPayment;
+        private System.Windows.Forms.DataGridView GDVCusLedger;
     }
 }

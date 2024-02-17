@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panelSide = new System.Windows.Forms.Panel();
             this.panelInvoiceSubmenu = new System.Windows.Forms.Panel();
             this.btnViewPurchaseInvoice = new System.Windows.Forms.Button();
@@ -49,15 +50,14 @@
             this.btnManagement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.labelClose = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelInvoiceSubmenu.SuspendLayout();
             this.panelLedger.SuspendLayout();
             this.panelManagement.SuspendLayout();
-            this.panelTop.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSide
@@ -85,7 +85,7 @@
             this.panelInvoiceSubmenu.Controls.Add(this.btnPurchaseInvoice);
             this.panelInvoiceSubmenu.Controls.Add(this.btnSaleInvoice);
             this.panelInvoiceSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInvoiceSubmenu.Location = new System.Drawing.Point(0, 650);
+            this.panelInvoiceSubmenu.Location = new System.Drawing.Point(0, 660);
             this.panelInvoiceSubmenu.Name = "panelInvoiceSubmenu";
             this.panelInvoiceSubmenu.Size = new System.Drawing.Size(183, 161);
             this.panelInvoiceSubmenu.TabIndex = 13;
@@ -161,7 +161,7 @@
             this.btnInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvoices.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvoices.ForeColor = System.Drawing.Color.White;
-            this.btnInvoices.Location = new System.Drawing.Point(0, 605);
+            this.btnInvoices.Location = new System.Drawing.Point(0, 615);
             this.btnInvoices.Name = "btnInvoices";
             this.btnInvoices.Size = new System.Drawing.Size(183, 45);
             this.btnInvoices.TabIndex = 12;
@@ -176,7 +176,7 @@
             this.panelLedger.Controls.Add(this.btnSupplierLedger);
             this.panelLedger.Controls.Add(this.btnEmployeeLedger);
             this.panelLedger.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLedger.Location = new System.Drawing.Point(0, 418);
+            this.panelLedger.Location = new System.Drawing.Point(0, 428);
             this.panelLedger.Name = "panelLedger";
             this.panelLedger.Size = new System.Drawing.Size(183, 187);
             this.panelLedger.TabIndex = 11;
@@ -256,7 +256,7 @@
             this.btnLedgers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLedgers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLedgers.ForeColor = System.Drawing.Color.White;
-            this.btnLedgers.Location = new System.Drawing.Point(0, 373);
+            this.btnLedgers.Location = new System.Drawing.Point(0, 383);
             this.btnLedgers.Name = "btnLedgers";
             this.btnLedgers.Size = new System.Drawing.Size(183, 45);
             this.btnLedgers.TabIndex = 10;
@@ -272,7 +272,7 @@
             this.panelManagement.Controls.Add(this.btnSupplierList);
             this.panelManagement.Controls.Add(this.btnCustomerList);
             this.panelManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelManagement.Location = new System.Drawing.Point(0, 190);
+            this.panelManagement.Location = new System.Drawing.Point(0, 200);
             this.panelManagement.Name = "panelManagement";
             this.panelManagement.Size = new System.Drawing.Size(183, 183);
             this.panelManagement.TabIndex = 5;
@@ -352,7 +352,7 @@
             this.btnManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManagement.ForeColor = System.Drawing.Color.White;
-            this.btnManagement.Location = new System.Drawing.Point(0, 145);
+            this.btnManagement.Location = new System.Drawing.Point(0, 155);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.Size = new System.Drawing.Size(183, 45);
             this.btnManagement.TabIndex = 4;
@@ -368,7 +368,7 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 100);
+            this.btnHome.Location = new System.Drawing.Point(0, 110);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(183, 45);
             this.btnHome.TabIndex = 3;
@@ -379,55 +379,31 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.BackColor = System.Drawing.Color.Black;
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(183, 100);
+            this.panelLogo.Size = new System.Drawing.Size(183, 110);
             this.panelLogo.TabIndex = 0;
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.DarkCyan;
-            this.panelTop.Controls.Add(this.labelClose);
-            this.panelTop.Controls.Add(this.label1);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTop.Location = new System.Drawing.Point(200, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(700, 42);
-            this.panelTop.TabIndex = 1;
-            // 
-            // labelClose
-            // 
-            this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelClose.AutoSize = true;
-            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelClose.Location = new System.Drawing.Point(661, 9);
-            this.labelClose.Name = "labelClose";
-            this.labelClose.Size = new System.Drawing.Size(27, 30);
-            this.labelClose.TabIndex = 1;
-            this.labelClose.Text = "X";
-            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(185, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "New Pride PVC Pipe";
             // 
             // panelMain
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(200, 42);
+            this.panelMain.Location = new System.Drawing.Point(200, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(700, 558);
+            this.panelMain.Size = new System.Drawing.Size(700, 600);
             this.panelMain.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::WareHouseSystem.Properties.Resources.NewPride1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(46, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 97);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
@@ -435,19 +411,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelSide);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(916, 639);
             this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard2";
+            this.Text = "New Pride PVC Pipe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Dashboard_FormClosed);
             this.panelSide.ResumeLayout(false);
             this.panelInvoiceSubmenu.ResumeLayout(false);
             this.panelLedger.ResumeLayout(false);
             this.panelManagement.ResumeLayout(false);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,9 +438,6 @@
         private System.Windows.Forms.Panel panelManagement;
         private System.Windows.Forms.Button btnCustomerList;
         private System.Windows.Forms.Button btnManagement;
-        private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Label labelClose;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelLedger;
         private System.Windows.Forms.Button btnDailySheet;
@@ -479,5 +454,6 @@
         private System.Windows.Forms.Button btnPurchaseInvoice;
         private System.Windows.Forms.Button btnSaleInvoice;
         private System.Windows.Forms.Button btnInvoices;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

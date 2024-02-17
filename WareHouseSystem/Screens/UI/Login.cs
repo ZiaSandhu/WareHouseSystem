@@ -18,6 +18,7 @@ namespace WareHouseSystem.Screens.UI
         public Login()
         {
             InitializeComponent();
+            this.Focus();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -69,7 +70,9 @@ namespace WareHouseSystem.Screens.UI
         {
             using (SqlConnection con = new SqlConnection(database.ConnectionString))
             {
-                string query = "INSERT INTO tblLoginHistory(Name,Date) Values('"+txtName.Text.Trim()+"','"+System.DateTime.Now+"')";
+                DateTime date = DateTime.Now;
+                string formattedDateTime = date.ToString("yyyy-MM-dd HH:mm:ss");
+                string query = "INSERT INTO tblLoginHistory(Name,Date) Values('"+txtName.Text.Trim()+"','"+ formattedDateTime + "')";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -106,6 +109,9 @@ namespace WareHouseSystem.Screens.UI
                 txtPassword.UseSystemPasswordChar = true;
         }
 
-       
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
