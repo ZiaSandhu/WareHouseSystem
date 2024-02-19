@@ -53,4 +53,3 @@ C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\ob
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\WareHouseSystem.csproj.CopyComplete
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\New Pride PVC Pipe.exe
 C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\obj\Debug\New Pride PVC Pipe.pdb
-C:\Users\Administrator\source\repos\ZiaSandhu\WareHouseSystem\WareHouseSystem\bin\Debug\database\newpridepvc.mdf

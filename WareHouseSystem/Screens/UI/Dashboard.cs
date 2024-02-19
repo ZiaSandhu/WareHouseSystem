@@ -154,5 +154,10 @@ namespace WareHouseSystem.Screens.UI
         {
             Application.Exit();
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

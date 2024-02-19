@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using WareHouseSystem.General;
-
+using System.ServiceProcess;
 namespace WareHouseSystem.Screens.UI
 {
     public partial class Login : MetroTemplate
@@ -18,7 +10,40 @@ namespace WareHouseSystem.Screens.UI
         public Login()
         {
             InitializeComponent();
-            this.Focus();
+            checkServerStatus();
+           this.Focus();
+        }
+
+        private void checkServerStatus()
+        {
+            string serviceName = "MSSQL$SQLEXPRESS"; // This is the default service name for SQL Server
+            ServiceController sc = new ServiceController(serviceName);
+
+            try
+            {
+                if (sc != null && sc.Status == ServiceControllerStatus.Stopped)
+                {
+                    sc.Start();
+                    lblStatus.Text = "SQL Server is Starting.";
+
+                    sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(30)); // Wait up to 30 seconds for the service to start
+                }
+
+                if (sc.Status == ServiceControllerStatus.Running)
+                {
+                    btnLogin.Enabled = true;
+                }
+                else
+                {
+                    lblStatus.Text = "SQL Server failed to start.";
+                    btnLogin.Enabled = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went wrong!", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

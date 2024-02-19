@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkShowpass = new System.Windows.Forms.CheckBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -105,11 +106,21 @@
             this.checkShowpass.UseVisualStyleBackColor = true;
             this.checkShowpass.CheckedChanged += new System.EventHandler(this.checkShowpass_CheckedChanged);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(137, 77);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblStatus.TabIndex = 14;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(395, 262);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.checkShowpass);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -134,5 +145,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkShowpass;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

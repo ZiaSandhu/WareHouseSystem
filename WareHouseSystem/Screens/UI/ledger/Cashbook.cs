@@ -23,6 +23,8 @@ namespace WareHouseSystem.Screens.UI.ledger
         private void CustomSetting()
         {
             database.SetDateTimePickerToFirstDayOfMonth(FromDate);
+            btnReport.Visible = false;
+            //btnRefresh.Visible = false;
         }
 
         public void PopulateGrid()
@@ -139,6 +141,17 @@ namespace WareHouseSystem.Screens.UI.ledger
         private void ToDate_ValueChanged(object sender, EventArgs e)
         {
             PopulateGrid();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            database.SetDateTimePickerToFirstDayOfMonth(FromDate);
+            ToDate.Value = DateTime.Now;
         }
     }
 }

@@ -19,9 +19,9 @@ namespace WareHouseSystem.General
 
         //DESKTOP-0RPIUHH
 
-        //public static string ConnectionString = @"Data Source=DESKTOP-0RPIUHH\SQLEXPRESS;Initial Catalog=newpridepvc;Integrated Security=True";
+        public static string ConnectionString = @"Data Source=DESKTOP-0RPIUHH\SQLEXPRESS;Initial Catalog=newpridepvc;Integrated Security=True";
 
-        public static string ConnectionString = @"Data Source=DESKTOP-1ULGF16\SQLEXPRESS;Initial Catalog=warehouse;Integrated Security=True";
+        //public static string ConnectionString = @"Data Source=DESKTOP-1ULGF16\SQLEXPRESS;Initial Catalog=warehouse;Integrated Security=True";
 
         public static void PopulatGrid(string query, DataGridView datagrid)
         {

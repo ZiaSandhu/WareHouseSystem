@@ -32,13 +32,7 @@ namespace WareHouseSystem.Screens.UI.ledger
 
             database.LedgerGridPopulate(GDVCusLedger, userId);
 
-            decimal income = database.CalculateColumnSum(GDVCusLedger, "income");
-            decimal expense = database.CalculateColumnSum(GDVCusLedger, "expense");
-            decimal balance = expense - income;
-
-            labelBalance.Text = "Rs." + database.FormatAmount(balance);
-            labelIncome.Text = "Rs." + database.FormatAmount(income);
-            labelExpense.Text = "Rs." + database.FormatAmount(expense);
+           
 
         }
 

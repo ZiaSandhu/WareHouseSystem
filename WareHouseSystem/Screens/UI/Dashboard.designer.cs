@@ -50,8 +50,8 @@
             this.btnManagement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelSide.SuspendLayout();
             this.panelInvoiceSubmenu.SuspendLayout();
             this.panelLedger.SuspendLayout();
@@ -387,14 +387,6 @@
             this.panelLogo.Size = new System.Drawing.Size(183, 110);
             this.panelLogo.TabIndex = 0;
             // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(200, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(700, 600);
-            this.panelMain.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::WareHouseSystem.Properties.Resources.NewPride1;
@@ -405,10 +397,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(200, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(700, 600);
+            this.panelMain.TabIndex = 2;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelSide);
